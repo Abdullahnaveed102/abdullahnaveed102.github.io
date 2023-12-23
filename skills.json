@@ -4,12 +4,20 @@
         "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
     },
     {
+        "name": "C",
+        "icon": "https://path-to-c-icon.png"
+    },
+    {
         "name": "C++",
         "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
     },
     {
         "name": "JavaScript",
         "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+    },
+    {
+        "name": "Haskell",
+        "icon": "https://path-to-haskell-icon.png"
     },
     {
         "name": "PHP",
@@ -46,5 +54,45 @@
     {
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    }   
+    },
+    {
+        "name": "NumPy",
+        "icon": "https://path-to-numpy-icon.png"
+    },
+    {
+        "name": "Pandas",
+        "icon": "https://path-to-pandas-icon.png"
+    },
+    {
+        "name": "TensorFlow",
+        "icon": "https://path-to-tensorflow-icon.png"
+    },
+    {
+        "name": "OpenCV",
+        "icon": "https://path-to-opencv-icon.png"
+    },
+    {
+        "name": "Scikit-learn",
+        "icon": "https://path-to-scikit-learn-icon.png"
+    },
+    {
+        "name": "Keras",
+        "icon": "https://path-to-keras-icon.png"
+    },
+    {
+        "name": "LLVM",
+        "icon": "https://path-to-llvm-icon.png"
+    },
+    {
+        "name": "Figma",
+        "icon": "https://icons8.com/icon/EZQdGLNeo7JI/canva-app"
+    },
+    {
+        "name": "Canva",
+        "icon": "https://icons8.com/icon/EZQdGLNeo7JI/canva-app"
+    },
+    {
+        "name": "Photoshop",
+        "icon": "https://icons8.com/icon/13677/adobe-photoshop"
+    }
 ]
