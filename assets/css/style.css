@@ -213,6 +213,7 @@ header .navbar ul li a:hover {
 }
 .home .image img {
   width: 70%;
+  background-position: cover;
   margin-left: 6rem;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -476,33 +477,73 @@ header .navbar ul li a:hover {
   padding: 2rem;
   width: 90%;
   margin: auto;
-  margin-top: 2rem;
+  /* margin-top: 4rem; */
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 100px;
 }
-.skills .container .row {
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.subject {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.module {
+  float: right;
+}
+.bar-line {
+  width: 100%;
+  background: whitesmoke;
+  padding: 4px;
+  border-radius: 3px;
+  position: relative;
+  /* margin-top: 10px;  */
+}
+
+.bar .bar-line > span {
+  background-color: blue;
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: width 1s ease;
+}
+/* .row {
+  background-color: whitesmoke;
+} */
+/* .skills .container .row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
   gap: 1.8rem;
-}
-.skills .container .bar {
+} */
+/* .skills .container .bar {
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 22, 0.9);
   transition: 0.2s;
-}
-.skills .container .bar:hover {
+  width: 90%;
+} */
+/* .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
   background-color: rgba(0, 0, 0, 0.9) !important;
-}
-.skills .container .bar .info {
+} */
+/* .skills .container .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
-}
+} */
 .skills .container .bar .info i {
   font-size: 4rem;
 }
@@ -518,8 +559,8 @@ header .navbar ul li a:hover {
     padding: 0;
     margin: 0;
   }
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
+  .skills .container {
+    grid-template-columns: repeat(1, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
@@ -527,6 +568,9 @@ header .navbar ul li a:hover {
   .skills .container {
     margin-top: 5px;
     width: 100%;
+  }
+  .row {
+    margin: 10px;
   }
 }
 /* skills media queries ends*/
@@ -569,13 +613,13 @@ header .navbar ul li a:hover {
   box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
 }
 .education .box-container .box .image {
-  flex: 1 1 20rem;
+  flex: 1 1 30rem;
   width: 100%;
 }
 .education .box-container .box img {
   object-fit: cover;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 .education .box-container .box .content {
@@ -609,7 +653,7 @@ header .navbar ul li a:hover {
 }
 
 /* education media queries starts*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .education .box-container .box {
     flex-direction: column;
     width: 100%;
@@ -663,7 +707,7 @@ header .navbar ul li a:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  height: 30rem;
+  height: 35rem;
 }
 .work .box-container .box img {
   height: 100%;
@@ -757,6 +801,7 @@ header .navbar ul li a:hover {
 .work .viewall .btn:hover i {
   transform: translateX(5px);
 }
+
 /* work section ends */
 
 /* experience section starts */
