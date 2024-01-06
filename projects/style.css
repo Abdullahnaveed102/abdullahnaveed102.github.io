@@ -155,20 +155,20 @@ header .navbar ul li a:hover{
 }
 /* hamburger icon ends */
 
-/* projects section starts */
-.projects{
+/* work section starts */
+.work{
   /* background: #010124; */
   background: linear-gradient(to bottom, #010136, #00003a);
   margin-top: 5rem;
 }
-.projects h2{
+.work h2{
   color: #fff;
   padding: 1rem;
 }
-.projects .heading span{
+.work .heading span{
   color: rgb(255, 230, 0);
 }
-.projects .button-group{
+.work .button-group{
   display: flex;
   flex-wrap: wrap;
   gap:1rem;
@@ -177,7 +177,7 @@ header .navbar ul li a:hover{
   justify-content: center;
   align-items: center;
 }
-.projects .button-group .btn{
+.work .button-group .btn{
   outline: none;
   padding: 1rem 2rem;
   background: transparent;
@@ -187,21 +187,21 @@ header .navbar ul li a:hover{
   cursor: pointer;
   font-weight: 500;
 }
-.projects .button-group .btn:hover{
+.work .button-group .btn:hover{
   background-color: #fff;
   color: #000;
 }
-.projects .button-group .btn.is-checked{
+.work .button-group .btn.is-checked{
   background-color: #fff;
   color: #000;
 }
-.projects .box-container{
+.work .box-container{
   display: flex;
   flex-wrap: wrap;
   gap:1.5rem;
   margin: 2rem;
 }
-.projects .box-container .box{
+.work .box-container .box{
   flex:1 1 30rem;
   border-radius: .5rem;
   box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
@@ -211,12 +211,12 @@ header .navbar ul li a:hover{
   background: #fff;
   border: none;
 }
-.projects .box-container .box img{
+.work .box-container .box img{
   height: 100%;
   width:100%;
   object-fit: cover;
 }
-.projects .box-container .box .content{
+.work .box-container .box .content{
   height: 100%;
   width:100%;
   position: absolute;
@@ -225,7 +225,7 @@ header .navbar ul li a:hover{
   display: flex;
   flex-direction: column;
 }
-.projects .box-container .box .content .tag{
+.work .box-container .box .content .tag{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -235,28 +235,28 @@ header .navbar ul li a:hover{
   padding-left: 1rem;
   background: #ffd900;
 }
-.projects .box-container .box .content .tag h3{
+.work .box-container .box .content .tag h3{
   font-size: 2rem;
 }
-.projects .box-container .box:hover .content{
+.work .box-container .box:hover .content{
   top: 25%;
 }
-.projects .desc {
+.work .desc {
   margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.projects .desc p{
+.work .desc p{
   font-size: 1.5rem;
 }
-.projects .desc .btns{
+.work .desc .btns{
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 2rem;
 }
-.projects .desc .btns .btn{
+.work .desc .btns .btn{
   line-height: 0;
   display: inline;
   padding: 1.5rem 2.5rem;
@@ -266,7 +266,7 @@ header .navbar ul li a:hover{
   background: rgb(12, 12, 12);
   margin-right: 2rem;
 }
-.projects .desc .btns .btn:hover{
+.work .desc .btns .btn:hover{
   background: #310ae0f5;
 }
 
