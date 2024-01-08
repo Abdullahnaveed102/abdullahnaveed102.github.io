@@ -1,5 +1,15 @@
 [
   {
+    "name": "SOP violation detection",
+    "desc": "Including live streaming, mask detection using YOLOv5, orthogonal top view projection, generation of static and animated heatmaps.",
+    "image": "sopvalidation",
+    "category": "ML",
+    "links": {
+      "code": "https://github.com/Abdullahnaveed102/SOP-Violation-Detection-with-Multi-Camera-System"
+    }
+  },
+
+  {
     "name": "Afloat",
     "desc": "Explore the HCI design journey for Afloat, a conceptual application tackling post-Covid social and mental health challenges for LUMS students, focusing on user interface design.",
     "image": "afloat",
@@ -8,6 +18,7 @@
       "code": "https://github.com/Abdullahnaveed102/Afloat"
     }
   },
+
   {
     "name": "G23-LUMS-APP ",
     "desc": "A University Portal Designed for Lahore University of Management Sciences.",
@@ -18,18 +29,6 @@
     }
   },
   
-
-  {
-    "name": "SOP violation detection",
-    "desc": "Including live streaming, mask detection using YOLOv5, orthogonal top view projection, generation of static and animated heatmaps.",
-    "image": "sopvalidation",
-    "category": "ML",
-    "links": {
-      "code": "https://github.com/Abdullahnaveed102/SOP-Violation-Detection-with-Multi-Camera-System"
-    }
-  },
-  
-
   {
     "name": "Netflix Recommendation System",
     "desc": "Suggestions based on latest watch and explore recommended genres, utilizing a robust recommendation system enriched by Exploratory Data Analysis and ML insights.",
