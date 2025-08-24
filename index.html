@@ -136,7 +136,7 @@
 
   <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
 
-  <p class="qoute">"Education is not the learning of facts, but the training of the mind to think."</p>
+  <!-- <p class="qoute">"Education is not the learning of facts, but the training of the mind to think."</p> -->
 
   <div class="box-container">
 
@@ -384,27 +384,45 @@
     </a>
   </div>
 
+  <!-- Research Projects -->
+  <h2 class="heading" id="research"><i class="fas fa-flask"></i> Research <span>Projects</span></h2>
 
-<h2 class="heading" id="research"><i class="fas fa-laptop-code"></i> Projects <span>Research</span></h2>
-<div class="box-container">
-  <div class="box">
-      <img draggable="false" src="./assets/images/projects/debloat-bench.jpg" alt="" />
+  <div class="box-container">
+
+    <!-- DebloatBench card -->
+    <article class="box">
+      <img draggable="false" src="./assets/images/projects/debloat-bench.jpg"
+           alt="DebloatBench: benchmarking framework for container debloaters" />
       <div class="content">
-        <div class="tag">
-        <h3>Debloat Bench</h3>
-        </div>
+        <div class="tag"><h3>DebloatBench</h3></div>
+
         <div class="desc">
-          <p>Build a platform to benchmark Docker tools SPEAKER, CONFINE, and SLIMTOOLKIT. Evaluate based on system call reduction, CVE mitigation, and image size reduction for enhanced container security.</p>
+          <p>
+            Built a benchmarking framework for container debloaters
+            (SPEAKER, CONFINE, SlimToolkit) that measures system-call reduction,
+            CVE mitigation, correctness, and image size.
+          </p>
           <div class="btns">
-            <a href="https://github.com/Abdullahnaveed102/debloat-bench" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            <a href="https://github.com/Abdullahnaveed102/debloat-bench"
+               class="btn" target="_blank" rel="noopener noreferrer">
+              Code <i class="fas fa-code"></i>
+            </a>
+            <!-- Optional second CTA if you add docs/paper later
+            <a href="https://..." class="btn" target="_blank" rel="noopener noreferrer">
+              Docs <i class="fas fa-file-alt"></i>
+            </a>
+            -->
           </div>
         </div>
       </div>
-    </div>
-</div>
+    </article>
 
+    <!-- Duplicate this <article> for more research cards as you add them -->
+
+  </div>
 </section>
 <!-- work project section ends -->
+
 
 
 
@@ -576,6 +594,11 @@
   </div>
 </section>
 <!-- contact section ends -->
+
+
+
+
+
 
 
 <!-- footer section starts -->
