@@ -464,3 +464,9 @@ header .navbar ul li a:hover{
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+
+@media (max-width: 768px) {
+  .timeline .container { width: 100%; left: 0 !important; }
+  .timeline .container.left, .timeline .container.right { left: 0 !important; }
+}
