@@ -117,6 +117,7 @@ function showProjects(projects) {
 fetchData().then(data => { showSkills?.(data); }); // keep if you re-enable showSkills
 fetchData("projects").then(data => { showProjects(data); });
 
+
 // global tilt (for items present on load)
 VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
 
@@ -170,3 +171,81 @@ sr.reveal('.contact .container, .contact .container .form-group', { interval: 10
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   sr.destroy();
 }
+
+
+
+
+
+/* ===========================
+   Home: Projects loader/render
+   =========================== */
+
+async function fetchProjects() {
+  // Try a few common paths for projects.json
+  const tryPaths = [
+    "/projects/projects.json",
+    "./projects/projects.json",
+    "/projects.json",
+    "./projects.json"
+  ];
+  for (const p of tryPaths) {
+    try {
+      const r = await fetch(p, { cache: "no-cache" });
+      if (r.ok) return await r.json();
+    } catch (_) {}
+  }
+  console.warn("projects.json not found via known paths");
+  return [];
+}
+
+function projectCard(p) {
+  return `
+    <div class="box tilt">
+      <img draggable="false" src="/assets/images/projects/${p.image}.png" alt="${p.name}" />
+      <div class="content">
+        <div class="tag"><h3>${p.name}</h3></div>
+        <div class="desc">
+          <p>${p.desc}</p>
+          <div class="btns">
+            <a href="${p.links.code}" class="btn" target="_blank" rel="noopener">
+              Code <i class="fas fa-code"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+async function buildHomeProjects() {
+  const data = await fetchProjects();
+
+  const devWrap = document.querySelector("#dev-projects");
+  const resWrap = document.querySelector("#research-projects");
+  const resHeading = document.querySelector(".research-heading");
+
+  // Separate research vs everything else
+  const research = data.filter(d => (d.category || "").toLowerCase() === "research");
+  const nonResearch = data.filter(d => (d.category || "").toLowerCase() !== "research");
+
+  // Render non-research to main grid
+  devWrap.innerHTML = nonResearch.map(projectCard).join("");
+
+  // Render research if any, else hide the section
+  if (research.length) {
+    resWrap.innerHTML = research.map(projectCard).join("");
+    resHeading.style.display = "";
+    resWrap.style.display = "";
+  } else {
+    resHeading.style.display = "none";
+    resWrap.style.display = "none";
+  }
+
+  // Tilt effect
+  if (window.VanillaTilt) {
+    VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
+  }
+}
+
+// Call once the page loads
+document.addEventListener("DOMContentLoaded", buildHomeProjects);
+
