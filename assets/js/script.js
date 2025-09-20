@@ -1,21 +1,32 @@
+/*
+####################################################################################################
+#####################################>  SCRIPT.JS (Portfolio)  <###################################
+####################################################################################################
+*/
+
+/*##############################################################################################
+#####################################>  NAV + SCROLL BEHAVIOR  <#################################
+##############################################################################################*/
 $(document).ready(function () {
+  // Hamburger toggle
   $('#menu').click(function () {
     $(this).toggleClass('fa-times');
     $('.navbar').toggleClass('nav-toggle');
   });
 
+  // Scroll + load: close nav, scroll spy, show back-to-top
   $(window).on('scroll load', function () {
     $('#menu').removeClass('fa-times');
     $('.navbar').removeClass('nav-toggle');
 
-    // show/hide back-to-top
+    // Show/hide back-to-top
     if (window.scrollY > 10) {
       document.querySelector('#scroll-top').classList.add('active');
     } else {
       document.querySelector('#scroll-top').classList.remove('active');
     }
 
-    // scroll spy
+    // Scroll spy
     $('section').each(function () {
       let height = $(this).height();
       let offset = $(this).offset().top - 200;
@@ -29,21 +40,19 @@ $(document).ready(function () {
     });
   });
 
-  // smooth scrolling
+  // Smooth scrolling for anchor links
   $('a[href*="#"]').on('click', function (e) {
+    const target = $($(this).attr('href'));
+    if (!target.length) return;          // guard for external links with '#'
     e.preventDefault();
-    $('html, body').animate(
-      { scrollTop: $($(this).attr('href')).offset().top },
-      500,
-      'linear'
-    );
+    $('html, body').animate({ scrollTop: target.offset().top }, 500, 'linear');
   });
 
-  // emailjs
+  // EmailJS (form submit)
   $("#contact-form").submit(function (event) {
     emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-    emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+    emailjs
+      .sendForm('contact_service', 'template_contact', '#contact-form')
       .then(function (response) {
         console.log('SUCCESS!', response.status, response.text);
         document.getElementById("contact-form").reset();
@@ -52,12 +61,13 @@ $(document).ready(function () {
         console.log('FAILED...', error);
         alert("Form Submission Failed! Try Again");
       });
-
     event.preventDefault();
   });
 });
 
-// dynamic title / favicon
+/*##############################################################################################
+#####################################>  PAGE TITLE / FAVICON  <#################################
+##############################################################################################*/
 document.addEventListener('visibilitychange', function () {
   if (document.visibilityState === "visible") {
     document.title = "Portfolio | Abdullah Naveed";
@@ -68,7 +78,9 @@ document.addEventListener('visibilitychange', function () {
   }
 });
 
-// typed.js
+/*##############################################################################################
+#####################################>  HERO: TYPED.JS  <#######################################
+##############################################################################################*/
 var typed = new Typed(".typing-text", {
   strings: ["Research", "ML Engineering", "Data Science"],
   loop: true,
@@ -77,60 +89,34 @@ var typed = new Typed(".typing-text", {
   backDelay: 500,
 });
 
-// data loading
-async function fetchData(type = "skills") {
-  let response = (type === "skills")
-    ? await fetch("skills.json")
-    : await fetch("./projects/projects.json");
-  const data = await response.json();
-  return data;
-}
+/*##############################################################################################
+#####################################>  PARTICLES.JS (external)  <##############################
+##############################################################################################*/
+/* Loaded via ./assets/js/particles.min.js and ./assets/js/app.js in index.html */
 
-// showProjects (kept Tilt, removed duplicate ScrollReveal)
-function showProjects(projects) {
-  let projectsContainer = document.querySelector("#work .box-container");
-  let projectHTML = "";
-  projects
-    .slice(0, 10)
-    .filter(project => project.category != "development")
-    .forEach(project => {
-      projectHTML += `
-        <div class="box tilt">
-          <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-          <div class="content">
-            <div class="tag"><h3>${project.name}</h3></div>
-            <div class="desc">
-              <p>${project.desc}</p>
-              <div class="btns">
-                <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>`;
-    });
-  projectsContainer.innerHTML = projectHTML;
+/*##############################################################################################
+#####################################>  VANILLA TILT  <#########################################
+##############################################################################################*/
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.VanillaTilt) {
+    VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
+  }
+});
 
-  // tilt
-  VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
-}
-
-fetchData().then(data => { showSkills?.(data); }); // keep if you re-enable showSkills
-fetchData("projects").then(data => { showProjects(data); });
-
-
-// global tilt (for items present on load)
-VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
-
-// disable developer shortcuts
+/*##############################################################################################
+#####################################>  DISABLE DEV SHORTCUTS  <################################
+##############################################################################################*/
 document.onkeydown = function (e) {
-  if (e.keyCode == 123) return false;
+  if (e.keyCode == 123) return false; // F12
   if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
   if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
   if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
-  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // View Source
 };
 
-// Tawk.to
+/*##############################################################################################
+#####################################>  LIVE CHAT (Tawk.to)  <##################################
+##############################################################################################*/
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 (function () {
   var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
@@ -138,50 +124,45 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
   s1.charset = 'UTF-8'; s1.setAttribute('crossorigin', '*'); s0.parentNode.insertBefore(s1, s0);
 })();
 
-/* ===== ScrollReveal (tuned) ===== */
+/*##############################################################################################
+#####################################>  SCROLLREVEAL  <########################################
+##############################################################################################*/
 const sr = ScrollReveal({
   origin: 'top',
   distance: '30px',
   duration: 600,
   easing: 'cubic-bezier(.2,.65,.3,1)',
-  reset: false,             // reveal once
+  reset: false,      // reveal once
   mobile: true,
-  viewFactor: 0.12,         // reveal earlier (12% visible)
+  viewFactor: 0.12,  // reveal earlier (12% visible)
   viewOffset: { top: 80, right: 0, bottom: 80, left: 0 }
 });
 
-// home
+// Sections to reveal
 sr.reveal('.home .content h3, .home .content p, .home .content .btn', { interval: 120 });
 sr.reveal('.home .image', { delay: 200 });
-// about
 sr.reveal('.about .content h3, .about .content .tag, .about .content p, .about .content .box-container, .about .content .resumebtn', { interval: 100 });
-// skills
 sr.reveal('.skills .container', { interval: 100 });
 sr.reveal('.skills .container .bar', { interval: 60 });
-// education
 sr.reveal('.education .box', { interval: 120 });
-// projects
 sr.reveal('.work .box', { interval: 120 });
-// experience
 sr.reveal('.experience .timeline, .experience .timeline .container', { interval: 120 });
-// contact
 sr.reveal('.contact .container, .contact .container .form-group', { interval: 100 });
 
-// respect prefers-reduced-motion
+// Respect prefers-reduced-motion
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   sr.destroy();
 }
 
-
-
-
-
-/* ===========================
-   Home: Projects loader/render
-   =========================== */
-
+/*##############################################################################################
+#####################################>  PROJECTS LOADER  <#####################################
+##############################################################################################*/
+/*
+  Reads projects from one of several common paths and renders:
+    - Non-research items into #dev-projects
+    - Research items into #research-projects (hides heading if none)
+*/
 async function fetchProjects() {
-  // Try a few common paths for projects.json
   const tryPaths = [
     "/projects/projects.json",
     "./projects/projects.json",
@@ -218,19 +199,14 @@ function projectCard(p) {
 
 async function buildHomeProjects() {
   const data = await fetchProjects();
-
   const devWrap = document.querySelector("#dev-projects");
   const resWrap = document.querySelector("#research-projects");
   const resHeading = document.querySelector(".research-heading");
 
-  // Separate research vs everything else
   const research = data.filter(d => (d.category || "").toLowerCase() === "research");
   const nonResearch = data.filter(d => (d.category || "").toLowerCase() !== "research");
 
-  // Render non-research to main grid
   devWrap.innerHTML = nonResearch.map(projectCard).join("");
-
-  // Render research if any, else hide the section
   if (research.length) {
     resWrap.innerHTML = research.map(projectCard).join("");
     resHeading.style.display = "";
@@ -240,12 +216,10 @@ async function buildHomeProjects() {
     resWrap.style.display = "none";
   }
 
-  // Tilt effect
   if (window.VanillaTilt) {
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
   }
 }
 
-// Call once the page loads
+// Run once on load
 document.addEventListener("DOMContentLoaded", buildHomeProjects);
-

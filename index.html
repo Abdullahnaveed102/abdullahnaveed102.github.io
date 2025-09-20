@@ -1,634 +1,519 @@
+<!--
+####################################################################################################
+#####################################>  INDEX.HTML (Portfolio)  <###################################
+####################################################################################################
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Abdullah Naveed, portfolio, Abdullah, Web Development, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Abdullah's Portfolio. Researcher, ML Engineer and Data Scientist" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/an.png" type="image/x-png">
-    <title>Portfolio | Abdullah</title>
+  <!--##############################################################################################
+  #####################################>  META & HEAD  <###########################################
+  ##############################################################################################-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Abdullah Naveed, portfolio, Abdullah, Web Development, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+  <meta name="description" content="Welcome to Abdullah's Portfolio. Researcher, ML Engineer and Data Scientist" />
+
+  <link id="favicon" rel="shortcut icon" href="./assets/images/an.png" type="image/x-png" />
+  <title>Portfolio | Abdullah</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!--##############################################################################################
+  #####################################>  ICONS / LIBS (CDN)  <####################################
+  ##############################################################################################-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
+
 <body oncontextmenu="return false">
+  <!--##############################################################################################
+  #####################################>  HEADER / NAVBAR  <#######################################
+  ##############################################################################################-->
+  <header>
+    <a href="/" class="logo"><i class="fas fa-cogs"></i> Abdullah</a>
 
-<!-- pre loader -->
-<!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- navbar starts -->
-<header>
-        <a href="/" class="logo"><i class="fas fa-cogs"></i> Abdullah</a>
-
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">Projects</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
-
-
-<!-- hero section starts -->
-<section class="home" id="home">
+  <!--##############################################################################################
+  #####################################>  HERO / HOME  <###########################################
+  ##############################################################################################-->
+  <section class="home" id="home">
     <div id="particles-js"></div>
 
     <div class="content">
-    <h2>Hi There,<br/> I'm Abdullah <span>Naveed</span></h2>
-    <p>i am into <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
+      <h2>Hi There,<br /> I'm Abdullah <span>Naveed</span></h2>
+      <p>i am into <span class="typing-text"></span></p>
+      <a href="#about" class="btn">
+        <span>About Me</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+
+      <div class="socials">
         <ul class="social-icons">
-          <li><a class="email" aria-label="Email" href="mailto:abdullahnaveed102@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/abdullah-naveed-3babbb22b/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/Abdullahnaveed102" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li>
+            <a class="email" aria-label="Email" href="mailto:abdullahnaveed102@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          </li>
+          <li>
+            <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/abdullah-naveed-3babbb22b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a class="github" aria-label="GitHub" href="https://github.com/Abdullahnaveed102" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
         </ul>
       </div>
     </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/an2.png" alt="">
-</div>
-</section>
-<!-- hero section ends -->
 
-
-
-
-
-
-
-
-<!-- about section starts -->
-<section class="about" id="about">
-  <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-
-  <div class="row">
     <div class="image">
-      <img draggable="false" class="tilt" src="./assets/images/an_profile.jpg" alt="Portrait of Abdullah Naveed">
+      <img draggable="false" class="tilt" src="./assets/images/an2.png" alt="">
     </div>
+  </section>
 
-    <div class="content">
-      <h3>I'm Abdullah Naveed</h3>
-      <span class="tag">Ph.D. Student | Error Resilience for LLMs & HPC | Data Compression </span>
+  <!--##############################################################################################
+  #####################################>  ABOUT  <#################################################
+  ##############################################################################################-->
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
 
-      <p>
-        I’m a Ph.D. student in <strong>Computer Engineering at the University of Florida</strong>.
-        My research centers on <strong>fault tolerance and error resilience for Large Language Models (LLMs)</strong> and
-        <strong>high-performance computing (HPC) applications</strong>, with a complementary focus on
-        <strong>data compression for scientific workloads</strong>.
-      </p>
-
-      <p>
-        I currently collaborate with <strong>Argonne National Laboratory</strong> on
-        <strong>Transformer-based lossy compressors for Advanced Photon Source (APS) X-ray data</strong>,
-        working with <em>Dr. Sheng Di</em> and <em>Prof. Guanpeng Li</em>.
-        Previously, I completed my <strong>MCS at The University of Iowa</strong> (2025) and earned a
-        <strong>BS in Computer Science with Distinction from LUMS</strong>, Pakistan.
-      </p>
-
-      <p>
-        Interests: machine learning systems, reliability for safety-critical AI, scientific data compression,
-        and LLVM-based tooling for dependable systems.
-      </p>
-
-      <div class="box-container">
-        <div class="box">
-          <p><span>email:</span> <a href="mailto:abdullahnaveed102@gmail.com">abdullahnaveed102@gmail.com</a></p>
-          <p><span>location:</span> Gainesville, FL, USA</p>
-        </div>
-      </div>
-        
-        <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1cLTIqSF0aQI95lPKmyuLQKSbf7IyCKed/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-
-    </div>
-  </div>
-</section>
-<!-- about section ends -->
-
-
-
-
-
-
-
-
-<!-- Education Section Starts -->
-<section class="education" id="education">
-
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-  <!-- <p class="qoute">"Education is not the learning of facts, but the training of the mind to think."</p> -->
-
-  <div class="box-container">
-
-    <!-- PhD Box -->
-    <div class="box">
+    <div class="row">
       <div class="image">
-        <img draggable="false" src="./assets/images/UF.png" alt="University of Florida">
+        <img draggable="false" class="tilt" src="./assets/images/an_profile.jpg" alt="Portrait of Abdullah Naveed" />
       </div>
+
       <div class="content">
-        <h3>Ph.D. in Computer Engineering</h3>
-        <p>University of Florida, Gainesville, FL, USA</p>
-        <p><strong>Advisor:</strong> Prof. Guanpeng Li</p>
-        <h4>Aug 2025 – Present</h4>
-        <p><strong>Research Lab:</strong> Dependable Systems Lab</p>
-        <p><strong>Research Areas:</strong> Fault Tolerance, Error Resilience for Large Language Models (LLMs), HPC Dependability, Scientific Data Compression</p>
-      </div>
-    </div>
-
-    <!-- Master's Box -->
-    <div class="box">
-      <div class="image">
-        <img draggable="false" src="./assets/images/UIOWA.png" alt="The University of Iowa">
-      </div>
-      <div class="content">
-        <h3>Master of Computer Science</h3>
-        <p>The University of Iowa, Iowa City, IA, USA</p>
-        <p><strong>GPA:</strong> 3.90 / 4.00</p>
-        <h4>Aug 2023 – May 2025</h4>
-        <p><strong>Selected Coursework:</strong> Applied Machine Learning, Compiler Optimization for HPC, Distributed Algorithms, Functional Programming & Algorithm Design, Data Visualization & Technologies</p>
-      </div>
-    </div>
-
-    <!-- Bachelor's Box -->
-    <div class="box">
-      <div class="image">
-        <img style="width: 90%;" draggable="false" src="./assets/images/LUMS.png" alt="Lahore University of Management Sciences">
-      </div>
-      <div class="content">
-        <h3>Bachelor of Science in Computer Science</h3>
-        <p>Lahore University of Management Sciences (LUMS), Lahore, Pakistan</p>
-        <p><strong>GPA:</strong> 3.61 / 4.00</p>
-        <p><em>Graduated with Distinction</em></p>
-        <h4>Aug 2019 – May 2023</h4>
-        <p><strong>Selected Coursework:</strong> Machine Learning, Computer Vision, Data Mining, Data Science, Network-Centric Computing, Blockchain Technology</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- Education Section Ends -->
-
-
-
-
-
-
-
-<!-- skills section starts -->
-<section class="skills" id="skills">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-
-  <div class="container">
-
-    <!-- =================== -->
-    <!-- Machine Learning -->
-    <div class="row" id="skillsContainer">
-      <h2>Machine Learning & Data Science</h2>
-
-      <div class="bar">
-        <div class="subject">
-          <span>PyTorch</span>
-          <span class="module">85%</span>
-        </div>
-        <div class="bar-line pytorch"><span style="width: 85%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>TensorFlow</span>
-          <span class="module">80%</span>
-        </div>
-        <div class="bar-line tensorflow"><span style="width: 80%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Scikit-learn</span>
-          <span class="module">75%</span>
-        </div>
-        <div class="bar-line sklearn"><span style="width: 75%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Pandas / NumPy</span>
-          <span class="module">85%</span>
-        </div>
-        <div class="bar-line pandas"><span style="width: 85%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>OpenCV</span>
-          <span class="module">80%</span>
-        </div>
-        <div class="bar-line opencv"><span style="width: 80%;"></span></div>
-      </div>
-    </div>
-
-    <!-- =================== -->
-    <!-- Development -->
-    <div class="row" id="skillsContainer">
-      <h2>Development</h2>
-
-      <div class="bar">
-        <div class="subject">
-          <span>JavaScript (ES6+)</span>
-          <span class="module">80%</span>
-        </div>
-        <div class="bar-line javascript"><span style="width: 80%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>React / React Native</span>
-          <span class="module">85%</span>
-        </div>
-        <div class="bar-line react"><span style="width: 85%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>HTML5 / CSS3</span>
-          <span class="module">75%</span>
-        </div>
-        <div class="bar-line htmlcss"><span style="width: 75%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Figma (UI/UX)</span>
-          <span class="module">80%</span>
-        </div>
-        <div class="bar-line figma"><span style="width: 80%;"></span></div>
-      </div>
-    </div>
-
-    <!-- =================== -->
-    <!-- Programming Languages -->
-    <div class="row" id="skillsContainer">
-      <h2>Programming Languages</h2>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Python</span>
-          <span class="module">90%</span>
-        </div>
-        <div class="bar-line python"><span style="width: 90%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>C++</span>
-          <span class="module">80%</span>
-        </div>
-        <div class="bar-line cpp"><span style="width: 80%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>SQL</span>
-          <span class="module">75%</span>
-        </div>
-        <div class="bar-line sql"><span style="width: 75%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Haskell</span>
-          <span class="module">65%</span>
-        </div>
-        <div class="bar-line haskell"><span style="width: 65%;"></span></div>
-      </div>
-    </div>
-
-    <!-- =================== -->
-    <!-- Systems & Tools -->
-    <div class="row" id="skillsContainer">
-      <h2>Systems & Tools</h2>
-
-      <div class="bar">
-        <div class="subject">
-          <span>LLVM</span>
-          <span class="module">75%</span>
-        </div>
-        <div class="bar-line llvm"><span style="width: 75%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Linux</span>
-          <span class="module">80%</span>
-        </div>
-        <div class="bar-line linux"><span style="width: 80%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>MATLAB</span>
-          <span class="module">50%</span>
-        </div>
-        <div class="bar-line matlab"><span style="width: 50%;"></span></div>
-      </div>
-
-      <div class="bar">
-        <div class="subject">
-          <span>Git / Docker</span>
-          <span class="module">75%</span>
-        </div>
-        <div class="bar-line gitdocker"><span style="width: 75%;"></span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- skills section ends -->
-
-
-
-
-
-
-<!-- work project section starts -->
-<section class="work" id="work">
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
-  <!-- Main projects grid (non-research) -->
-  <div id="dev-projects" class="box-container"></div>
-
-  <!-- Research section (auto-hidden if there are no research items) -->
-  <h2 class="heading research-heading" id="research">
-    <i class="fas fa-flask"></i> Research <span>Projects</span>
-  </h2>
-  <div id="research-projects" class="box-container"></div>
-
-  <!-- Place the View All button AFTER the grids -->
-  <div class="viewall">
-    <a href="/projects" class="btn">
-      <span>View All</span> <i class="fas fa-arrow-right"></i>
-    </a>
-  </div>
-</section>
-<!-- work project section ends -->
-
-
-
-
-
-
-
-
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-
-  <div class="timeline">
-
-    <!-- Argonne -->
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Argonne National Laboratory</h2>
-        </div>
-        <div class="desc">
-          <h3>Visiting Graduate Researcher (Contract) — Remote / Lemont, IL</h3>
-          <p>
-            Collaborating with <em>Dr. Sheng Di</em> and <em>Prof. Guanpeng Li</em> on
-            transformer-based lossy compression for APS X-ray data; targeting high-throughput
-            performance while minimizing scientific distortion.
-          </p>
-          <p><strong>Jun 2025 – Present</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- UF GRA -->
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>University of Florida</h2>
-        </div>
-        <div class="desc">
-          <h3>Graduate Research Assistant — Gainesville, FL</h3>
-          <p>
-            Fault tolerance &amp; error resilience for LLMs in safety-critical settings; designing
-            lightweight monitoring and error-detection mechanisms to improve reliability.
-          </p>
-          <p><strong>Aug 2025 – Present</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- UIowa RA -->
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The University of Iowa</h2>
-        </div>
-        <div class="desc">
-          <h3>Research Assistant — Iowa City, IA</h3>
-          <p>
-            Built LLVM-based tools for instruction-level resilience analysis; evaluated compiler/
-            runtime techniques for fault detection in HPC workloads (dependable systems).
-          </p>
-          <p><strong>Aug 2023 – Aug 2025</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- UIowa TA -->
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>The University of Iowa</h2>
-        </div>
-        <div class="desc">
-          <h3>Teaching Assistant — Database Systems</h3>
-          <p>
-            Mentored 30+ students on MySQL projects, query debugging, and relational schema design
-            through weekly labs and office hours.
-          </p>
-          <p><strong>Aug 2023 – Dec 2023</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- LUMS TA -->
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Lahore University of Management Sciences (LUMS)</h2>
-        </div>
-        <div class="desc">
-          <h3>Teaching Assistant — Computational Problem Solving</h3>
-          <p>
-            Guided 100+ students via tutorials and office hours; clarified programming assignments
-            and reinforced algorithmic problem-solving skills.
-          </p>
-          <p><strong>Sep 2022 – Jan 2023</strong></p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="morebtn">
-    <a href="/experience" class="btn"><span>View All</span>
-      <i class="fas fa-arrow-right"></i>
-    </a>
-  </div>
-
-</section>
-<!-- experience section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- contact section starts -->
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
-    </form>
-  </div>
-  </div>
-</section>
-<!-- contact section ends -->
-
-
-
-
-
-
-
-<!-- footer section starts -->
-<section class="footer">
-
-  <div class="box-container">
-
-      <div class="box">
-          <h3>Abdullah's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀.</p>
-      </div>
-
-      <div class="box">
-          <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="#work"><i class="fas fa-chevron-circle-right"></i> projects</a>
-          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-          <h3>contact info</h3>
-          <p> <i class="fas fa-envelope"></i>abdullahnaveed102@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i> Iowa City, US</p>
-          <div class="share">
-
-              <a href="https://www.linkedin.com/in/abdullah-naveed-3babbb22b/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-              <a href="https://github.com/Abdullahnaveed102" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-              <a href="mailto:abdullahnaveed102@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+        <h3>I'm Abdullah Naveed</h3>
+        <span class="tag">Ph.D. Student | Error Resilience for LLMs & HPC | Data Compression </span>
+
+        <p>
+          I’m a Ph.D. student in <strong>Computer Engineering at the University of Florida</strong>.
+          My research centers on <strong>fault tolerance and error resilience for Large Language Models (LLMs)</strong> and
+          <strong>high-performance computing (HPC) applications</strong>, with a complementary focus on
+          <strong>data compression for scientific workloads</strong>.
+        </p>
+
+        <p>
+          I currently collaborate with <strong>Argonne National Laboratory</strong> on
+          <strong>Transformer-based lossy compressors for Advanced Photon Source (APS) X-ray data</strong>,
+          working with <em>Dr. Sheng Di</em> and <em>Prof. Guanpeng Li</em>.
+          Previously, I completed my <strong>MCS at The University of Iowa</strong> (2025) and earned a
+          <strong>BS in Computer Science with Distinction from LUMS</strong>, Pakistan.
+        </p>
+
+        <p>
+          Interests: machine learning systems, reliability for safety-critical AI, scientific data compression,
+          and LLVM-based tooling for dependable systems.
+        </p>
+
+        <div class="box-container">
+          <div class="box">
+            <p><span>email:</span> <a href="mailto:abdullahnaveed102@gmail.com">abdullahnaveed102@gmail.com</a></p>
+            <p><span>location:</span> Gainesville, FL, USA</p>
           </div>
+        </div>
+
+        <div class="resumebtn">
+          <a href="https://drive.google.com/file/d/1cLTIqSF0aQI95lPKmyuLQKSbf7IyCKed/view?usp=sharing" target="_blank" class="btn">
+            <span>Resume</span><i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
       </div>
-  </div>
+    </div>
+  </section>
 
-</section>
-<!-- footer section ends -->
+  <!--##############################################################################################
+  #####################################>  EDUCATION  <#############################################
+  ##############################################################################################-->
+  <section class="education" id="education">
+    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
 
+    <div class="box-container">
+      <!-- PhD -->
+      <div class="box">
+        <div class="image">
+          <img draggable="false" src="./assets/images/UF.png" alt="University of Florida" />
+        </div>
+        <div class="content">
+          <h3>Ph.D. in Computer Engineering</h3>
+          <p>University of Florida, Gainesville, FL, USA</p>
+          <p><strong>Advisor:</strong> Prof. Guanpeng Li</p>
+          <h4>Aug 2025 – Present</h4>
+          <p><strong>Research Lab:</strong> Dependable Systems Lab</p>
+          <p><strong>Research Areas:</strong> Fault Tolerance, Error Resilience for Large Language Models (LLMs), HPC Dependability, Scientific Data Compression</p>
+        </div>
+      </div>
 
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
+      <!-- Masters -->
+      <div class="box">
+        <div class="image">
+          <img draggable="false" src="./assets/images/UIOWA.png" alt="The University of Iowa" />
+        </div>
+        <div class="content">
+          <h3>Master of Computer Science</h3>
+          <p>The University of Iowa, Iowa City, IA, USA</p>
+          <p><strong>GPA:</strong> 3.90 / 4.00</p>
+          <h4>Aug 2023 – May 2025</h4>
+          <p><strong>Selected Coursework:</strong> Applied Machine Learning, Compiler Optimization for HPC, Distributed Algorithms, Functional Programming & Algorithm Design, Data Visualization & Technologies</p>
+        </div>
+      </div>
 
+      <!-- Bachelors -->
+      <div class="box">
+        <div class="image">
+          <img style="width: 90%;" draggable="false" src="./assets/images/LUMS.png" alt="Lahore University of Management Sciences" />
+        </div>
+        <div class="content">
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>Lahore University of Management Sciences (LUMS), Lahore, Pakistan</p>
+          <p><strong>GPA:</strong> 3.61 / 4.00</p>
+          <p><em>Graduated with Distinction</em></p>
+          <h4>Aug 2019 – May 2023</h4>
+          <p><strong>Selected Coursework:</strong> Machine Learning, Computer Vision, Data Mining, Data Science, Network-Centric Computing, Blockchain Technology</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--##############################################################################################
+  #####################################>  SKILLS  <###############################################
+  ##############################################################################################-->
+  <section class="skills" id="skills">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
 
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div class="container">
+      <!-- Machine Learning & Data Science -->
+      <div class="row" id="skillsContainer">
+        <h2>Machine Learning & Data Science</h2>
 
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
+        <div class="bar">
+          <div class="subject"><span>PyTorch</span><span class="module">85%</span></div>
+          <div class="bar-line pytorch"><span style="width: 85%;"></span></div>
+        </div>
 
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <div class="bar">
+          <div class="subject"><span>TensorFlow</span><span class="module">80%</span></div>
+          <div class="bar-line tensorflow"><span style="width: 80%;"></span></div>
+        </div>
 
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
+        <div class="bar">
+          <div class="subject"><span>Scikit-learn</span><span class="module">75%</span></div>
+          <div class="bar-line sklearn"><span style="width: 75%;"></span></div>
+        </div>
 
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
+        <div class="bar">
+          <div class="subject"><span>Pandas / NumPy</span><span class="module">85%</span></div>
+          <div class="bar-line pandas"><span style="width: 85%;"></span></div>
+        </div>
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+        <div class="bar">
+          <div class="subject"><span>OpenCV</span><span class="module">80%</span></div>
+          <div class="bar-line opencv"><span style="width: 80%;"></span></div>
+        </div>
+      </div>
 
-<script src="./assets/js/script.js"></script>
+      <!-- Development -->
+      <div class="row" id="skillsContainer">
+        <h2>Development</h2>
 
+        <div class="bar">
+          <div class="subject"><span>JavaScript (ES6+)</span><span class="module">80%</span></div>
+          <div class="bar-line javascript"><span style="width: 80%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>React / React Native</span><span class="module">85%</span></div>
+          <div class="bar-line react"><span style="width: 85%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>HTML5 / CSS3</span><span class="module">75%</span></div>
+          <div class="bar-line htmlcss"><span style="width: 75%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>Figma (UI/UX)</span><span class="module">80%</span></div>
+          <div class="bar-line figma"><span style="width: 80%;"></span></div>
+        </div>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="row" id="skillsContainer">
+        <h2>Programming Languages</h2>
+
+        <div class="bar">
+          <div class="subject"><span>Python</span><span class="module">90%</span></div>
+          <div class="bar-line python"><span style="width: 90%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>C++</span><span class="module">80%</span></div>
+          <div class="bar-line cpp"><span style="width: 80%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>SQL</span><span class="module">75%</span></div>
+          <div class="bar-line sql"><span style="width: 75%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>Haskell</span><span class="module">65%</span></div>
+          <div class="bar-line haskell"><span style="width: 65%;"></span></div>
+        </div>
+      </div>
+
+      <!-- Systems & Tools -->
+      <div class="row" id="skillsContainer">
+        <h2>Systems & Tools</h2>
+
+        <div class="bar">
+          <div class="subject"><span>LLVM</span><span class="module">75%</span></div>
+          <div class="bar-line llvm"><span style="width: 75%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>Linux</span><span class="module">80%</span></div>
+          <div class="bar-line linux"><span style="width: 80%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>MATLAB</span><span class="module">50%</span></div>
+          <div class="bar-line matlab"><span style="width: 50%;"></span></div>
+        </div>
+
+        <div class="bar">
+          <div class="subject"><span>Git / Docker</span><span class="module">75%</span></div>
+          <div class="bar-line gitdocker"><span style="width: 75%;"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--##############################################################################################
+  #####################################>  WORK / PROJECTS  <#######################################
+  ##############################################################################################-->
+  <section class="work" id="work">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+    <!-- development/non-research -->
+    <div id="dev-projects" class="box-container"></div>
+
+    <!-- research -->
+    <h2 class="heading research-heading" id="research">
+      <i class="fas fa-flask"></i> Research <span>Projects</span>
+    </h2>
+    <div id="research-projects" class="box-container"></div>
+
+    <!-- view all -->
+    <div class="viewall">
+      <a href="/projects" class="btn"><span>View All</span> <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!--##############################################################################################
+  #####################################>  EXPERIENCE  <###########################################
+  ##############################################################################################-->
+  <section class="experience" id="experience">
+    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+
+    <div class="timeline">
+      <!-- Argonne -->
+      <div class="container right">
+        <div class="content">
+          <div class="tag"><h2>Argonne National Laboratory</h2></div>
+          <div class="desc">
+            <h3>Visiting Graduate Researcher (Contract) — Remote / Lemont, IL</h3>
+            <p>
+              Collaborating with <em>Dr. Sheng Di</em> and <em>Prof. Guanpeng Li</em> on
+              transformer-based lossy compression for APS X-ray data; targeting high-throughput
+              performance while minimizing scientific distortion.
+            </p>
+            <p><strong>Jun 2025 – Present</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UF -->
+      <div class="container left">
+        <div class="content">
+          <div class="tag"><h2>University of Florida</h2></div>
+          <div class="desc">
+            <h3>Graduate Research Assistant — Gainesville, FL</h3>
+            <p>
+              Fault tolerance &amp; error resilience for LLMs in safety-critical settings; designing
+              lightweight monitoring and error-detection mechanisms to improve reliability.
+            </p>
+            <p><strong>Aug 2025 – Present</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UIowa RA -->
+      <div class="container right">
+        <div class="content">
+          <div class="tag"><h2>The University of Iowa</h2></div>
+          <div class="desc">
+            <h3>Research Assistant — Iowa City, IA</h3>
+            <p>
+              Built LLVM-based tools for instruction-level resilience analysis; evaluated compiler/
+              runtime techniques for fault detection in HPC workloads (dependable systems).
+            </p>
+            <p><strong>Aug 2023 – Aug 2025</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UIowa TA -->
+      <div class="container left">
+        <div class="content">
+          <div class="tag"><h2>The University of Iowa</h2></div>
+          <div class="desc">
+            <h3>Teaching Assistant — Database Systems</h3>
+            <p>Mentored 30+ students on MySQL projects, query debugging, and relational schema design through weekly labs and office hours.</p>
+            <p><strong>Aug 2023 – Dec 2023</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LUMS TA -->
+      <div class="container right">
+        <div class="content">
+          <div class="tag"><h2>Lahore University of Management Sciences (LUMS)</h2></div>
+          <div class="desc">
+            <h3>Teaching Assistant — Computational Problem Solving</h3>
+            <p>Guided 100+ students via tutorials and office hours; clarified programming assignments and reinforced algorithmic problem-solving skills.</p>
+            <p><strong>Sep 2022 – Jan 2023</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="morebtn">
+      <a href="/experience" class="btn"><span>View All</span><i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!--##############################################################################################
+  #####################################>  CONTACT  <##############################################
+  ##############################################################################################-->
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img draggable="false" src="./assets/images/contact1.png" alt="">
+        </div>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Name" required />
+              <i class='fas fa-user'></i>
+            </div>
+            <div class="field">
+              <input type="text" name="email" placeholder="Email" required />
+              <i class='fas fa-envelope'></i>
+            </div>
+            <div class="field">
+              <input type="text" name="phone" placeholder="Phone" />
+              <i class='fas fa-phone-alt'></i>
+            </div>
+            <div class="message">
+              <textarea placeholder="Message" name="message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--##############################################################################################
+  #####################################>  FOOTER  <###############################################
+  ##############################################################################################-->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Abdullah's Portfolio</h3>
+        <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /><br /> Keep Rising 🚀.</p>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+        <a href="#work"><i class="fas fa-chevron-circle-right"></i> projects</a>
+        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <p><i class="fas fa-envelope"></i>abdullahnaveed102@gmail.com</p>
+        <p><i class="fas fa-map-marked-alt"></i> Gainesville, FL, US</p>
+        <div class="share">
+          <a href="https://www.linkedin.com/in/abdullah-naveed-3babbb22b/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+          <a href="https://github.com/Abdullahnaveed102" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+          <a href="mailto:abdullahnaveed102@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--##############################################################################################
+  #####################################>  SCROLL-TO-TOP  <########################################
+  ##############################################################################################-->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+
+  <!--##############################################################################################
+  #####################################>  JS: VENDOR / LIBS  <####################################
+  ##############################################################################################-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+          integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+          integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+          integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!--##############################################################################################
+  #####################################>  JS: APP SCRIPT  <#######################################
+  ##############################################################################################-->
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
