@@ -240,41 +240,48 @@ header .navbar ul li a:hover {
 .work .heading { color: #fff; padding: 1rem; }
 .work .heading span { color: #ffe600; }
 
-/* Grid: cap at 3 columns on wide screens */
+/* Grid: cap at 3 columns on wide screens, centered */
 .work .box-container{
-  --title-h: 5.4rem;                         /* taller yellow bar */
+  /* Tunables */
+  --title-h: 5.6rem;        /* yellow title bar height */
+  --reveal-top: 6%;         /* % of image left visible at top on hover (e.g., 5–10%) */
+  --reveal-height: 94%;     /* how much of the card the text panel occupies on hover */
+
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr)); /* <= cap at 3 */
+  grid-template-columns: repeat(3, minmax(280px, 1fr));   /* <= max 3 per row */
   gap: 1.6rem;
   margin: 2rem auto;
-  max-width: 1280px;                          /* centers & prevents 6-wide on ultrawide */
+  max-width: 1280px;                                      /* prevents 6-wide on ultrawide */
   padding: 0 1rem;
 }
 
-/* Card height = image (190px) + title bar */
+/* Card height = image (190px) + title bar => no white gap under the yellow bar */
 .work .box-container .box{
   position: relative;
   border-radius: 0.8rem;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.25);
-  height: calc(190px + var(--title-h));       /* exact -> no white gap under title */
+  height: calc(190px + var(--title-h));
   display: flex;
   flex-direction: column;
 }
 
+/* Show full image (no cropping of logos) */
 .work .box-container .box img{
   width: 100%;
   height: 190px;
-  object-fit: cover;
-  display: block;                             /* kills any image baseline gap */
+  object-fit: contain;     /* <- was cover; show entire logo/art */
+  background: #fff;        /* letterbox blends into card */
+  display: block;          /* removes baseline gap in some browsers */
 }
 
-/* Reveal panel: only the yellow bar is visible by default */
+/* Reveal panel: docked to the bottom by default (only title visible) */
 .work .box-container .box .content{
   position: absolute;
   left: 0; right: 0;
-  top: 190px;                                 /* right under image */
+  bottom: 0;                 /* anchor to bottom to eliminate any white strip */
+  top: auto;
   height: var(--title-h);
   overflow: hidden;
   background: rgba(255,255,255,0.96);
@@ -282,9 +289,13 @@ header .navbar ul li a:hover {
   flex-direction: column;
   transition: top .28s ease, height .28s ease;
 }
+
+/* On hover: slide up to show description & button (image remains a thin sliver) */
 .work .box-container .box:hover .content{
-  top: 20%;
-  height: 80%;
+  top: var(--reveal-top);        /* leave ~5–10% of image visible */
+  bottom: auto;
+  height: var(--reveal-height);  /* fill ~90–95% with text */
+  overflow-y: auto;              /* scroll if content is long; Code button stays visible */
 }
 
 /* Title bar */
@@ -294,11 +305,15 @@ header .navbar ul li a:hover {
   padding: 0 1rem;
   background: #ffd900;
 }
-.work .box-container .box .content .tag h3{ font-size: 1.9rem; color: #000; }
+.work .box-container .box .content .tag h3{ font-size: 2.0rem; color: #000; }
 
 /* Text reveal */
-.work .desc{ padding: 1.4rem; opacity: 0; transform: translateY(12px);
-  transition: opacity .22s ease .06s, transform .22s ease .06s; }
+.work .desc{
+  padding: 1.4rem;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .22s ease .06s, transform .22s ease .06s;
+}
 .work .box:hover .desc{ opacity: 1; transform: translateY(0); }
 
 .work .desc p{ font-size: 1.4rem; line-height: 1.6; color: #111; }
