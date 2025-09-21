@@ -329,6 +329,23 @@ header .navbar ul li a:hover {
   .work .box-container{ grid-template-columns:1fr; max-width:560px; }
 }
 
+/* View All button */
+.work .viewall{ display: flex; justify-content: center; margin: 2rem 0 3rem; }
+.work .viewall .btn{
+  line-height: 0; padding: 1.5rem 2.8rem; border-radius: 0.5em; transition: 0.25s;
+  color: #fff; font-weight: 700; border: 2px solid #fff; box-shadow: 0 5px 10px rgba(65,84,241,0.4);
+  text-align: center; font-size: 1.8rem;
+}
+.work .viewall .btn:hover{ background: #fff; color: #000; }
+
+/* Responsive: 2 cols → 1 col */
+@media (max-width: 1024px){
+  .work .box-container{ grid-template-columns: repeat(2, minmax(260px, 1fr)); max-width: 900px; }
+}
+@media (max-width: 600px){
+  .work .box-container{ grid-template-columns: 1fr; max-width: 560px; }
+}
+
 
 
 /*##############################################################################################
