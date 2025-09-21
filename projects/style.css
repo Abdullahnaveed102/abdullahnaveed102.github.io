@@ -76,16 +76,25 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
   height:30rem; position:relative; display:flex; flex-direction:column;
 }
 .work .box-container .box img{
-  width:100%; height:190px; object-fit:cover; display:block; /* remove white line under image */
+  width:100%; height:190px; object-fit:cover; display:block; /* prevent white line under image */
 }
 
-/* reveal panel */
+/* === reveal panel (same behavior as main site) === */
 .work .box-container .box .content{
-  position:absolute; left:0; right:0; top:63%;            /* align to image bottom */
+  position:absolute; left:0; right:0;
+  top:190px;                         /* directly under image */
+  height:4.2rem;                     /* only title bar visible */
+  overflow:hidden;
   background:rgba(255,255,255,0.96);
   display:flex; flex-direction:column;
-  transition:top .25s ease;
+  transition: top .28s ease, height .28s ease;
 }
+.work .box-container .box:hover .content{
+  top:20%;
+  height:80%;
+}
+
+/* tag + text */
 .work .box-container .box .content .tag{
   display:flex; align-items:center; justify-content:space-between;
   height:4.2rem; padding:0 1rem; background:#ffd900;
@@ -100,8 +109,9 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
 }
 .work .desc .btns .btn:hover{ background:#310ae0f5; }
 
-/* hover reveal */
-.work .box-container .box:hover .content{ top:35%; }
+/* text fade/slide */
+.work .desc{ opacity:0; transform:translateY(12px); transition:opacity .22s ease .06s, transform .22s ease .06s; }
+.work .box:hover .desc{ opacity:1; transform:translateY(0); }
 
 /* responsive */
 @media(max-width:1024px){

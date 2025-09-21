@@ -255,7 +255,7 @@ header .navbar ul li a:hover {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.25);
-  height: 30rem;                    /* fixed height to match projects page */
+  height: 30rem;                    /* fixed height for consistent reveal */
   display: flex;
   flex-direction: column;
 }
@@ -266,23 +266,32 @@ header .navbar ul li a:hover {
   display: block;                    /* removes any inline-img baseline gap */
 }
 
-/* sliding content panel (same behavior as projects page) */
+/* === reveal panel ===
+   Default: show ONLY the yellow title bar (4.2rem) anchored right under the image.
+   Hover: move the panel up and expand height so description occupies ~80% of the tile. */
 .work .box-container .box .content {
   position: absolute;
   left: 0; right: 0;
-  top: 63%;                          /* aligns bottom of image (190/300 ≈ 63%) */
+  top: 190px;                        /* sits right under the image */
+  height: 4.2rem;                    /* only the tag is visible */
+  overflow: hidden;
   background: rgba(255,255,255,0.96);
   display: flex;
   flex-direction: column;
-  transition: top .25s ease;
+  transition: top .28s ease, height .28s ease;
 }
-.work .box-container .box:hover .content { top: 35%; }  /* reveal more on hover */
+.work .box-container .box:hover .content {
+  top: 20%;                          /* slide up */
+  height: 80%;                       /* reveal most of the tile */
+}
 
+/* tag + text */
 .work .box-container .box .content .tag {
   display: flex; align-items: center; justify-content: space-between;
   height: 4.2rem; padding: 0 1rem; background: #ffd900;
 }
 .work .box-container .box .content .tag h3 { font-size: 1.8rem; color: #000; }
+
 .work .desc { padding: 1.4rem; }
 .work .desc p { font-size: 1.4rem; line-height: 1.6; color: #111; }
 .work .desc .btns { margin-top: 1.2rem; }
@@ -291,6 +300,10 @@ header .navbar ul li a:hover {
   color: #fff; background: #0c0c0c;
 }
 .work .desc .btns .btn:hover { background: #310ae0f5; }
+
+/* subtle fade/slide for text */
+.work .desc { opacity: 0; transform: translateY(12px); transition: opacity .22s ease .06s, transform .22s ease .06s; }
+.work .box:hover .desc { opacity: 1; transform: translateY(0); }
 
 /* View All button */
 .work .viewall { display: flex; justify-content: center; margin: 2rem 0 3rem; }
@@ -305,6 +318,7 @@ header .navbar ul li a:hover {
   .work .box-container { margin: 1rem; gap: 1.2rem; }
   .work .desc p { font-size: 1.35rem; }
 }
+
 
 
 /*##############################################################################################
