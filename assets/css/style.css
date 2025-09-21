@@ -94,50 +94,101 @@ header .navbar ul li a:hover {
 #####################################>  HERO / HOME  <##########################################
 ##############################################################################################*/
 .home {
-  position: relative; display: flex; flex-wrap: wrap; gap: 1.5rem;
-  min-height: 100vh; align-items: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
 }
-.home #particles-js, .home::before {
-  position: absolute; top: 0; left: 0; height: 100%; width: 100%; content: "";
+.home #particles-js,
+.home::before {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  content: "";
 }
 .home .content { flex: 1 1 40rem; padding-top: 1rem; z-index: 1; }
-.home .image { flex: 1 1 40rem; z-index: 1; }
-.home .image img {
-  width: 70%; background-position: cover; margin-left: 6rem; border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); cursor: pointer;
+.home .image   { flex: 1 1 40rem; z-index: 1; }
+
+.home .image img{
+  width: 70%;
+  background-position: center;
+  margin-left: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  cursor: pointer;
 }
-.home .image img:hover { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
-.home .content h2 { font-size: 5rem; font-weight: 800; color: #002057; }
-.home .content h2 span { color: #ff7b00; }
-.home .content p { font-size: 2.5rem; color: #000; font-weight: 600; padding: 1rem 0; }
-.home .content p span { color: rgb(148, 8, 8); }
-.home .btn {
-  margin-top: 1rem; position: absolute; line-height: 0; padding: 1.6rem 3rem; border-radius: 4em;
-  transition: 0.5s; color: #fff; background: #2506ad; box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+.home .image img:hover{ box-shadow: 0 5px 15px rgba(0,0,0,.5); }
+
+.home .content h2{ font-size: 5rem; font-weight: 800; color: #002057; }
+.home .content h2 span{ color: #ff7b00; }
+.home .content p{ font-size: 2.5rem; color: #000; font-weight: 600; padding: 1rem 0; }
+.home .content p span{ color: rgb(148, 8, 8); }
+
+/* --- About Me button (desktop/tablet) --- */
+.home .btn{
+  margin-top: 1rem;
+  position: absolute;          /* keep the desktop positioning you had */
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;              /* was 0 -> lets text sit naturally */
+  padding: 1.8rem 3.6rem;      /* a bit larger */
+  border-radius: 4em;
+  transition: 0.5s;
+  color: #fff;
+  background: #2506ad;
+  box-shadow: 0 5px 18px rgba(48,68,247,.6);
   font-family: "Nunito", sans-serif;
 }
-.home .btn i { margin-left: 0.3rem; font-size: 1.5rem; }
-.home .btn:hover { background: #1a047e; }
+.home .btn span{
+  font-size: 1.9rem;           /* bigger label */
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.home .btn i{
+  margin-left: .6rem;
+  font-size: 1.8rem;
+}
+.home .btn:hover{ background: #1a047e; }
 
-@media (max-width: 450px) {
-  .home .btn { margin: 4rem 0; position: static; }
-  .socials { margin-top: 12rem; }
-  .home .image img { margin-top: -12rem; }
-  .home .content p, .home .content p span { font-size: 2.2rem; }
+/* ================= Mobile tweaks ================= */
+@media (max-width: 450px){
+  .home .btn{
+    position: relative;        /* let it flow under the line above */
+    margin-top: 2rem;          /* spacing so it doesn't touch the text */
+    padding: 2rem 3.8rem;      /* bigger tap target */
+  }
+  .home .btn span{ font-size: 2.1rem; }
+  .home .btn i{ font-size: 2rem; }
+
+  .socials{ margin-top: 12rem; }
+  .home .image img{ margin-top: -12rem; }
+
+  .home .content p,
+  .home .content p span{ font-size: 2.2rem; }
 }
 
 /* Socials */
-.socials { position: relative; margin-top: 9rem; }
-.socials .social-icons { padding-left: 0; margin-bottom: 0; list-style: none; }
-.socials .social-icons li { display: inline-block; margin-bottom: 14px; }
-.social-icons a {
-  font-size: 2rem; display: inline-block; line-height: 44px; color: #00d9ff; background-color: #09011b;
-  width: 44px; height: 44px; text-align: center; margin-right: 8px; border-radius: 100%;
+.socials{ position: relative; margin-top: 9rem; }
+.socials .social-icons{ padding-left: 0; margin-bottom: 0; list-style: none; }
+.socials .social-icons li{ display: inline-block; margin-bottom: 14px; }
+.social-icons a{
+  font-size: 2rem;
+  display: inline-block;
+  line-height: 44px;
+  color: #00d9ff;
+  background-color: #09011b;
+  width: 44px; height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
 }
-.social-icons a:hover { color: #fff; background-color: #0685da; }
-.social-icons a.github:hover { background-color: #0e0e0e; }
-.social-icons a.linkedin:hover { background-color: #007bb6; }
-.social-icons a.instagram:hover { background-color: #ee00da; }
+.social-icons a:hover{ color: #fff; background-color: #0685da; }
+.social-icons a.github:hover{ background-color: #0e0e0e; }
+.social-icons a.linkedin:hover{ background-color: #007bb6; }
+.social-icons a.instagram:hover{ background-color: #ee00da; }
+
 
 /*##############################################################################################
 #####################################>  ABOUT  <################################################
