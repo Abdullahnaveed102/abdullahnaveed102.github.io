@@ -312,23 +312,40 @@
   #####################################>  WORK / PROJECTS  <#######################################
   ##############################################################################################-->
   <section class="work" id="work">
+
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
 
-    <!-- development/non-research -->
-    <div id="dev-projects" class="box-container"></div>
+    <!-- main (non-research) grid – populated by your JS as before -->
+    <div class="box-container" id="dev-projects"></div>
 
-    <!-- research -->
+    <!-- View all -->
+    <div class="viewall" style="margin-bottom: 50px;">
+      <a href="/projects" class="btn"><span>View All</span> <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Research (single full-width row) -->
     <h2 class="heading research-heading" id="research">
       <i class="fas fa-flask"></i> Research <span>Projects</span>
     </h2>
-    <div id="research-projects" class="box-container"></div>
 
-    <!-- view all -->
-    <div class="viewall">
-      <a href="/projects" class="btn">
-        <span>View All</span> <i class="fas fa-arrow-right"></i>
-      </a>
+    <!-- one-up forces a single column, full-width card -->
+    <div class="box-container one-up" id="research-projects">
+      <div class="box tilt">
+        <img draggable="false" src="./assets/images/projects/debloat-bench.jpg" alt="Debloat Bench" />
+        <div class="content">
+          <div class="tag"><h3>Debloat Bench</h3></div>
+          <div class="desc">
+            <p>Build a platform to benchmark Docker tools SPEAKER, CONFINE, and SLIMTOOLKIT. Evaluate based on system call reduction, CVE mitigation, and image size reduction for enhanced container security.</p>
+            <div class="btns">
+              <a href="https://github.com/Abdullahnaveed102/debloat-bench" class="btn" target="_blank" rel="noopener">
+                Code <i class="fas fa-code"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </section>
 
   <!--##############################################################################################

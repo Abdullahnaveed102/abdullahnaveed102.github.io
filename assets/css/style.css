@@ -396,6 +396,16 @@ header .navbar ul li a:hover {
   .work .box-container{ grid-template-columns: 1fr; max-width: 560px; }
 }
 
+/* single full-width row for research */
+.work .box-container.one-up {
+  grid-template-columns: 1fr;     /* force a single column */
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.work .box-container.one-up .box {
+  max-width: 1280px;               /* keeps a nice readable width */
+  margin: 0 auto;                  /* center the lone card */
+}
 
 
 /*##############################################################################################
