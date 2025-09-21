@@ -55,7 +55,7 @@
   /*##############################################################################################
   #####################################>  EMAILJS (CONTACT FORM) <#################################
   ##############################################################################################*/
-  const EMAILJS_PUBLIC_KEY  = "Mxn3esSwoirljhTd3";
+  const EMAILJS_PUBLIC_KEY  = "Mxn3esSwoilrJhTd3";
   const EMAILJS_SERVICE_ID  = "service_cnm7ry6";
   const EMAILJS_TEMPLATE_ID = "template_uxqfdii";
 
