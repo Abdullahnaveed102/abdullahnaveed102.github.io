@@ -248,32 +248,33 @@ header .navbar ul li a:hover {
   margin: 2rem;
 }
 
-/* card */
+/* card (height = image 190px + title bar 4.8rem → 238px ≈ 23.8rem) */
 .work .box-container .box {
   position: relative;
   border-radius: 0.8rem;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.25);
-  height: 30rem;                    /* fixed height for consistent reveal */
+  height: 23.8rem;                 /* << no extra white below title by default */
   display: flex;
   flex-direction: column;
 }
+
 .work .box-container .box img {
   width: 100%;
   height: 190px;
   object-fit: cover;
-  display: block;                    /* removes any inline-img baseline gap */
+  display: block;                  /* prevents any baseline gap */
 }
 
 /* === reveal panel ===
-   Default: show ONLY the yellow title bar (4.2rem) anchored right under the image.
-   Hover: move the panel up and expand height so description occupies ~80% of the tile. */
+   Default: ONLY the yellow title bar is visible (no white block below it).
+   Hover: slide up and expand so description fills ~80% of the tile. */
 .work .box-container .box .content {
   position: absolute;
   left: 0; right: 0;
-  top: 190px;                        /* sits right under the image */
-  height: 4.2rem;                    /* only the tag is visible */
+  top: 190px;                      /* sits right under the image */
+  height: 4.8rem;                  /* taller yellow strip */
   overflow: hidden;
   background: rgba(255,255,255,0.96);
   display: flex;
@@ -281,18 +282,23 @@ header .navbar ul li a:hover {
   transition: top .28s ease, height .28s ease;
 }
 .work .box-container .box:hover .content {
-  top: 20%;                          /* slide up */
-  height: 80%;                       /* reveal most of the tile */
+  top: 20%;
+  height: 80%;
 }
 
-/* tag + text */
+/* title bar + text */
 .work .box-container .box .content .tag {
   display: flex; align-items: center; justify-content: space-between;
-  height: 4.2rem; padding: 0 1rem; background: #ffd900;
+  height: 4.8rem;                  /* increased as requested */
+  padding: 0 1rem;
+  background: #ffd900;
 }
-.work .box-container .box .content .tag h3 { font-size: 1.8rem; color: #000; }
+.work .box-container .box .content .tag h3 { font-size: 1.9rem; color: #000; }
 
-.work .desc { padding: 1.4rem; }
+.work .desc { padding: 1.4rem; opacity: 0; transform: translateY(12px);
+  transition: opacity .22s ease .06s, transform .22s ease .06s; }
+.work .box:hover .desc { opacity: 1; transform: translateY(0); }
+
 .work .desc p { font-size: 1.4rem; line-height: 1.6; color: #111; }
 .work .desc .btns { margin-top: 1.2rem; }
 .work .desc .btns .btn {
@@ -300,10 +306,6 @@ header .navbar ul li a:hover {
   color: #fff; background: #0c0c0c;
 }
 .work .desc .btns .btn:hover { background: #310ae0f5; }
-
-/* subtle fade/slide for text */
-.work .desc { opacity: 0; transform: translateY(12px); transition: opacity .22s ease .06s, transform .22s ease .06s; }
-.work .box:hover .desc { opacity: 1; transform: translateY(0); }
 
 /* View All button */
 .work .viewall { display: flex; justify-content: center; margin: 2rem 0 3rem; }
