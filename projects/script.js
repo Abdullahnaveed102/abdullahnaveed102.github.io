@@ -34,8 +34,9 @@ function getProjects() {
 }
 
 function card(p) {
+  const cat = (p.category || "").toLowerCase();   // ensure class matches filter
   return `
-    <div class="grid-item ${p.category}">
+    <div class="grid-item ${cat}">
       <div class="box tilt">
         <img draggable="false" src="/assets/images/projects/${p.image}.png" alt="${p.name}" />
         <div class="content">

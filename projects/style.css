@@ -155,132 +155,98 @@ header .navbar ul li a:hover{
 }
 /* hamburger icon ends */
 
-/* work section starts */
+
+
+
+
+/* =========================
+   WORK (Projects page only)
+   ========================= */
 .work{
-  /* background: #010124; */
   background: linear-gradient(to bottom, #010136, #00003a);
   margin-top: 5rem;
 }
-.work h2{
-  color: #fff;
-  padding: 1rem;
-}
-.work .heading span{
-  color: rgb(255, 230, 0);
-}
+.work h2{ color:#fff; padding:1rem; }
+.work .heading span{ color:#ffe600; }
+
+/* filter buttons */
 .work .button-group{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1rem;
-  margin: 2rem auto;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
+  display:flex; flex-wrap:wrap; gap:1rem;
+  margin:2rem auto; width:100%; max-width:900px;
+  justify-content:center; align-items:center;
 }
 .work .button-group .btn{
-  outline: none;
-  padding: 1rem 2rem;
-  background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  cursor: pointer;
-  font-weight: 500;
+  outline:none; padding:1rem 2rem; background:transparent;
+  color:#fff; border:1px solid #fff; border-radius:3px; cursor:pointer; font-weight:600;
 }
-.work .button-group .btn:hover{
-  background-color: #fff;
-  color: #000;
-}
-.work .button-group .btn.is-checked{
-  background-color: #fff;
-  color: #000;
-}
+.work .button-group .btn:hover,
+.work .button-group .btn.is-checked{ background:#fff; color:#000; }
+
+/* ---------- GRID: 3 per row on desktop ---------- */
 .work .box-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
-  margin: 2rem;
-}
-.work .box-container .box{
-  flex:1 1 30rem;
-  border-radius: .5rem;
-  box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
-  position: relative;
-  overflow:hidden;
-  height:30rem;
-  background: #fff;
-  border: none;
-}
-.work .box-container .box img{
-  height: 100%;
-  width:100%;
-  object-fit: cover;
-}
-.work .box-container .box .content{
-  height: 100%;
-  width:100%;
-  position: absolute;
-  top:85%; left:0;
-  background:rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction: column;
-}
-.work .box-container .box .content .tag{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 4.5rem;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap:1.6rem;
+  margin: 2rem auto;
   width: 100%;
-  padding-left: 1rem;
-  background: #ffd900;
-}
-.work .box-container .box .content .tag h3{
-  font-size: 2rem;
-}
-.work .box-container .box:hover .content{
-  top: 25%;
-}
-.work .desc {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.work .desc p{
-  font-size: 1.5rem;
-}
-.work .desc .btns{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-}
-.work .desc .btns .btn{
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-  border-radius: .5rem;
-  font-size: 1.5rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
-  margin-right: 2rem;
-}
-.work .desc .btns .btn:hover{
-  background: #310ae0f5;
+  max-width: 1280px;   /* keeps 3 neat columns */
+  padding: 0 1rem;
 }
 
-@media screen and (max-width: 450px) {
-  .work .button-group{
-    width: 100%;
-  }
+/* each item */
+.work .box-container .grid-item{ width:100%; }
+.work .box-container .box{
+  border-radius:.8rem; overflow:hidden; background:#fff;
+  box-shadow:0 .7rem 1rem rgba(0,0,0,.25);
+  height: 30rem; position:relative; display:flex; flex-direction:column;
+}
+.work .box-container .box img{ width:100%; height:190px; object-fit:cover; }
+
+/* reveal panel */
+.work .box-container .box .content{
+  position:absolute; left:0; right:0;
+  top:72%;                   /* start a bit higher so more content shows */
+  background: rgba(255,255,255,0.96);
+  display:flex; flex-direction:column;
+  transition: top .25s ease;
+}
+.work .box-container .box .content .tag{
+  display:flex; align-items:center; justify-content:space-between;
+  height:4.2rem; padding:0 1rem; background:#ffd900;
+}
+.work .box-container .box .content .tag h3{ font-size:1.8rem; color:#000; }
+.work .desc{ padding:1.4rem; }
+.work .desc p{ font-size:1.4rem; line-height:1.6; color:#111; }
+.work .desc .btns{ margin-top:1.2rem; }
+.work .desc .btns .btn{
+  display:inline-block; padding:1.2rem 1.8rem; border-radius:.5rem;
+  font-size:1.4rem; color:#fff; background:#0c0c0c;
+}
+.work .desc .btns .btn:hover{ background:#310ae0f5; }
+
+/* lift further on hover so the Code button is fully visible */
+.work .box-container .box:hover .content{ top:35%; }
+
+/* ----- Responsive ----- */
+@media (max-width: 1024px){
   .work .box-container{
-    margin: 0rem;
-  }
-  .work .box-container .grid-item .box{
-    width: 95% !important;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    max-width: 900px;
   }
 }
+@media (max-width: 600px){
+  .work .box-container{
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    justify-items: center;   /* centers cards */
+  }
+  .work .box-container .box{
+    width:100%;
+    max-width: 520px;        /* prevents hugging the left edge */
+  }
+}
+
+
 
 /* back to home button */
 .backbtn{
