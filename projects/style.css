@@ -62,29 +62,30 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
 .work .button-group .btn:hover,
 .work .button-group .btn.is-checked{ background:#fff; color:#000; }
 
-/* grid layout */
+/* Grid: 3 per row, centered */
 .work .box-container{
+  --title-h: 5.4rem;
   display:grid; grid-template-columns:repeat(3,minmax(280px,1fr)); gap:1.6rem;
   margin:2rem auto; max-width:1280px; padding:0 1rem;
 }
 .work .box-container .grid-item{ width:100%; }
 
-/* card (height = 190px image + 4.8rem title bar) */
+/* Card height = image + title bar */
 .work .box-container .box{
   border-radius:.8rem; overflow:hidden; background:#fff;
   box-shadow:0 .7rem 1rem rgba(0,0,0,.25);
-  height:23.8rem;                   /* << eliminates white space under title */
+  height: calc(190px + var(--title-h));
   position:relative; display:flex; flex-direction:column;
 }
 .work .box-container .box img{
   width:100%; height:190px; object-fit:cover; display:block;
 }
 
-/* reveal panel */
+/* Reveal panel */
 .work .box-container .box .content{
   position:absolute; left:0; right:0;
-  top:190px;                         /* directly under image */
-  height:4.8rem;                     /* taller yellow strip */
+  top:190px;
+  height: var(--title-h);
   overflow:hidden;
   background:rgba(255,255,255,0.96);
   display:flex; flex-direction:column;
@@ -95,13 +96,14 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
   height:80%;
 }
 
-/* title bar + text */
+/* Title bar */
 .work .box-container .box .content .tag{
   display:flex; align-items:center; justify-content:space-between;
-  height:4.8rem; padding:0 1rem; background:#ffd900;
+  height: var(--title-h); padding:0 1rem; background:#ffd900;
 }
 .work .box-container .box .content .tag h3{ font-size:1.9rem; color:#000; }
 
+/* Text reveal */
 .work .desc{ padding:1.4rem; opacity:0; transform:translateY(12px);
   transition:opacity .22s ease .06s, transform .22s ease .06s; }
 .work .box:hover .desc{ opacity:1; transform:translateY(0); }
@@ -114,23 +116,13 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
 }
 .work .desc .btns .btn:hover{ background:#310ae0f5; }
 
-/* responsive */
+/* Responsive: 2 cols → 1 col */
 @media(max-width:1024px){
   .work .box-container{ grid-template-columns:repeat(2,minmax(260px,1fr)); max-width:900px; }
 }
 @media(max-width:600px){
-  .work .box-container{ grid-template-columns:1fr; max-width:560px; justify-items:center; }
-  .work .box-container .box{ max-width:520px; }
+  .work .box-container{ grid-template-columns:1fr; max-width:560px; }
 }
-
-/* back btn */
-.backbtn{ display:flex; justify-content:center; margin:4rem 0 2rem; }
-.backbtn .btn{
-  padding:1.6rem 3rem; color:#fff; border:2px solid #fff; border-radius:.5em;
-  box-shadow:0px 2px 4px rgba(48,68,247,.3); text-align:center;
-}
-.backbtn .btn span{ font-size:1.7rem; font-weight:600; font-family:'Nunito',sans-serif; }
-.backbtn .btn i{ margin-right:0.5rem; font-size:1.5rem; }
 
 
 /*##############################################################################################

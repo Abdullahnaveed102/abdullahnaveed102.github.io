@@ -240,85 +240,90 @@ header .navbar ul li a:hover {
 .work .heading { color: #fff; padding: 1rem; }
 .work .heading span { color: #ffe600; }
 
-/* grid */
-.work .box-container {
+/* Grid: cap at 3 columns on wide screens */
+.work .box-container{
+  --title-h: 5.4rem;                         /* taller yellow bar */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr)); /* <= cap at 3 */
   gap: 1.6rem;
-  margin: 2rem;
+  margin: 2rem auto;
+  max-width: 1280px;                          /* centers & prevents 6-wide on ultrawide */
+  padding: 0 1rem;
 }
 
-/* card (height = image 190px + title bar 4.8rem → 238px ≈ 23.8rem) */
-.work .box-container .box {
+/* Card height = image (190px) + title bar */
+.work .box-container .box{
   position: relative;
   border-radius: 0.8rem;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.25);
-  height: 23.8rem;                 /* << no extra white below title by default */
+  height: calc(190px + var(--title-h));       /* exact -> no white gap under title */
   display: flex;
   flex-direction: column;
 }
 
-.work .box-container .box img {
+.work .box-container .box img{
   width: 100%;
   height: 190px;
   object-fit: cover;
-  display: block;                  /* prevents any baseline gap */
+  display: block;                             /* kills any image baseline gap */
 }
 
-/* === reveal panel ===
-   Default: ONLY the yellow title bar is visible (no white block below it).
-   Hover: slide up and expand so description fills ~80% of the tile. */
-.work .box-container .box .content {
+/* Reveal panel: only the yellow bar is visible by default */
+.work .box-container .box .content{
   position: absolute;
   left: 0; right: 0;
-  top: 190px;                      /* sits right under the image */
-  height: 4.8rem;                  /* taller yellow strip */
+  top: 190px;                                 /* right under image */
+  height: var(--title-h);
   overflow: hidden;
   background: rgba(255,255,255,0.96);
   display: flex;
   flex-direction: column;
   transition: top .28s ease, height .28s ease;
 }
-.work .box-container .box:hover .content {
+.work .box-container .box:hover .content{
   top: 20%;
   height: 80%;
 }
 
-/* title bar + text */
-.work .box-container .box .content .tag {
+/* Title bar */
+.work .box-container .box .content .tag{
   display: flex; align-items: center; justify-content: space-between;
-  height: 4.8rem;                  /* increased as requested */
+  height: var(--title-h);
   padding: 0 1rem;
   background: #ffd900;
 }
-.work .box-container .box .content .tag h3 { font-size: 1.9rem; color: #000; }
+.work .box-container .box .content .tag h3{ font-size: 1.9rem; color: #000; }
 
-.work .desc { padding: 1.4rem; opacity: 0; transform: translateY(12px);
+/* Text reveal */
+.work .desc{ padding: 1.4rem; opacity: 0; transform: translateY(12px);
   transition: opacity .22s ease .06s, transform .22s ease .06s; }
-.work .box:hover .desc { opacity: 1; transform: translateY(0); }
+.work .box:hover .desc{ opacity: 1; transform: translateY(0); }
 
-.work .desc p { font-size: 1.4rem; line-height: 1.6; color: #111; }
-.work .desc .btns { margin-top: 1.2rem; }
-.work .desc .btns .btn {
+.work .desc p{ font-size: 1.4rem; line-height: 1.6; color: #111; }
+.work .desc .btns{ margin-top: 1.2rem; }
+.work .desc .btns .btn{
   display: inline-block; padding: 1.2rem 1.8rem; border-radius: 0.5rem; font-size: 1.4rem;
   color: #fff; background: #0c0c0c;
 }
-.work .desc .btns .btn:hover { background: #310ae0f5; }
+.work .desc .btns .btn:hover{ background: #310ae0f5; }
 
 /* View All button */
-.work .viewall { display: flex; justify-content: center; margin: 2rem 0 3rem; }
-.work .viewall .btn {
+.work .viewall{ display: flex; justify-content: center; margin: 2rem 0 3rem; }
+.work .viewall .btn{
   line-height: 0; padding: 1.5rem 2.8rem; border-radius: 0.5em; transition: 0.25s;
   color: #fff; font-weight: 700; border: 2px solid #fff; box-shadow: 0 5px 10px rgba(65,84,241,0.4);
   text-align: center; font-size: 1.8rem;
 }
-.work .viewall .btn:hover { background: #fff; color: #000; }
+.work .viewall .btn:hover{ background: #fff; color: #000; }
 
-@media (max-width: 480px) {
-  .work .box-container { margin: 1rem; gap: 1.2rem; }
-  .work .desc p { font-size: 1.35rem; }
+/* Responsive: 2 cols → 1 col */
+@media (max-width: 1024px){
+  .work .box-container{ grid-template-columns: repeat(2, minmax(260px, 1fr)); max-width: 900px; }
+}
+@media (max-width: 600px){
+  .work .box-container{ grid-template-columns: 1fr; max-width: 560px; }
 }
 
 
