@@ -464,78 +464,48 @@ header .navbar ul li a:hover {
 }
 
 /*##############################################################################################
-#####################################>  CONTACT / FORM  <#######################################
+#####################################>  CONTACT  <##############################################
 ##############################################################################################*/
-.contact{
-  background:#e9f0fb;
-  padding: 6rem 9% 8rem;
+.contact { background: #e5ecfb; min-height: 60vh; }
+.contact .container {
+  max-width: 1050px; width: 100%; background: #fff; border-radius: 1.5rem; margin: 2rem 5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.contact .heading{ color:#0e2431; }
-.contact .heading span{ color:#7b2cff; }
-
-.contact .contact-card{
-  display:grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap:2.2rem;
-  background:#fff;
-  border-radius:14px;
-  box-shadow:0 10px 24px rgba(0,0,0,.08);
-  padding:2.2rem;
+.contact .container .content { display: flex; align-items: center; justify-content: space-between; padding: 2.5rem 2rem; }
+.contact .content .image-box { max-width: 60%; margin-left: 4rem; }
+.contact .content .image-box img { width: 100%; height: 40rem; position: relative; object-fit: contain; }
+.contact .content form { width: 45%; margin-right: 3.5rem; }
+form .form-group { display: flex; flex-direction: column; justify-content: center; }
+.form-group .field { height: 50px; display: flex; position: relative; margin: 1rem; width: 100%; }
+form i {
+  position: absolute; top: 50%; left: 18px; color: #333; font-size: 17px; pointer-events: none; transform: translateY(-50%);
 }
-.contact .contact-illustration{
-  display:flex; align-items:center; justify-content:center; padding:1rem;
+form .field input, form .message textarea {
+  width: 100%; height: 100%; padding: 0 16px 0 48px; font-size: 16px; font-family: "Poppins", sans-serif;
+  border-radius: 5px; border: 1px solid #333; background: #e5ecfb;
 }
-.contact .contact-illustration img{ max-width:100%; height:auto; }
-
-.contact form{ display:flex; flex-direction:column; gap:1.2rem; }
-
-.contact .field{
-  position:relative; display:flex; align-items:center;
-  background:#f4f6ff;
-  border:1px solid #d8def7;
-  border-radius:10px;
-  padding:0 .9rem;
-  height:52px;
+.field input::placeholder, .message textarea::placeholder { color: #333; }
+.field input:focus, .message textarea:focus { padding-left: 47px; border: 2px solid rgb(115, 3, 167); }
+.field input:focus ~ i, .message textarea:focus ~ i { color: rgb(115, 3, 167); }
+form .message { position: relative; margin: 1rem; width: 100%; }
+form .message i { top: 25px; font-size: 20px; left: 15px; }
+form .message textarea { min-height: 130px; max-height: 230px; max-width: 100%; min-width: 100%; padding: 12px 20px 0 48px; }
+form .message textarea::-webkit-scrollbar { width: 0px; }
+form .button-area { display: flex; float: right; flex-direction: row-reverse; }
+.button-area button {
+  color: #fff; border: none; font-size: 1.8rem; cursor: pointer; border-radius: 5px; padding: 13px 25px;
+  background: #2506ad; box-shadow: 0 5px 10px rgba(48, 68, 247, 0.6); transition: 0.3s ease; font-family: "Nunito", sans-serif;
 }
-.contact .field i{ color:#2a2f4f; opacity:.75; margin-right:.6rem; }
+.button-area button:hover { background: #421cec; }
+.button-area button i { position: relative; top: 6px; left: 2px; font-size: 1.5rem; transition: 0.3s; color: #fff; }
 
-.contact .field input,
-.contact .field textarea{
-  width:100%;
-  border:0;
-  background:transparent;
-  font-size:1.55rem;
-  color:#1b1b1b;
-  padding:.6rem .2rem;
+@media (max-width: 900px) {
+  .contact { min-height: 70vh; }
+  .contact .container { margin: 3rem 0 2rem 0; }
+  .contact .container .content { padding: 18px 12px; }
+  .contact .content .image-box { display: none; }
+  .contact .content form { width: 100%; margin-right: 2rem; }
 }
-.contact .field--textarea{ height:auto; padding:.9rem; }
-.contact .field--textarea textarea{ min-height:140px; resize:vertical; }
-
-.contact .field:focus-within{
-  border-color:#4253ff;
-  box-shadow:0 0 0 3px rgba(66,83,255,.12);
-}
-
-.contact .submit-btn{
-  margin-left:auto; margin-top:.4rem;
-  background:#2506ad; color:#fff; border:2px solid transparent; border-radius:10px;
-  padding:1.1rem 2.2rem; font-weight:800; letter-spacing:.2px;
-  box-shadow:0 8px 18px rgba(48,68,247,.3);
-}
-.contact .submit-btn:hover{ background:#fff; color:#000; border-color:#2506ad; }
-
-/* Mobile stack */
-@media (max-width: 900px){
-  .contact .contact-card{ grid-template-columns:1fr; }
-}
-
-/* Optional: hide any lingering 3rd-party chat UIs, just in case */
-.tawk-min-container,
-#tawkchat-container,
-iframe[src*="tawk.to"]{
-  display:none !important; visibility:hidden !important; pointer-events:none !important;
-}
-
 
 /*##############################################################################################
 #####################################>  FOOTER  <###############################################
