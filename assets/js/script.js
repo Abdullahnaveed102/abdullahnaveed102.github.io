@@ -59,15 +59,21 @@
   const EMAILJS_SERVICE_ID  = "service_cnm7ry6";     // your SMTP service ID
   const EMAILJS_TEMPLATE_ID = "template_uxqfdii";      // copy this ID from the template page
 
-  // Initialize EmailJS once when DOM is ready (NOT inside submit handler)
   document.addEventListener("DOMContentLoaded", function () {
     if (!window.emailjs || !emailjs.init) {
-      console.error("EmailJS SDK not found. Include the CDN script before </body>.");
+      console.error("EmailJS SDK not found. Include the CDN script before your main script.");
       return;
     }
 
+    // Init: support both new ({ publicKey }) and old (string) styles
     try {
-      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+      if (typeof EMAILJS_PUBLIC_KEY === "string" && EMAILJS_PUBLIC_KEY.length > 0) {
+        // Older style init (works for all keys)
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+      } else {
+        // Fallback (shouldn't hit)
+        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+      }
     } catch (e) {
       console.error("EmailJS init failed:", e);
     }
@@ -76,55 +82,61 @@
     const submitBtn = document.getElementById("contact-submit");
     const statusEl = document.getElementById("contact-status");
 
-    if (form) {
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+    if (!form) return;
 
-        if (!EMAILJS_PUBLIC_KEY || !EMAILJS_PUBLIC_KEY.startsWith("public_")) {
-          alert("Email service is not configured. Set EMAILJS_PUBLIC_KEY.");
-          return;
-        }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-        // Disable while sending + show status
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.style.opacity = "0.7";
-          submitBtn.textContent = "Sending…";
-        }
-        if (statusEl) {
-          statusEl.textContent = "Sending your message…";
-          statusEl.style.color = "#666";
-        }
+      // Loosened guard: just ensure a non-empty key
+      if (!EMAILJS_PUBLIC_KEY) {
+        alert("Email service is not configured. Set EMAILJS_PUBLIC_KEY.");
+        return;
+      }
+      if (!EMAILJS_TEMPLATE_ID) {
+        alert("Email service is not configured. Set EMAILJS_TEMPLATE_ID.");
+        return;
+      }
 
-        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
-          .then(function (response) {
-            console.log("EmailJS SUCCESS", response);
-            form.reset();
-            if (statusEl) {
-              statusEl.textContent = "Thanks! Your message was sent successfully.";
-              statusEl.style.color = "#159957";
-            }
-            alert("Form Submitted Successfully");
-          })
-          .catch(function (error) {
-            console.error("EmailJS FAILED", error);
-            let msg = "Form Submission Failed! Try Again";
-            if (error && error.text) msg += `\n\nDetails: ${error.text}`;
-            alert(msg);
-            if (statusEl) {
-              statusEl.textContent = "Failed to send. Please verify your email and try again.";
-              statusEl.style.color = "#c0392b";
-            }
-          })
-          .finally(function () {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.style.opacity = "1";
-              submitBtn.textContent = "Submit";
-            }
-          });
-      });
-    }
+      // UX while sending
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.7";
+        submitBtn.textContent = "Sending…";
+      }
+      if (statusEl) {
+        statusEl.textContent = "Sending your message…";
+        statusEl.style.color = "#666";
+      }
+
+      emailjs
+        .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+        .then(function (response) {
+          console.log("EmailJS SUCCESS", response);
+          form.reset();
+          if (statusEl) {
+            statusEl.textContent = "Thanks! Your message was sent successfully.";
+            statusEl.style.color = "#159957";
+          }
+          alert("Form Submitted Successfully");
+        })
+        .catch(function (error) {
+          console.error("EmailJS FAILED", error);
+          let msg = "Form Submission Failed! Try Again";
+          if (error && error.text) msg += `\n\nDetails: ${error.text}`;
+          alert(msg);
+          if (statusEl) {
+            statusEl.textContent = "Failed to send. Please verify your email and try again.";
+            statusEl.style.color = "#c0392b";
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = "1";
+            submitBtn.textContent = "Submit";
+          }
+        });
+    });
   });
 
   /*##############################################################################################
