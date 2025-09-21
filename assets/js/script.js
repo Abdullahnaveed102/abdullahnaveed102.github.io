@@ -55,67 +55,43 @@
   /*##############################################################################################
   #####################################>  EMAILJS (CONTACT FORM) <#################################
   ##############################################################################################*/
-  const EMAILJS_PUBLIC_KEY  = "Mxn3esSwoilrJhTd3";
+  const EMAILJS_PUBLIC_KEY  = "Mxn3esSwoirljhTd3";  // copy with the copy button, don't retype
   const EMAILJS_SERVICE_ID  = "service_cnm7ry6";
   const EMAILJS_TEMPLATE_ID = "template_uxqfdii";
 
   document.addEventListener("DOMContentLoaded", function () {
-    if (!window.emailjs || !emailjs.init) {
-      console.error("EmailJS SDK not found. Include the CDN script before your main script.");
-      return;
-    }
+    if (!window.emailjs || !emailjs.init) return;
 
-    // ✅ IMPORTANT: use object form (publicKey), NOT string
+    // IMPORTANT: v3 object form
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+    // (optional) confirm what the page is using
+    console.log("EmailJS", emailjs.VERSION, "key:", EMAILJS_PUBLIC_KEY);
 
     const form = document.getElementById("contact-form");
     const submitBtn = document.getElementById("contact-submit");
     const statusEl = document.getElementById("contact-status");
-
     if (!form) return;
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      if (!EMAILJS_PUBLIC_KEY || !EMAILJS_TEMPLATE_ID) {
-        alert("Email service is not configured.");
-        return;
-      }
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = "0.7";
-        submitBtn.textContent = "Sending…";
-      }
-      if (statusEl) {
-        statusEl.textContent = "Sending your message…";
-        statusEl.style.color = "#666";
-      }
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+      if (statusEl) { statusEl.textContent = "Sending your message…"; statusEl.style.color = "#666"; }
 
       emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
-        .then(function (response) {
-          console.log("EmailJS SUCCESS", response);
+        .then(() => {
           form.reset();
-          if (statusEl) {
-            statusEl.textContent = "Thanks! Your message was sent successfully.";
-            statusEl.style.color = "#159957";
-          }
+          if (statusEl) { statusEl.textContent = "Thanks! Your message was sent successfully."; statusEl.style.color = "#159957"; }
           alert("Form Submitted Successfully");
         })
-        .catch(function (error) {
-          console.error("EmailJS FAILED", error);
-          alert("Form Submission Failed! Try Again\n\nDetails: " + (error?.text || error));
-          if (statusEl) {
-            statusEl.textContent = "Failed to send. Please verify your email and try again.";
-            statusEl.style.color = "#c0392b";
-          }
+        .catch(err => {
+          console.error("EmailJS FAILED", err);
+          alert("Form Submission Failed! Try Again\n\nDetails: " + (err?.text || err));
+          if (statusEl) { statusEl.textContent = "Failed to send. Please verify your email and try again."; statusEl.style.color = "#c0392b"; }
         })
-        .finally(function () {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = "1";
-            submitBtn.textContent = "Submit";
-          }
+        .finally(() => {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit"; }
         });
     });
   });
