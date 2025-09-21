@@ -48,8 +48,11 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
 #####################################> WORK (PROJECTS) <#######################################
 ##############################################################################################*/
 .work{
-  margin-top: -1px; /* hides any hairline seam above the section */
-  background: linear-gradient(to bottom, #010136, #00003a);
+  /* keep page content below fixed header */
+  padding-top: calc(6.5rem + 1rem);
+  scroll-margin-top: 7.5rem;
+
+  background: linear-gradient(to bottom,#010136,#00003a);
 }
 .work h2{ color:#fff; padding:1rem; }
 .work .heading span{ color:#ffe600; }
@@ -78,7 +81,7 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
 
 /* Card */
 .work .box-container .box{
-  border-radius:.8rem; overflow:hidden; background:transparent; /* <<< was white */
+  border-radius:.8rem; overflow:hidden; background:transparent;
   box-shadow:0 .7rem 1rem rgba(0,0,0,.25);
   height: calc(190px + var(--title-h));
   position:relative; display:flex; flex-direction:column;
@@ -131,11 +134,22 @@ header .navbar ul li a:hover{ color:#011aff; border-bottom:.2rem solid #011aff; 
 }
 .work .desc .btns .btn:hover{ background:#310ae0f5; }
 
-/* Responsive */
-@media (max-width:1024px){
+/* Back to Home button (pretty!) */
+.backbtn{ display:flex; justify-content:center; margin:4rem 0 2rem; }
+.backbtn .btn{
+  position:relative;
+  line-height:0; padding:1.3rem 2.4rem; border-radius:.75rem;
+  color:#fff; border:2px solid #fff; text-align:center; font-weight:700;
+  box-shadow:0 6px 14px rgba(48,68,247,.35);
+  transition:transform .2s ease, background .2s ease, color .2s ease;
+}
+.backbtn .btn:hover{ background:#fff; color:#000; transform:translateY(-1px); }
+
+/* responsive */
+@media(max-width:1024px){
   .work .box-container{ grid-template-columns:repeat(2,minmax(260px,1fr)); max-width:900px; }
 }
-@media (max-width:600px){
+@media(max-width:600px){
   .work .box-container{ grid-template-columns:1fr; max-width:560px; }
 }
 

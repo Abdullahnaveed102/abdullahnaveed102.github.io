@@ -90,11 +90,6 @@ var typed = new Typed(".typing-text", {
 });
 
 /*##############################################################################################
-#####################################>  PARTICLES.JS (external)  <##############################
-##############################################################################################*/
-/* Loaded via ./assets/js/particles.min.js and ./assets/js/app.js in index.html */
-
-/*##############################################################################################
 #####################################>  VANILLA TILT  <#########################################
 ##############################################################################################*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -132,9 +127,9 @@ const sr = ScrollReveal({
   distance: '30px',
   duration: 600,
   easing: 'cubic-bezier(.2,.65,.3,1)',
-  reset: false,      // reveal once
+  reset: false,
   mobile: true,
-  viewFactor: 0.12,  // reveal earlier (12% visible)
+  viewFactor: 0.12,
   viewOffset: { top: 80, right: 0, bottom: 80, left: 0 }
 });
 
@@ -158,7 +153,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 #####################################>  PROJECTS LOADER  <#####################################
 ##############################################################################################*/
 /*
-  Reads projects from one of several common paths and renders:
+  Reads projects.json (common paths) and renders:
     - Non-research items into #dev-projects
     - Research items into #research-projects (hides heading if none)
 */
@@ -206,14 +201,17 @@ async function buildHomeProjects() {
   const research = data.filter(d => (d.category || "").toLowerCase() === "research");
   const nonResearch = data.filter(d => (d.category || "").toLowerCase() !== "research");
 
-  devWrap.innerHTML = nonResearch.map(projectCard).join("");
-  if (research.length) {
-    resWrap.innerHTML = research.map(projectCard).join("");
-    resHeading.style.display = "";
-    resWrap.style.display = "";
-  } else {
-    resHeading.style.display = "none";
-    resWrap.style.display = "none";
+  if (devWrap) devWrap.innerHTML = nonResearch.map(projectCard).join("");
+
+  if (resWrap && resHeading) {
+    if (research.length) {
+      resWrap.innerHTML = research.map(projectCard).join("");
+      resHeading.style.display = "";
+      resWrap.style.display = "";
+    } else {
+      resHeading.style.display = "none";
+      resWrap.style.display = "none";
+    }
   }
 
   if (window.VanillaTilt) {
