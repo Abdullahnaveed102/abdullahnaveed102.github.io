@@ -433,43 +433,75 @@
   </section>
 
   <!--##############################################################################################
-  #####################################>  CONTACT  <##############################################
+  #####################################>  CONTACT / GET IN TOUCH  <#################################
   ##############################################################################################-->
   <section class="contact" id="contact">
-    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+    <h2 class="heading"><i class="fas fa-headset"></i> Get In <span>Touch</span></h2>
 
-    <div class="container">
-      <div class="content">
-        <div class="image-box">
-          <img draggable="false" src="./assets/images/contact1.png" alt="">
+    <div class="contact-card">
+      <div class="contact-illustration">
+        <!-- Use your existing illustration path -->
+        <img src="assets/images/contact.svg" alt="Get in touch" />
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+            autocomplete="name"
+            data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"
+          />
         </div>
 
-        <form id="contact-form">
-          <div class="form-group">
-            <div class="field">
-              <input type="text" name="name" placeholder="Name" required />
-              <i class='fas fa-user'></i>
-            </div>
-            <div class="field">
-              <input type="text" name="email" placeholder="Email" required />
-              <i class='fas fa-envelope'></i>
-            </div>
-            <div class="field">
-              <input type="text" name="phone" placeholder="Phone" />
-              <i class='fas fa-phone-alt'></i>
-            </div>
-            <div class="message">
-              <textarea placeholder="Message" name="message" required></textarea>
-              <i class="fas fa-comment-dots"></i>
-            </div>
-          </div>
-          <div class="button-area">
-            <button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
-          </div>
-        </form>
-      </div>
+        <div class="field">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="name@email.com"
+            required
+            autocomplete="email"
+            inputmode="email"
+            data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"
+          />
+        </div>
+
+        <div class="field">
+          <i class="fas fa-phone-alt"></i>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="(xxx) xxx-xxxx"
+            autocomplete="tel"
+            inputmode="tel"
+            pattern="^[0-9+()\-\s]{7,}$"
+            data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"
+          />
+        </div>
+
+        <div class="field field--textarea">
+          <i class="fas fa-comment-dots"></i>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Write your message…"
+            required
+            data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"
+            spellcheck="true"
+          ></textarea>
+        </div>
+
+        <button class="btn submit-btn" type="submit">
+          Submit <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
     </div>
   </section>
+
 
   <!--##############################################################################################
   #####################################>  FOOTER  <###############################################
