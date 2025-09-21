@@ -55,9 +55,9 @@
   /*##############################################################################################
   #####################################>  EMAILJS (CONTACT FORM) <#################################
   ##############################################################################################*/
-  const EMAILJS_PUBLIC_KEY  = "Mxn3esSwoirljhTd3";   // your actual public key
-  const EMAILJS_SERVICE_ID  = "service_cnm7ry6";     // your SMTP service ID
-  const EMAILJS_TEMPLATE_ID = "template_uxqfdii";      // copy this ID from the template page
+  const EMAILJS_PUBLIC_KEY  = "Mxn3esSwoirljhTd3";
+  const EMAILJS_SERVICE_ID  = "service_cnm7ry6";
+  const EMAILJS_TEMPLATE_ID = "template_uxqfdii";
 
   document.addEventListener("DOMContentLoaded", function () {
     if (!window.emailjs || !emailjs.init) {
@@ -65,18 +65,8 @@
       return;
     }
 
-    // Init: support both new ({ publicKey }) and old (string) styles
-    try {
-      if (typeof EMAILJS_PUBLIC_KEY === "string" && EMAILJS_PUBLIC_KEY.length > 0) {
-        // Older style init (works for all keys)
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-      } else {
-        // Fallback (shouldn't hit)
-        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-      }
-    } catch (e) {
-      console.error("EmailJS init failed:", e);
-    }
+    // ✅ IMPORTANT: use object form (publicKey), NOT string
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
     const form = document.getElementById("contact-form");
     const submitBtn = document.getElementById("contact-submit");
@@ -87,17 +77,11 @@
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      // Loosened guard: just ensure a non-empty key
-      if (!EMAILJS_PUBLIC_KEY) {
-        alert("Email service is not configured. Set EMAILJS_PUBLIC_KEY.");
-        return;
-      }
-      if (!EMAILJS_TEMPLATE_ID) {
-        alert("Email service is not configured. Set EMAILJS_TEMPLATE_ID.");
+      if (!EMAILJS_PUBLIC_KEY || !EMAILJS_TEMPLATE_ID) {
+        alert("Email service is not configured.");
         return;
       }
 
-      // UX while sending
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.style.opacity = "0.7";
@@ -108,8 +92,7 @@
         statusEl.style.color = "#666";
       }
 
-      emailjs
-        .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
         .then(function (response) {
           console.log("EmailJS SUCCESS", response);
           form.reset();
@@ -121,9 +104,7 @@
         })
         .catch(function (error) {
           console.error("EmailJS FAILED", error);
-          let msg = "Form Submission Failed! Try Again";
-          if (error && error.text) msg += `\n\nDetails: ${error.text}`;
-          alert(msg);
+          alert("Form Submission Failed! Try Again\n\nDetails: " + (error?.text || error));
           if (statusEl) {
             statusEl.textContent = "Failed to send. Please verify your email and try again.";
             statusEl.style.color = "#c0392b";
