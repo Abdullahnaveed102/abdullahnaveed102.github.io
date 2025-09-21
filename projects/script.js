@@ -1,13 +1,15 @@
-/* ===========================
-   Projects page interactions
-   =========================== */
+//##############################################################################################
+//#####################################> PROJECTS JS <#########################################
+//##############################################################################################
 
 $(document).ready(function () {
+  // mobile menu toggle
   $("#menu").click(function () {
     $(this).toggleClass("fa-times");
     $(".navbar").toggleClass("nav-toggle");
   });
 
+  // scroll behavior
   $(window).on("scroll load", function () {
     $("#menu").removeClass("fa-times");
     $(".navbar").removeClass("nav-toggle");
@@ -15,6 +17,7 @@ $(document).ready(function () {
   });
 });
 
+// dynamic title / favicon
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "visible") {
     document.title = "Projects | Portfolio Abdullah";
@@ -25,16 +28,18 @@ document.addEventListener("visibilitychange", function () {
   }
 });
 
-// ---- Data loader ----
+//##############################################################################################
+//#####################################> LOAD DATA <###########################################
+//##############################################################################################
+
 function getProjects() {
-  // projects.json is colocated under /projects/
   return fetch("/projects/projects.json", { cache: "no-cache" })
     .then(r => r.json())
     .catch(() => []);
 }
 
 function card(p) {
-  const cat = (p.category || "").toLowerCase();   // ensure class matches filter
+  const cat = (p.category || "").toLowerCase(); // normalize for filter
   return `
     <div class="grid-item ${cat}">
       <div class="box tilt">
@@ -63,22 +68,31 @@ function showProjects(projects) {
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
   }
 
-  // isotope filters
-  const $grid = $(".box-container").isotope({
-    itemSelector: ".grid-item",
-    layoutMode: "fitRows"
-  });
+  //##################################################
+  //#################> SIMPLE FILTER <################
+  //##################################################
+  const gridEl = document.querySelector(".box-container");
+  document.querySelector(".button-group").addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
 
-  $(".button-group").on("click", "button", function () {
-    $(".button-group").find(".is-checked").removeClass("is-checked");
-    $(this).addClass("is-checked");
-    $grid.isotope({ filter: $(this).attr("data-filter") });
+    // button active state
+    document.querySelectorAll(".button-group .btn").forEach(b => b.classList.remove("is-checked"));
+    btn.classList.add("is-checked");
+
+    // filter
+    const sel = btn.getAttribute("data-filter");
+    gridEl.querySelectorAll(".grid-item").forEach(card => {
+      card.style.display = (sel === "*" || card.matches(sel)) ? "" : "none";
+    });
   });
 }
 
 getProjects().then(showProjects);
 
-// Disable some dev shortcuts
+//##############################################################################################
+//######################> DISABLE DEV SHORTCUTS <###############################################
+//##############################################################################################
 document.onkeydown = function (e) {
   if (e.keyCode === 123) return false;
   if (e.ctrlKey && e.shiftKey && ["I","C","J"].includes(String.fromCharCode(e.keyCode))) return false;
