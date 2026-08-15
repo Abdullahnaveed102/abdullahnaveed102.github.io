@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific compression research illustration</title>
+  <desc id="desc">A scientific signal progressively compressed into a smaller representation.</desc>
+  <rect width="900" height="600" fill="#102f2a"/>
+  <g opacity=".23" stroke="#9dc8b8" stroke-width="1">
+    <path d="M0 100h900M0 200h900M0 300h900M0 400h900M0 500h900M150 0v600M300 0v600M450 0v600M600 0v600M750 0v600"/>
+  </g>
+  <path d="M70 310c52-168 96 171 148 0s96 170 148 0 96 168 148 0" fill="none" stroke="#f0b76d" stroke-width="11" stroke-linecap="round"/>
+  <path d="M560 310c30-90 55 91 85 0s55 90 85 0" fill="none" stroke="#8fd0b8" stroke-width="11" stroke-linecap="round"/>
+  <path d="m500 240 64 70-64 70" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="742" y="218" width="105" height="184" rx="12" fill="#f7f4ed"/>
+  <rect x="765" y="252" width="59" height="12" rx="6" fill="#274f40"/>
+  <rect x="765" y="286" width="59" height="12" rx="6" fill="#7cae9b"/>
+  <rect x="765" y="320" width="59" height="12" rx="6" fill="#b8ccc4"/>
+  <rect x="765" y="354" width="38" height="12" rx="6" fill="#e5a75d"/>
+</svg>

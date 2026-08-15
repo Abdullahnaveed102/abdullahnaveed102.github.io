@@ -1,9 +1,6 @@
 (function () {
   "use strict";
 
-  document.documentElement.classList.add("js");
-
-  const header = document.querySelector(".site-header");
   const menuButton = document.querySelector(".nav-menu-button");
   const siteNav = document.querySelector(".site-nav");
 
@@ -29,41 +26,12 @@
     });
   }
 
-  function updateHeader() {
-    if (header) header.classList.toggle("is-scrolled", window.scrollY > 12);
-  }
-
-  updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
-
   document.querySelectorAll("[data-year]").forEach(function (element) {
     element.textContent = new Date().getFullYear();
   });
 
-  const revealElements = document.querySelectorAll("[data-reveal]");
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        });
-      },
-      { rootMargin: "0px 0px -8%", threshold: 0.08 }
-    );
-
-    revealElements.forEach(function (element) {
-      revealObserver.observe(element);
-    });
-  } else {
-    revealElements.forEach(function (element) {
-      element.classList.add("is-visible");
-    });
-  }
-
   const filterButtons = document.querySelectorAll("[data-filter]");
-  const projectCards = document.querySelectorAll(".project-card[data-category]");
+  const projectCards = document.querySelectorAll(".work-item[data-category]");
   const filterStatus = document.querySelector("[data-filter-status]");
 
   if (filterButtons.length && projectCards.length) {
@@ -73,15 +41,15 @@
         let visibleCount = 0;
 
         filterButtons.forEach(function (item) {
-          const active = item === button;
-          item.classList.toggle("is-active", active);
-          item.setAttribute("aria-pressed", String(active));
+          const isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
         });
 
         projectCards.forEach(function (card) {
-          const matches = filter === "all" || card.dataset.category === filter;
-          card.hidden = !matches;
-          if (matches) visibleCount += 1;
+          const isVisible = filter === "all" || card.dataset.category === filter;
+          card.hidden = !isVisible;
+          if (isVisible) visibleCount += 1;
         });
 
         if (filterStatus) {

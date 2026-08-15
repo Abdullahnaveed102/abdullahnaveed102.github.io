@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Dependable AI research illustration</title>
+  <desc id="desc">A neural network protected by a reliability shield.</desc>
+  <rect width="900" height="600" fill="#eef2f5"/>
+  <g stroke="#7891a2" stroke-width="4" fill="#fff">
+    <path d="M105 155 270 110M105 155l165 145M105 300h165M105 445l165-145M105 445l165 45M270 110l170 90M270 300l170-100M270 300l170 100M270 490l170-90M440 200l168 100M440 400l168-100"/>
+    <circle cx="105" cy="155" r="20"/><circle cx="105" cy="300" r="20"/><circle cx="105" cy="445" r="20"/>
+    <circle cx="270" cy="110" r="20"/><circle cx="270" cy="300" r="20"/><circle cx="270" cy="490" r="20"/>
+    <circle cx="440" cy="200" r="24"/><circle cx="440" cy="400" r="24"/>
+    <circle cx="608" cy="300" r="28" fill="#204f40" stroke="#204f40"/>
+  </g>
+  <path d="M690 166c53 38 108 43 142 46v98c0 88-56 139-142 171-86-32-142-83-142-171v-98c34-3 89-8 142-46Z" fill="#173d62"/>
+  <path d="m636 316 35 35 77-85" fill="none" stroke="#f7f4ed" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="690" cy="166" r="14" fill="#e5a75d"/>
+</svg>
