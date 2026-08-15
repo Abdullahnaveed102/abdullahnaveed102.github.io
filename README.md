@@ -4,15 +4,16 @@ A minimal, dependency-free academic portfolio designed for GitHub Pages.
 
 ## Structure
 
-- `index.html` — profile overview, recent work, education, experience, and skills
+- `index.html` — profile overview, education, experience, ongoing research, publications, and selected projects
 - `publications/` — image-led publication archive
-- `projects/` — filterable, image-led project archive
+- `projects/` — grouped, image-led project archive
 - `experience/` — research, teaching, and academic service history
 - `cv/` — HTML curriculum vitae with embedded and downloadable PDF
 - `assets/` — shared styles, JavaScript, images, and CV document
 - `old-website/` — complete backup of the previous portfolio version
 
 The legacy `/education/` URL redirects to the education section on the homepage.
+The locally cloned reference repositories are ignored and are not part of the deployed website.
 
 ## Local preview
 
