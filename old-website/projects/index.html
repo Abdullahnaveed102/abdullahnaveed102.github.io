@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--##################################################
+  ######################> HEAD <#######################
+  ##################################################-->
+  <link id="favicon" rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png" />
+  <link rel="stylesheet" href="/projects/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Projects | Portfolio Abdullah</title>
+</head>
+<body oncontextmenu="return false">
+
+  <!--##################################################
+  ######################> HEADER <#####################
+  ##################################################-->
+  <header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Abdullah</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#education">Education</a></li>
+        <li><a class="active" href="/#work">Work</a></li>
+        <li><a href="/#research">Research</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--##################################################
+  #####################> PROJECTS <####################
+  ##################################################-->
+  <section class="work" id="work">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+    <!-- filter buttons -->
+    <div id="filters" class="button-group" style="text-align:center;margin-bottom:1rem;">
+      <button class="btn is-checked" data-filter="*">All Projects</button>
+      <button class="btn" data-filter=".development">Development</button>
+      <button class="btn" data-filter=".ml">ML / Data Science</button>
+      <button class="btn" data-filter=".research">Research</button>
+    </div>
+
+    <!-- grid container -->
+    <div class="box-container"></div>
+
+    <!-- back -->
+    <div class="backbtn">
+      <a href="/#work" class="btn"><i class="fas fa-arrow-left"></i><span> Back To Home</span></a>
+    </div>
+  </section>
+
+  <!-- scroll top -->
+  <a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
+
+  <!--##################################################
+  ######################> JS <#########################
+  ##################################################-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- removed isotope, we’ll handle filters with JS -->
+  <script src="/projects/script.js"></script>
+</body>
+</html>

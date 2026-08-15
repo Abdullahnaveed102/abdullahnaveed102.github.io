@@ -1,74 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Selected research, machine learning, systems, and product projects by Abdullah Naveed.">
+    <meta name="theme-color" content="#f2f0e9">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Projects — Abdullah Naveed</title>
+    <script>document.documentElement.classList.add("js")</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="/" aria-label="Abdullah Naveed — Home"><span class="brand-mark" aria-hidden="true">AN</span><span class="brand-text">Abdullah Naveed</span></a>
+        <button class="nav-menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 8h16M4 16h16" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="/">Home</a><a class="nav-link" href="/publications/">Publications</a><a class="nav-link" href="/projects/" aria-current="page">Projects</a><a class="nav-link" href="/experience/">Experience</a><a class="nav-link" href="/education/">Education</a>
+        </nav>
+      </div>
+    </header>
 
-  <!--##################################################
-  ######################> HEAD <#######################
-  ##################################################-->
-  <link id="favicon" rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-png" />
-  <link rel="stylesheet" href="/projects/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <title>Projects | Portfolio Abdullah</title>
-</head>
-<body oncontextmenu="return false">
+    <main id="main">
+      <header class="page-hero">
+        <div class="container page-hero-grid">
+          <div data-reveal><p class="eyebrow">Selected work · 10 projects</p><h1>Projects</h1></div>
+          <p data-reveal>Research prototypes and applied systems across dependable computing, machine learning, computer vision, and product development.</p>
+        </div>
+      </header>
 
-  <!--##################################################
-  ######################> HEADER <#####################
-  ##################################################-->
-  <header>
-    <a href="/" class="logo"><i class="fab fa-node-js"></i> Abdullah</a>
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="/#home">Home</a></li>
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#skills">Skills</a></li>
-        <li><a href="/#education">Education</a></li>
-        <li><a class="active" href="/#work">Work</a></li>
-        <li><a href="/#research">Research</a></li>
-        <li><a href="/#experience">Experience</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+      <section class="page-section" aria-label="Project list">
+        <div class="container">
+          <div class="filter-bar" aria-label="Filter projects">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="research" aria-pressed="false">Research & systems</button>
+            <button class="filter-button" type="button" data-filter="ml" aria-pressed="false">ML & computer vision</button>
+            <button class="filter-button" type="button" data-filter="product" aria-pressed="false">Product development</button>
+            <span class="filter-status" data-filter-status aria-live="polite">10 projects</span>
+          </div>
+          <div class="project-list">
+            <article class="project-row project-card" data-category="research" data-reveal>
+              <span class="list-number">01</span><div><span class="tag">Research</span><h3>DebloatBenchC</h3><p class="project-meta">Container security · benchmarking</p></div><p>A unified benchmark for comparing SPEAKER, CONFINE, and SlimToolkit across attack-surface reduction, CVEs, image size, and correctness.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/debloat-bench" target="_blank" rel="noopener noreferrer" aria-label="View DebloatBenchC on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="ml" data-reveal>
+              <span class="list-number">02</span><div><span class="tag">Machine learning</span><h3>Multimodal Fake News Classification</h3><p class="project-meta">NLP · computer vision</p></div><p>A classification workflow combining textual and visual signals to identify misleading content across modalities.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Multimodal-Fake-News-Classification" target="_blank" rel="noopener noreferrer" aria-label="View Multimodal Fake News Classification on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="ml" data-reveal>
+              <span class="list-number">03</span><div><span class="tag">Computer vision</span><h3>COVID SOP Violation Detection</h3><p class="project-meta">Python · OpenCV · PyTorch · YOLOv5</p></div><p>A real-time multi-camera system for mask detection, orthogonal top-view projection, and static or animated crowd-density heatmaps.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/SOP-Violation-Detection-with-Multi-Camera-System" target="_blank" rel="noopener noreferrer" aria-label="View COVID SOP Violation Detection on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="research" data-reveal>
+              <span class="list-number">04</span><div><span class="tag">Compilers</span><h3>Compiler Optimizations</h3><p class="project-meta">LLVM · C++ · HPC</p></div><p>Implementations of three research-driven compiler optimization techniques, with evaluation for performance-focused workloads.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Compiler-Optimizations" target="_blank" rel="noopener noreferrer" aria-label="View Compiler Optimizations on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="ml" data-reveal>
+              <span class="list-number">05</span><div><span class="tag">NLP</span><h3>Audio Sentiment Analysis</h3><p class="project-meta">Python · speech processing · ML</p></div><p>An emotion-recognition pipeline built around 7,442 labeled CREMA-D audio clips for sentiment analysis in spoken interactions.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Sentiment-Analysis-of-Audio-Recordings" target="_blank" rel="noopener noreferrer" aria-label="View Audio Sentiment Analysis on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="ml" data-reveal>
+              <span class="list-number">06</span><div><span class="tag">Recommenders</span><h3>Netflix Recommendation System</h3><p class="project-meta">Scikit-learn · NLP · unsupervised learning</p></div><p>A personalized recommendation engine using exploratory analysis, content clustering, and recent watch behavior to predict preferences.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Netlfix-Prediction-Engine" target="_blank" rel="noopener noreferrer" aria-label="View Netflix Recommendation System on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="ml" data-reveal>
+              <span class="list-number">07</span><div><span class="tag">Classification</span><h3>Fake Tweet Detection</h3><p class="project-meta">Python · ensemble learning · social data</p></div><p>An ensemble classification system combining user-profile attributes and tweet patterns to identify fabricated social content.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Twitter-Fake-Tweet-Detection" target="_blank" rel="noopener noreferrer" aria-label="View Fake Tweet Detection on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="ml" data-reveal>
+              <span class="list-number">08</span><div><span class="tag">Interactive AI</span><h3>Cozmo’s Star Wars Odyssey</h3><p class="project-meta">Computer vision · LLMs · robotics</p></div><p>An interactive storytelling experience that combines visual character recognition, generative narrative, and user questions on the Cozmo robot.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Cozmo-and-Star-Wars" target="_blank" rel="noopener noreferrer" aria-label="View Cozmo's Star Wars Odyssey on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="product" data-reveal>
+              <span class="list-number">09</span><div><span class="tag">Mobile product</span><h3>LUMS Student Portal</h3><p class="project-meta">React Native · JavaScript · Firebase</p></div><p>A cross-platform university portal for academic deadlines, GPA calculation, student communication, and real-time data management.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/G23-LUMS-APP" target="_blank" rel="noopener noreferrer" aria-label="View LUMS Student Portal on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+            <article class="project-row project-card" data-category="product" data-reveal>
+              <span class="list-number">10</span><div><span class="tag">HCI</span><h3>Afloat</h3><p class="project-meta">UX research · interface design</p></div><p>A human-computer interaction case study for a conceptual product supporting students’ social and mental well-being after COVID-19.</p><a class="project-link" href="https://github.com/Abdullahnaveed102/Afloat" target="_blank" rel="noopener noreferrer" aria-label="View Afloat on GitHub"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <!--##################################################
-  #####################> PROJECTS <####################
-  ##################################################-->
-  <section class="work" id="work">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
-    <!-- filter buttons -->
-    <div id="filters" class="button-group" style="text-align:center;margin-bottom:1rem;">
-      <button class="btn is-checked" data-filter="*">All Projects</button>
-      <button class="btn" data-filter=".development">Development</button>
-      <button class="btn" data-filter=".ml">ML / Data Science</button>
-      <button class="btn" data-filter=".research">Research</button>
-    </div>
-
-    <!-- grid container -->
-    <div class="box-container"></div>
-
-    <!-- back -->
-    <div class="backbtn">
-      <a href="/#work" class="btn"><i class="fas fa-arrow-left"></i><span> Back To Home</span></a>
-    </div>
-  </section>
-
-  <!-- scroll top -->
-  <a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
-
-  <!--##################################################
-  ######################> JS <#########################
-  ##################################################-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!-- removed isotope, we’ll handle filters with JS -->
-  <script src="/projects/script.js"></script>
-</body>
+      <section class="section" aria-labelledby="contact-title"><div class="container contact-panel" data-reveal><div><span class="eyebrow">Code & collaboration</span><h2 id="contact-title">Want to build on one of these ideas?</h2><p>Browse the repositories or reach out to discuss a research collaboration.</p></div><a class="button" href="https://github.com/Abdullahnaveed102" target="_blank" rel="noopener noreferrer">Visit GitHub<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 17 17 7M8 7h9v9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><p class="footer-copy">© <span data-year>2026</span> Abdullah Naveed. Built with care and plain HTML.</p><div class="footer-links" aria-label="Social links"><a href="mailto:abdullahnaveed102@gmail.com">Email</a><a href="https://github.com/Abdullahnaveed102" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/abdullah-naveed-3babbb22b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+    <script src="/assets/js/main.js" defer></script>
+  </body>
 </html>
