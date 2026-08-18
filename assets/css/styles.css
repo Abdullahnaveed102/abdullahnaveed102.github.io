@@ -208,13 +208,40 @@ ul {
   margin-bottom: 1rem;
 }
 
+.author-details li,
+.author-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .author-details li + li,
 .author-links li + li {
   margin-top: 0.3rem;
 }
 
+.profile-icon {
+  flex: 0 0 auto;
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #999;
+}
+
+.profile-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .author-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: #555;
+}
+
+.author-links a:hover .profile-icon {
+  color: var(--link);
 }
 
 .author-links a:hover {
