@@ -470,6 +470,11 @@ ul {
   object-fit: cover;
 }
 
+.entry-figure--contain img {
+  padding: 7px;
+  object-fit: contain;
+}
+
 .publication-list .visual-entry {
   grid-template-columns: 164px minmax(0, 1fr);
 }
