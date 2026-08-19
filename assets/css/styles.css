@@ -227,7 +227,7 @@ ul {
   justify-content: center;
   width: 0.72rem;
   height: 0.72rem;
-  color: #999;
+  color: var(--link);
 }
 
 .profile-icon svg {
@@ -304,9 +304,47 @@ ul {
 .compact-entry {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  padding: 0.85rem 0;
+  align-items: center;
+  padding: 0.95rem 0;
   gap: 1rem;
   border-bottom: 1px solid #ededed;
+}
+
+.compact-entry-main {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.compact-entry-main > div {
+  min-width: 0;
+}
+
+.institution-mark {
+  display: grid;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  padding: 5px;
+  border: 1px solid #e5e8eb;
+  border-radius: 8px;
+  background: #fff;
+  place-items: center;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.institution-mark:hover {
+  border-color: #c9dce7;
+  box-shadow: 0 3px 10px rgba(28, 76, 101, 0.1);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.institution-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .compact-entry h3 {
@@ -317,6 +355,15 @@ ul {
   margin: 0;
   color: var(--muted);
   font-size: 0.84rem;
+}
+
+.compact-entry p a {
+  color: #59646a;
+  font-weight: 550;
+}
+
+.compact-entry p a:hover {
+  color: var(--link);
 }
 
 .entry-date {
@@ -372,6 +419,11 @@ ul {
   background: #fff;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.18);
   object-fit: cover;
+}
+
+.entry-figure img[src*="/publications/"] {
+  padding: 4px;
+  object-fit: contain;
 }
 
 .entry-badge {
@@ -709,6 +761,10 @@ ul {
   .compact-entry {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  .compact-entry-main + .entry-date {
+    padding-left: 3.85rem;
   }
 }
 
