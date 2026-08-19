@@ -261,6 +261,14 @@ ul {
 }
 
 .author-links li:nth-child(4) .profile-icon {
+  color: #4285f4;
+}
+
+.author-links li:nth-child(5) .profile-icon {
+  color: #a6ce39;
+}
+
+.author-links li:nth-child(6) .profile-icon {
   color: #7651a8;
 }
 
@@ -372,6 +380,20 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.institution-mark img[src$="/uf.png"] {
+  width: 82%;
+  height: 82%;
+}
+
+.institution-mark img[src$="/uiowa.png"] {
+  transform: scale(1.2);
+}
+
+.institution-mark img[src$="/argonne.png"] {
+  width: 92%;
+  height: 92%;
 }
 
 .compact-entry h3 {
