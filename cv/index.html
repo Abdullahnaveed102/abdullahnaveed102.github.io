@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Curriculum vitae of Abdullah Naveed, Ph.D. researcher in dependable AI and scientific computing.">
+    <meta name="description" content="Curriculum vitae of Abdullah Naveed, Ph.D. researcher in dependable AI, HPC resilience, and scientific data compression.">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260819-4">
     <title>CV — Abdullah Naveed</title>
   </head>
   <body>
@@ -15,50 +15,85 @@
 
     <main class="page-layout" id="main">
       <h1>Curriculum vitae</h1>
-      <p class="page-lead">A concise web version is provided below. The complete PDF can also be viewed or downloaded directly.</p>
+      <p class="page-lead">Ph.D. student in Computer Engineering at the University of Florida, working on dependable AI, HPC resilience, and scientific data compression.</p>
       <div class="cv-actions"><a class="button button--primary" href="/assets/documents/Abdullah-Naveed-CV.pdf" download>Download CV</a><a class="button" href="/assets/documents/Abdullah-Naveed-CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a></div>
+      <nav class="cv-contact-links" aria-label="Professional profiles"><a href="mailto:abdullahnaveed102@gmail.com">Email</a><a href="https://scholar.google.com/citations?user=LL4EX88AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://orcid.org/0009-0008-5849-9920" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://github.com/Abdullahnaveed102" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/abdullah-naveed-3babbb22b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></nav>
+
+      <section class="cv-section" aria-labelledby="cv-interests">
+        <h2 id="cv-interests">Research interests</h2>
+        <p>Dependable AI and large language model resilience; fault tolerance and reliability for high-performance computing; scientific data compression; hardware–software co-design; and machine learning systems.</p>
+      </section>
 
       <section class="cv-section" aria-labelledby="cv-education">
         <h2 id="cv-education">Education</h2>
         <ul class="compact-list">
-          <li class="compact-entry"><div><h3>Ph.D. in Computer Engineering · University of Florida</h3><p>Dependable Systems Lab · Advisor: Prof. Guanpeng Li</p></div><span class="entry-date">2025–Present</span></li>
-          <li class="compact-entry"><div><h3>Master of Computer Science · The University of Iowa</h3><p>GPA: 3.99 / 4.00</p></div><span class="entry-date">2023–2025</span></li>
-          <li class="compact-entry"><div><h3>B.S. in Computer Science · Lahore University of Management Sciences</h3><p>GPA: 3.61 / 4.00 · Graduated with Distinction</p></div><span class="entry-date">2019–2023</span></li>
+          <li class="compact-entry"><div><h3>Ph.D. in Computer Engineering · University of Florida</h3><p>GPA: 3.93 / 4.00 · Advisor: Prof. Guanpeng Li · Dependable AI, HPC systems, fault tolerance, and scientific data compression</p></div><span class="entry-date">Aug 2025–Present</span></li>
+          <li class="compact-entry"><div><h3>Master of Computer Science · The University of Iowa</h3><p>GPA: 3.99 / 4.00 · Graduate study in compilers, distributed systems, machine learning, algorithms, and data visualization</p></div><span class="entry-date">Aug 2023–Aug 2025</span></li>
+          <li class="compact-entry"><div><h3>B.S. in Computer Science, with Distinction · Lahore University of Management Sciences</h3><p>GPA: 3.61 / 4.00</p></div><span class="entry-date">Aug 2019–May 2023</span></li>
         </ul>
       </section>
 
       <section class="cv-section" aria-labelledby="cv-research">
         <h2 id="cv-research">Research experience</h2>
-        <ul class="compact-list">
-          <li class="compact-entry"><div><h3>Visiting Graduate Researcher · Argonne National Laboratory</h3><p>Transformer-based lossy compression for Advanced Photon Source X-ray data.</p></div><span class="entry-date">2025–Present</span></li>
-          <li class="compact-entry"><div><h3>Graduate Research Assistant · University of Florida</h3><p>Fault tolerance and lightweight error detection for large language models.</p></div><span class="entry-date">2025–Present</span></li>
-          <li class="compact-entry"><div><h3>Research Assistant · The University of Iowa</h3><p>LLVM-based instruction-level resilience analysis for HPC applications.</p></div><span class="entry-date">2023–2025</span></li>
-        </ul>
-      </section>
-
-      <section class="cv-section" aria-labelledby="cv-teaching">
-        <h2 id="cv-teaching">Teaching</h2>
-        <ul class="compact-list">
-          <li class="compact-entry"><div><h3>Teaching Assistant · Database Systems</h3><p>The University of Iowa · Labs, office hours, projects, and student mentoring.</p></div><span class="entry-date">Fall 2023</span></li>
-          <li class="compact-entry"><div><h3>Teaching Assistant · Data Structures</h3><p>Lahore University of Management Sciences · Tutorials and student mentoring.</p></div><span class="entry-date">2022–2023</span></li>
-        </ul>
+        <div class="experience-list">
+          <article class="experience-entry"><span class="entry-date">Jun 2025–Present</span><div><h2>Argonne National Laboratory</h2><h3>Visiting Graduate Researcher · Lemont, Illinois</h3><ul><li>Researching hardware–software co-designed, error-bounded compression for high-rate Advanced Photon Source data pipelines, reducing data-movement bottlenecks through FPGA acceleration.</li><li>Designing and validating reusable Chisel/RTL compression components and streaming datapaths, evaluating throughput, numerical fidelity, timing, and resource efficiency.</li></ul></div></article>
+          <article class="experience-entry"><span class="entry-date">Aug 2025–Present</span><div><h2>University of Florida</h2><h3>Graduate Research Assistant · Dependable Systems Lab</h3><ul><li>Characterizing LLM resilience across inference, pretraining, and parameter-efficient fine-tuning using large-scale controlled fault-injection campaigns.</li><li>Developing low-overhead techniques that detect and mitigate silent errors through fault-propagation behavior and informative internal model signals.</li></ul></div></article>
+          <article class="experience-entry"><span class="entry-date">Aug 2023–Aug 2025</span><div><h2>The University of Iowa</h2><h3>Research Assistant · Iowa City, Iowa</h3><ul><li>Developed LLVM-based fault-injection and analysis tooling to characterize transient-error propagation in HPC applications.</li><li>Compared compiler and runtime error-detection methods across scientific workloads, quantifying detection-coverage and runtime-overhead trade-offs.</li></ul></div></article>
+        </div>
       </section>
 
       <section class="cv-section" aria-labelledby="cv-publications">
         <h2 id="cv-publications">Publications</h2>
+        <ol class="cv-publication-list">
+          <li><strong>Abdullah Naveed</strong>, Mahina Sheikh, and Guanpeng Li. “Low-Overhead Silent Error Detection for Large Language Model Inference at Scale.” <em>SC ’26</em>, 2026. Accepted; to appear.</li>
+          <li>Darren Ng, <strong>Abdullah Naveed</strong>, Duo Zhang, Guanpeng Li, Sheng Di, and Xiaoyi Lu. “Z-SPDK: Accelerating Lossy Compressed I/O on NVMe-SSDs.” <em>SC ’26</em>, 2026. Accepted; to appear.</li>
+          <li>Muhammad Hassan, Talha Tahir, Muhammad Farrukh, <strong>Abdullah Naveed</strong>, et al. “<a href="https://doi.org/10.1109/SecDev56634.2023.00023" target="_blank" rel="noopener noreferrer">Evaluating Container Debloaters</a>.” <em>IEEE SecDev 2023</em>, pp. 88–98.</li>
+        </ol>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-manuscripts">
+        <h2 id="cv-manuscripts">Manuscripts under review</h2>
         <ul class="compact-list">
-          <li class="compact-entry"><div><h3>Evaluating Container Debloaters</h3><p>M. Hassan, T. Tahir, M. Farrukh, A. Naveed, et al. · IEEE SecDev 2023</p></div><span class="entry-date">2023</span></li>
-          <li class="compact-entry"><div><h3 class="placeholder">Publication details to be added</h3><p>Title, authors, venue, and links forthcoming.</p></div><span class="entry-date">TBD</span></li>
-          <li class="compact-entry"><div><h3 class="placeholder">Publication details to be added</h3><p>Title, authors, venue, and links forthcoming.</p></div><span class="entry-date">TBD</span></li>
+          <li class="compact-entry"><div><h3>LLM Pretraining Reliability</h3><p>Large-scale characterization of transient soft-error effects and resilience during Transformer pretraining.</p></div><span class="entry-date">2026</span></li>
+          <li class="compact-entry"><div><h3>LLM Fault Resilience</h3><p>Study of LLM behavior under increasing fault intensity, multi-bit corruption, and emerging high-error computing environments.</p></div><span class="entry-date">2026</span></li>
+          <li class="compact-entry"><div><h3>HPC Reliability</h3><p>Compiler-based, low-overhead detection of silent errors in scientific and HPC applications.</p></div><span class="entry-date">2026</span></li>
+        </ul>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-teaching">
+        <h2 id="cv-teaching">Teaching experience</h2>
+        <ul class="compact-list">
+          <li class="compact-entry"><div><h3>Teaching Assistant · Database Systems</h3><p>The University of Iowa · Guided 30+ students in schema design, query formulation, debugging, and MySQL project implementation.</p></div><span class="entry-date">Aug–Dec 2023</span></li>
+          <li class="compact-entry"><div><h3>Teaching Assistant · Data Structures</h3><p>Lahore University of Management Sciences · Led tutorials for 100+ students in data structures, algorithms, programming, and problem solving.</p></div><span class="entry-date">Sep 2022–Jan 2023</span></li>
+        </ul>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-projects">
+        <h2 id="cv-projects">Selected technical projects</h2>
+        <ul class="compact-list">
+          <li class="compact-entry"><div><h3>Multimodal Fake News Classification</h3><p>Integrated textual and visual representations to classify misleading content across language and image modalities.</p></div><span class="entry-date">NLP · Vision</span></li>
+          <li class="compact-entry"><div><h3>Cozmo’s Star Wars Odyssey</h3><p>Combined character recognition, LLM-driven narrative generation, and question answering for context-aware robot interaction.</p></div><span class="entry-date">Robotics · LLMs</span></li>
+          <li class="compact-entry"><div><h3>COVID SOP Violation Detection</h3><p>Built a real-time multi-camera pipeline with YOLOv5 detection, top-view projection, and spatial density heatmaps.</p></div><span class="entry-date">PyTorch · OpenCV</span></li>
+          <li class="compact-entry"><div><h3>Audio Sentiment Analysis</h3><p>Developed a speech-emotion classifier using 7,442 labeled CREMA-D audio clips.</p></div><span class="entry-date">Speech · ML</span></li>
+          <li class="compact-entry"><div><h3>Netflix Recommendation System</h3><p>Used NLP content representations and unsupervised clustering to generate personalized recommendations.</p></div><span class="entry-date">NLP · Clustering</span></li>
         </ul>
       </section>
 
       <section class="cv-section" aria-labelledby="cv-skills">
         <h2 id="cv-skills">Technical skills</h2>
-        <div class="cv-skill-row"><strong>Programming</strong><span>Python, C++, SQL, Bash, JavaScript, Git</span></div>
-        <div class="cv-skill-row"><strong>Machine learning</strong><span>PyTorch, TensorFlow, Hugging Face, Keras, Scikit-learn, OpenCV</span></div>
-        <div class="cv-skill-row"><strong>Data</strong><span>Pandas, NumPy, Matplotlib, Seaborn, Jupyter, MATLAB</span></div>
-        <div class="cv-skill-row"><strong>Systems</strong><span>LLVM, Linux, Docker, React, React Native, Firebase, HTML, CSS</span></div>
+        <div class="cv-skill-row"><strong>Programming</strong><span>Python, C, C++, Bash, SQL, Scala/Chisel, JavaScript, Git</span></div>
+        <div class="cv-skill-row"><strong>Machine learning / AI</strong><span>PyTorch, Hugging Face Transformers, TensorFlow/Keras, scikit-learn, OpenCV</span></div>
+        <div class="cv-skill-row"><strong>HPC / parallel computing</strong><span>MPI, OpenMP, Slurm, large-scale CPU/GPU experimentation, fault injection, resilience analysis</span></div>
+        <div class="cv-skill-row"><strong>Hardware / systems</strong><span>Chisel, Verilog/RTL, Chipyard, RISC-V, Verilator, Vivado, LLVM, Linux, Docker</span></div>
+        <div class="cv-skill-row"><strong>Scientific computing / data</strong><span>NumPy, Pandas, Matplotlib, Jupyter, MATLAB</span></div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="cv-service">
+        <h2 id="cv-service">Professional service</h2>
+        <ul>
+          <li>Conference reviewer / subreviewer for SC, DSN, ICS, and ISRAE.</li>
+          <li>Contributing team member to the ProdeBench benchmarking project, supporting implementation and experimental evaluation.</li>
+        </ul>
       </section>
 
       <section class="cv-section" aria-labelledby="pdf-heading">
