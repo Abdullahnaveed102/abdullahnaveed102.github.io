@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Curriculum vitae and technical résumé of Abdullah Naveed, a Ph.D. researcher in dependable AI, HPC resilience, and scientific data compression.">
+    <meta name="description" content="Curriculum vitae and technical résumé of Abdullah Naveed, a Ph.D. candidate in dependable AI, HPC resilience, and scientific data compression.">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/assets/css/styles.css?v=20260820-2">
@@ -40,18 +40,18 @@
       <section class="cv-section" aria-labelledby="cv-education">
         <h2 id="cv-education">Education</h2>
         <ul class="compact-list">
-          <li class="compact-entry"><div><h3>Ph.D. in Computer Engineering · University of Florida</h3><p>GPA: 3.93 / 4.00 · Advisor: Prof. Guanpeng Li · Dependable AI, HPC systems, fault tolerance, and scientific data compression</p></div><span class="entry-date">Aug 2025–Present</span></li>
-          <li class="compact-entry"><div><h3>Master of Computer Science · The University of Iowa</h3><p>GPA: 3.99 / 4.00 · Graduate study in compilers, distributed systems, machine learning, algorithms, and data visualization</p></div><span class="entry-date">Aug 2023–Aug 2025</span></li>
-          <li class="compact-entry"><div><h3>B.S. in Computer Science · Lahore University of Management Sciences</h3><p>GPA: 3.61 / 4.00</p></div><span class="entry-date">Aug 2019–May 2023</span></li>
+          <li class="compact-entry"><div><h3>Ph.D. in Computer Engineering · University of Florida</h3><p>GPA: 3.93 / 4.00 · Advisor: Prof. Guanpeng Li</p></div><span class="entry-date">Expected May 2027</span></li>
+          <li class="compact-entry"><div><h3>Master of Computer Science · The University of Iowa</h3><p>GPA: 3.99 / 4.00</p></div><span class="entry-date">Aug 2025</span></li>
+          <li class="compact-entry"><div><h3>B.S. in Computer Science · Lahore University of Management Sciences</h3><p>GPA: 3.61 / 4.00</p></div><span class="entry-date">May 2023</span></li>
         </ul>
       </section>
 
       <section class="cv-section" aria-labelledby="cv-research">
         <h2 id="cv-research">Research experience</h2>
         <div class="experience-list">
-          <article class="experience-entry"><span class="entry-date">Jun 2025–Present</span><div><h2>Argonne National Laboratory</h2><h3>Visiting Graduate Researcher · Lemont, Illinois</h3><ul><li>Researching hardware–software co-designed, error-bounded compression for high-rate Advanced Photon Source data pipelines, reducing data-movement bottlenecks through FPGA acceleration.</li><li>Designing and validating reusable Chisel/RTL compression components and streaming datapaths, evaluating throughput, numerical fidelity, timing, and resource efficiency.</li></ul></div></article>
-          <article class="experience-entry"><span class="entry-date">Aug 2025–Present</span><div><h2>University of Florida</h2><h3>Graduate Research Assistant · Dependable Systems Lab</h3><ul><li>Characterizing the resilience of LLM inference, Transformer pretraining, and parameter-efficient fine-tuning to transient hardware errors.</li><li>Developing low-overhead techniques that detect and mitigate silent errors through fault-propagation behavior and informative internal model signals.</li></ul></div></article>
-          <article class="experience-entry"><span class="entry-date">Aug 2023–Aug 2025</span><div><h2>The University of Iowa</h2><h3>Research Assistant · Iowa City, Iowa</h3><ul><li>Developed LLVM-based fault-injection and analysis tooling to characterize transient-error propagation in HPC applications.</li><li>Compared compiler and runtime error-detection methods across scientific workloads, quantifying detection-coverage and runtime-overhead trade-offs.</li></ul></div></article>
+          <article class="experience-entry"><span class="entry-date">Jun 2025–Present</span><div><h2>Argonne National Laboratory</h2><h3>Visiting Graduate Researcher · Lemont, Illinois</h3><ul><li>Designed an end-to-end hardware–software co-design framework for FPGA/CPU scientific data compression at the Advanced Photon Source, achieving up to 19.8× cycle speedup over matched software and 46–65% lower end-to-end workflow time.</li><li>Developed a modular Chisel/RTL compression library supporting LZ4, Snappy, StreamVByte, SZ3, SZp, SZx, zfp, and extensible new designs.</li></ul></div></article>
+          <article class="experience-entry"><span class="entry-date">Aug 2025–Present</span><div><h2>University of Florida</h2><h3>Graduate Research Assistant · Dependable Systems Lab</h3><ul><li>Developed TRACE, a runtime detector for silent data corruption during LLM inference, achieving 95.3% average detection coverage across 15 LLMs and 3 datasets with 0.56% runtime overhead; paper accepted at SC26.</li><li>Characterizing the resilience of LLM inference, pretraining, and parameter-efficient fine-tuning to transient hardware faults, including models fine-tuned with LoRA, QLoRA, LoRA-FA, and DoRA.</li></ul></div></article>
+          <article class="experience-entry"><span class="entry-date">Aug 2023–Aug 2025</span><div><h2>The University of Iowa</h2><h3>Graduate Research Assistant · Iowa City, Iowa</h3><ul><li>Developed an LLVM-based silent-error detector for scientific and HPC applications using selective monitoring of informative program locations, achieving 86.19% average detection coverage at 4.90% runtime overhead across 15 benchmarks.</li><li>Compared compiler- and runtime-based error-detection techniques across scientific workloads, analyzing their behavior under different fault-propagation patterns and quantifying trade-offs between detection coverage and runtime overhead.</li></ul></div></article>
         </div>
       </section>
 
@@ -87,24 +87,23 @@
           <li class="compact-entry"><div><h3>Multimodal Fake News Classification</h3><p>Integrated textual and visual representations to classify misleading content across language and image modalities.</p></div><span class="entry-date">NLP · Vision</span></li>
           <li class="compact-entry"><div><h3>Cozmo’s Star Wars Odyssey</h3><p>Combined character recognition, LLM-driven narrative generation, and question answering for context-aware robot interaction.</p></div><span class="entry-date">Robotics · LLMs</span></li>
           <li class="compact-entry"><div><h3>COVID SOP Violation Detection</h3><p>Built a real-time multi-camera pipeline with YOLOv5 detection, top-view projection, and spatial density heatmaps.</p></div><span class="entry-date">PyTorch · OpenCV</span></li>
-          <li class="compact-entry"><div><h3>Audio Sentiment Analysis</h3><p>Developed a speech-emotion classifier using 7,442 labeled CREMA-D audio clips.</p></div><span class="entry-date">Speech · ML</span></li>
-          <li class="compact-entry"><div><h3>Netflix Recommendation System</h3><p>Used NLP content representations and unsupervised clustering to generate personalized recommendations.</p></div><span class="entry-date">NLP · Clustering</span></li>
+          <li class="compact-entry"><div><h3>LUMS Mobile App</h3><p>Developed a cross-platform student portal for deadlines, GPA calculation, communication, and real-time cloud-backed data management.</p></div><span class="entry-date">React Native · Firebase</span></li>
         </ul>
       </section>
 
       <section class="cv-section" aria-labelledby="cv-skills">
         <h2 id="cv-skills">Technical skills</h2>
-        <div class="cv-skill-row"><strong>Programming</strong><span>Python, C, C++, Bash, SQL, Scala/Chisel, JavaScript, Git</span></div>
+        <div class="cv-skill-row"><strong>Programming</strong><span>Python, C, C++, Bash, SQL, Scala, JavaScript, Git</span></div>
         <div class="cv-skill-row"><strong>Machine learning / AI</strong><span>PyTorch, Hugging Face Transformers, TensorFlow/Keras, scikit-learn, OpenCV</span></div>
         <div class="cv-skill-row"><strong>HPC / parallel computing</strong><span>MPI, OpenMP, Slurm, large-scale CPU/GPU experimentation, fault injection, resilience analysis</span></div>
         <div class="cv-skill-row"><strong>Hardware / systems</strong><span>Chisel, Verilog/RTL, Chipyard, RISC-V, Verilator, Vivado, LLVM, Linux, Docker</span></div>
-        <div class="cv-skill-row"><strong>Scientific computing / data</strong><span>NumPy, Pandas, Matplotlib, Jupyter, MATLAB</span></div>
+        <div class="cv-skill-row"><strong>Scientific computing / data analysis</strong><span>NumPy, Pandas, Matplotlib, Jupyter, MATLAB</span></div>
       </section>
 
       <section class="cv-section" aria-labelledby="cv-service">
         <h2 id="cv-service">Professional service</h2>
         <ul>
-          <li>Conference reviewer / subreviewer for SC, DSN, ICS, and ISRAE.</li>
+          <li>Conference reviewer / subreviewer for SC, DSN, ICS, AAAI, and HPDC.</li>
           <li>Contributing team member to the ProdeBench benchmarking project, supporting implementation and experimental evaluation.</li>
         </ul>
       </section>
