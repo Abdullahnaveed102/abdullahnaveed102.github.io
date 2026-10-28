@@ -1,3 +1,7 @@
 # Local reference repositories used to guide the redesign.
 seredef.github.io/
 hyfshishen.github.io/
+
+# Local news generation / test bytecode.
+__pycache__/
+*.py[cod]

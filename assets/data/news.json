@@ -1,0 +1,66 @@
+{
+  "homeLimit": 5,
+  "entries": [
+    {
+      "id": "phd-proposal-exam",
+      "date": "2026",
+      "category": "academic",
+      "title": "Passed my Ph.D. proposal examination",
+      "description": "Completed my proposal examination in Computer Engineering at the University of Florida, focusing on fault tolerance and reliable computing."
+    },
+    {
+      "id": "sc26-paper-acceptances",
+      "date": "2026",
+      "category": "research",
+      "title": "Two of our papers accepted at SC26",
+      "description": "Our work on reliable large language model inference and compressed scientific I/O was accepted at SC26.",
+      "link": {
+        "url": "/publications/",
+        "label": "View publications"
+      }
+    },
+    {
+      "id": "sc25-st-louis",
+      "date": "2025",
+      "category": "travel",
+      "title": "Attended SC25 in St. Louis",
+      "description": "Joined the high-performance computing community at SC25 in St. Louis, Missouri."
+    },
+    {
+      "id": "iowa-masters-graduation",
+      "date": "2025-08",
+      "category": "academic",
+      "title": "Completed my master's degree at the University of Iowa",
+      "description": "Graduated with a Master of Computer Science from the University of Iowa."
+    },
+    {
+      "id": "joined-uf-research",
+      "date": "2025-08",
+      "category": "professional",
+      "title": "Joined the University of Florida as a Graduate Research Assistant",
+      "description": "Started working with Prof. Guanpeng Li in the Dependable Systems Lab.",
+      "link": {
+        "url": "/experience/",
+        "label": "View research experience"
+      }
+    },
+    {
+      "id": "joined-argonne",
+      "date": "2025-06",
+      "category": "professional",
+      "title": "Joined Argonne National Laboratory as a Visiting Graduate Researcher",
+      "description": "Began working with Dr. Sheng Di on scientific data compression and hardware-software co-design.",
+      "link": {
+        "url": "/experience/",
+        "label": "View research experience"
+      }
+    },
+    {
+      "id": "lums-graduation",
+      "date": "2023-05",
+      "category": "academic",
+      "title": "Completed my bachelor's degree at LUMS",
+      "description": "Graduated with a B.S. in Computer Science from Lahore University of Management Sciences."
+    }
+  ]
+}
