@@ -3,7 +3,7 @@
   "entries": [
     {
       "id": "phd-proposal-exam",
-      "date": "2026",
+      "date": "2026-09",
       "category": "academic",
       "title": "Passed my Ph.D. proposal examination",
       "description": "Completed my proposal examination in Computer Engineering at the University of Florida, focusing on fault tolerance and reliable computing."
@@ -27,6 +27,13 @@
       "description": "Joined the high-performance computing community at SC25 in St. Louis, Missouri."
     },
     {
+      "id": "qualifying-examination",
+      "date": "2025-09",
+      "category": "academic",
+      "title": "Passed my qualifying examination at the University of Iowa",
+      "description": "Passed my qualifying examination at the University of Iowa in September 2025."
+    },
+    {
       "id": "iowa-masters-graduation",
       "date": "2025-08",
       "category": "academic",
@@ -36,9 +43,9 @@
     {
       "id": "joined-uf-research",
       "date": "2025-08",
-      "category": "professional",
-      "title": "Joined the University of Florida as a Graduate Research Assistant",
-      "description": "Started working with Prof. Guanpeng Li in the Dependable Systems Lab.",
+      "category": "academic",
+      "title": "Started my Ph.D. in Computer Engineering at the University of Florida",
+      "description": "Began my Ph.D. in August 2025 and joined the Dependable Systems Lab as a Graduate Research Assistant working with Prof. Guanpeng Li.",
       "link": {
         "url": "/experience/",
         "label": "View research experience"
@@ -56,11 +63,47 @@
       }
     },
     {
+      "id": "secdev23-undergraduate-research",
+      "date": "2023",
+      "category": "research",
+      "title": "First publication at IEEE SecDev",
+      "description": "My final-year undergraduate collaboration with researchers at LUMS, the University of Arizona, and SRI International led to our paper, Evaluating Container Debloaters, at IEEE SecDev 2023.",
+      "link": {
+        "url": "/experience/#undergraduate-research",
+        "label": "View undergraduate research"
+      }
+    },
+    {
+      "id": "joined-iowa-research",
+      "date": "2023-08",
+      "category": "professional",
+      "title": "Started as a Graduate Research Assistant at the University of Iowa",
+      "description": "Began graduate research on fault tolerance and reliable scientific computing at the University of Iowa.",
+      "link": {
+        "url": "/experience/",
+        "label": "View research experience"
+      }
+    },
+    {
+      "id": "iowa-database-teaching",
+      "date": "2023-08",
+      "category": "professional",
+      "title": "Teaching Assistant for Database Systems at the University of Iowa",
+      "description": "Supported Database Systems students during the fall 2023 semester, from August through December 2023."
+    },
+    {
       "id": "lums-graduation",
       "date": "2023-05",
       "category": "academic",
       "title": "Completed my bachelor's degree at LUMS",
       "description": "Graduated with a B.S. in Computer Science from Lahore University of Management Sciences."
+    },
+    {
+      "id": "lums-computational-problem-solving-teaching",
+      "date": "2022-08",
+      "category": "professional",
+      "title": "Teaching Assistant for Computational Problem Solving at LUMS",
+      "description": "Supported Computational Problem Solving students during the fall 2022 semester, from August through December 2022."
     }
   ]
 }

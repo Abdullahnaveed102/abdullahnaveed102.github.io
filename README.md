@@ -4,7 +4,7 @@ A minimal, dependency-free academic portfolio designed for GitHub Pages.
 
 ## Structure
 
-- `index.html` — profile overview, recent news, education, experience, ongoing research, publications, and selected projects
+- `index.html` — profile and broad research overview, selected publications, recent news, research experience, and education
 - `news/` — dated news timeline, grouped by year, with optional category filters
 - `publications/` — image-led publication archive
 - `projects/` — grouped, image-led project archive
@@ -44,7 +44,9 @@ Supported categories:
 
 Only categories with entries appear in the filter bar. Adding the first service entry automatically makes the Service filter available.
 
-Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can confirm. The initial proposal exam, SC26 acceptance, and SC25 attendance entries deliberately show the year only; confirm their months/days before making them more specific. No volunteering details have been assumed. Reorder entries when adding or confirming dates.
+Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can confirm. The proposal examination is September 2026, and the qualifying examination at Iowa is September 2025. SC26 acceptance, SC25 attendance, and the first SecDev publication retain year-only dates until their months/days are confirmed. Teaching entries use their start month as the timeline date and give the full semester range in the description. No volunteering details have been assumed. Reorder entries when adding or confirming dates.
+
+The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. Ongoing research is summarized in broad terms in the introduction; unpublished manuscript names, results, and project descriptions are not added as separate homepage projects.
 
 Example shape (replace these illustrative values with a confirmed event):
 
