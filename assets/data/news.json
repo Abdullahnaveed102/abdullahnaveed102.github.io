@@ -10,7 +10,7 @@
     },
     {
       "id": "sc26-paper-acceptances",
-      "date": "2026",
+      "date": "2026-07",
       "category": "research",
       "title": "Two of our papers accepted at SC26",
       "description": "Our work on reliable large language model inference and compressed scientific I/O was accepted at SC26.",
@@ -21,10 +21,10 @@
     },
     {
       "id": "sc25-st-louis",
-      "date": "2025",
+      "date": "2025-11",
       "category": "travel",
       "title": "Attended SC25 in St. Louis",
-      "description": "Joined the high-performance computing community at SC25 in St. Louis, Missouri."
+      "description": "Attended SC25 in St. Louis, Missouri, during the conference held November 16–21, 2025."
     },
     {
       "id": "qualifying-examination",
@@ -56,7 +56,7 @@
       "date": "2025-06",
       "category": "professional",
       "title": "Joined Argonne National Laboratory as a Visiting Graduate Researcher",
-      "description": "Began working with Dr. Sheng Di on scientific data compression and hardware-software co-design.",
+      "description": "Started my visiting graduate research appointment at Argonne National Laboratory in June 2025, working with Dr. Sheng Di on scientific data compression and hardware–software co-design.",
       "link": {
         "url": "/experience/",
         "label": "View research experience"
@@ -64,10 +64,10 @@
     },
     {
       "id": "secdev23-undergraduate-research",
-      "date": "2023",
+      "date": "2023-10",
       "category": "research",
       "title": "First publication at IEEE SecDev",
-      "description": "My final-year undergraduate collaboration with researchers at LUMS, the University of Arizona, and SRI International led to our paper, Evaluating Container Debloaters, at IEEE SecDev 2023.",
+      "description": "Our collaboration on container security and benchmarking led to Evaluating Container Debloaters at IEEE SecDev 2023, held October 18–20, 2023.",
       "link": {
         "url": "/experience/#undergraduate-research",
         "label": "View undergraduate research"
@@ -97,6 +97,17 @@
       "category": "academic",
       "title": "Completed my bachelor's degree at LUMS",
       "description": "Graduated with a B.S. in Computer Science from Lahore University of Management Sciences."
+    },
+    {
+      "id": "started-undergraduate-research",
+      "date": "2022-08",
+      "category": "research",
+      "title": "Started a research collaboration with the University of Arizona and SRI International",
+      "description": "Began collaborating on container security and benchmarking with researchers at LUMS, the University of Arizona, and SRI International (formerly Stanford Research Institute). The collaboration ran from August 2022 through May 2023.",
+      "link": {
+        "url": "/experience/#undergraduate-research",
+        "label": "View research collaboration"
+      }
     },
     {
       "id": "lums-computational-problem-solving-teaching",

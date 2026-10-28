@@ -44,7 +44,9 @@ Supported categories:
 
 Only categories with entries appear in the filter bar. Adding the first service entry automatically makes the Service filter available.
 
-Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can confirm. The proposal examination is September 2026, and the qualifying examination at Iowa is September 2025. SC26 acceptance, SC25 attendance, and the first SecDev publication retain year-only dates until their months/days are confirmed. Teaching entries use their start month as the timeline date and give the full semester range in the description. No volunteering details have been assumed. Reorder entries when adding or confirming dates.
+Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can confirm. Current entries all have confirmed months: proposal examination September 2026; qualifying examination at Iowa September 2025; SC26 decisions July 2026; SC25 attendance November 2025; and the SecDev conference milestone October 2023. The undergraduate research collaboration ran from August 2022 through May 2023. Teaching entries use their start month as the timeline date and give the full semester range in the description. No volunteering details have been assumed. Reorder entries when adding or confirming dates.
+
+Conference month references: [SC26 technical paper notifications](https://sc26.supercomputing.org/program/papers/), [SC25](https://sc25.supercomputing.org/), and [SecDev 2023 schedule](https://secdev.ieee.org/2023/schedule/). The SecDev month records the conference milestone, not a separately verified online-publication date. SRI's official name is [SRI International](https://www.sri.com/about-us/), formerly Stanford Research Institute.
 
 The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. Ongoing research is summarized in broad terms in the introduction; unpublished manuscript names, results, and project descriptions are not added as separate homepage projects.
 
