@@ -93,7 +93,7 @@ class NewsTests(unittest.TestCase):
         output = news.render_archive(changed)
         self.assertLess(output.index('id="sc26-paper-acceptances"'), output.index('id="phd-proposal-exam"'))
 
-    def test_archive_tells_the_story_in_order_while_home_stays_recent(self):
+    def test_archive_is_newest_first_and_keeps_same_month_milestones_in_order(self):
         story = {
             "homeLimit": 2,
             "entries": [
@@ -104,9 +104,9 @@ class NewsTests(unittest.TestCase):
             ],
         }
         archive = news.render_archive(story)
-        self.assertLess(archive.index('id="bachelors-completed"'), archive.index('id="joined-graduate-school"'))
+        self.assertLess(archive.index('id="paper"'), archive.index('id="joined-graduate-school"'))
         self.assertLess(archive.index('id="joined-graduate-school"'), archive.index('id="teaching-start"'))
-        self.assertLess(archive.index('id="teaching-start"'), archive.index('id="paper"'))
+        self.assertLess(archive.index('id="teaching-start"'), archive.index('id="bachelors-completed"'))
         home = news.render_home(story)
         self.assertLess(home.index('data-news-id="paper"'), home.index('data-news-id="joined-graduate-school"'))
         self.assertNotIn('data-news-id="bachelors-completed"', home)

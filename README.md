@@ -30,7 +30,7 @@ The site uses plain HTML, CSS, and a small amount of vanilla JavaScript. GitHub 
 
 ## Adding news and updates
 
-Edit **`assets/data/news.json`**. This is the single source for both the homepage and the full timeline. Keep the source entries in newest-first order for the homepage. The full News page sorts them oldest-to-newest to show the progression of academic and professional milestones. Entries with the same month keep their authored order, so joining a university appears before a teaching appointment there. `homeLimit` controls how many appear on the homepage (currently 5; change it to 7 or 8 if preferred).
+Edit **`assets/data/news.json`**. This is the single source for both the homepage and the full timeline. Keep the source entries in newest-first order for the homepage. The full News page also sorts them newest-to-oldest. Entries with the same month keep their authored order, so joining a university appears before a teaching appointment there and completing the master's degree appears before starting the Ph.D. `homeLimit` controls how many appear on the homepage (currently 5; change it to 7 or 8 if preferred).
 
 Each entry needs a unique, stable `id`, a `date`, a `category`, and a short `title`. An optional `description` adds detail on the archive page; an optional `link` points to a publication, event, or post. Use plain text, not HTML, in titles/descriptions. The homepage links each headline to its full timeline entry.
 
