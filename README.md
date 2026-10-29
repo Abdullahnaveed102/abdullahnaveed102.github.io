@@ -6,7 +6,7 @@ A minimal, dependency-free academic portfolio designed for GitHub Pages.
 
 - `index.html` — profile and broad research overview, selected publications, recent news, research experience, and education
 - `news/` — dated news timeline, grouped by year, with optional category filters
-- `publications/` — image-led publication archive
+- `publications/` — image-led publication archive and broad current research overview
 - `projects/` — grouped, image-led project archive
 - `experience/` — research, teaching, and professional service history
 - `cv/` — combined CV and résumé page with an accessible HTML CV and downloadable PDFs
@@ -44,11 +44,11 @@ Supported categories:
 
 Only categories with entries appear in the filter bar. Adding the first service entry automatically makes the Service filter available.
 
-Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can confirm. Current entries all have confirmed months: proposal examination September 2026; qualifying examination at Iowa September 2025; SC26 decisions July 2026; SC25 attendance November 2025; and the SecDev conference milestone October 2023. The undergraduate research collaboration ran from August 2022 through May 2023. Teaching entries use their start month as the timeline date and give the full semester range in the description. No volunteering details have been assumed. Reorder entries when adding or confirming dates.
+Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can confirm. Current entries all have confirmed months: proposal examination September 2026; SC26 decisions July 2026; SC25 attendance November 2025; and the SecDev conference milestone October 2023. The undergraduate research collaboration ran from August 2022 through May 2023, and the B.S. degree ran from August 2019 through May 2023. Teaching entries use their start month as the timeline date and give the full semester range in the description. No volunteering details have been assumed. Reorder entries when adding or confirming dates.
 
 Conference month references: [SC26 technical paper notifications](https://sc26.supercomputing.org/program/papers/), [SC25](https://sc25.supercomputing.org/), and [SecDev 2023 schedule](https://secdev.ieee.org/2023/schedule/). The SecDev month records the conference milestone, not a separately verified online-publication date. SRI's official name is [SRI International](https://www.sri.com/about-us/), formerly Stanford Research Institute.
 
-The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. Ongoing research is summarized in broad terms in the introduction; unpublished manuscript names, results, and project descriptions are not added as separate homepage projects.
+The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. Ongoing research is summarized in broad terms in the introduction and the Publications page's Current Research section, without unpublished manuscript names, methods, results, or submission details. Keep the timeline newest-first, preserving the master's-before-Ph.D. order for the August 2025 entries. The qualifying-exam news entry has been removed at the author's request.
 
 Example shape (replace these illustrative values with a confirmed event):
 

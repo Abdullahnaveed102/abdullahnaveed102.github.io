@@ -27,18 +27,11 @@
       "description": "Attended SC25 in St. Louis, Missouri, during the conference held November 16–21, 2025."
     },
     {
-      "id": "qualifying-examination",
-      "date": "2025-09",
-      "category": "academic",
-      "title": "Passed my qualifying examination at the University of Iowa",
-      "description": "Passed my qualifying examination at the University of Iowa in September 2025."
-    },
-    {
       "id": "iowa-masters-graduation",
       "date": "2025-08",
       "category": "academic",
       "title": "Completed my master's degree at the University of Iowa",
-      "description": "Graduated with a Master of Computer Science from the University of Iowa."
+      "description": "Completed my Master of Computer Science at the University of Iowa before beginning my Ph.D. at the University of Florida."
     },
     {
       "id": "joined-uf-research",
@@ -77,8 +70,8 @@
       "id": "joined-iowa-research",
       "date": "2023-08",
       "category": "professional",
-      "title": "Started as a Graduate Research Assistant at the University of Iowa",
-      "description": "Began graduate research on fault tolerance and reliable scientific computing at the University of Iowa.",
+      "title": "Started graduate school and research at the University of Iowa",
+      "description": "After completing my B.S. at LUMS, began graduate studies at the University of Iowa in August 2023 and started as a Graduate Research Assistant working on fault tolerance and reliable scientific computing.",
       "link": {
         "url": "/experience/",
         "label": "View research experience"
