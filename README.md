@@ -30,7 +30,7 @@ The site uses plain HTML, CSS, and a small amount of vanilla JavaScript. GitHub 
 
 ## Adding news and updates
 
-Edit **`assets/data/news.json`**. This is the single source for both the homepage and the full timeline. Keep entries in newest-first order. `homeLimit` controls how many appear on the homepage (currently 5; change it to 7 or 8 if preferred).
+Edit **`assets/data/news.json`**. This is the single source for both the homepage and the full timeline. Keep the source entries in newest-first order for the homepage. The full News page sorts them oldest-to-newest to show the progression of academic and professional milestones. Entries with the same month keep their authored order, so joining a university appears before a teaching appointment there. `homeLimit` controls how many appear on the homepage (currently 5; change it to 7 or 8 if preferred).
 
 Each entry needs a unique, stable `id`, a `date`, a `category`, and a short `title`. An optional `description` adds detail on the archive page; an optional `link` points to a publication, event, or post. Use plain text, not HTML, in titles/descriptions. The homepage links each headline to its full timeline entry.
 
@@ -48,7 +48,7 @@ Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can 
 
 Conference month references: [SC26 technical paper notifications](https://sc26.supercomputing.org/program/papers/), [SC25](https://sc25.supercomputing.org/), and [SecDev 2023 schedule](https://secdev.ieee.org/2023/schedule/). The SecDev month records the conference milestone, not a separately verified online-publication date. SRI's official name is [SRI International](https://www.sri.com/about-us/), formerly Stanford Research Institute.
 
-The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. Ongoing research is summarized in broad terms in the introduction and the Publications page's Current Research section, without unpublished manuscript names, methods, results, or submission details. Keep the timeline newest-first, preserving the master's-before-Ph.D. order for the August 2025 entries. The qualifying-exam news entry has been removed at the author's request.
+The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. Ongoing research is summarized in broad terms in the introduction and the Publications page's Current Research section, without unpublished manuscript names, methods, results, or submission details. Preserve the master's-before-Ph.D. order for the August 2025 source entries and the Iowa-enrollment-before-teaching order for August 2023. The qualifying-exam news entry has been removed at the author's request.
 
 Example shape (replace these illustrative values with a confirmed event):
 

@@ -37,7 +37,7 @@
       if (selected) label = button.textContent.trim();
     });
     status.textContent = category === "all"
-      ? count + " update" + (count === 1 ? "" : "s") + " · Newest first"
+      ? count + " update" + (count === 1 ? "" : "s") + " · Oldest to newest"
       : count + " update" + (count === 1 ? "" : "s") + " · " + label;
     empty.hidden = count > 0;
   }

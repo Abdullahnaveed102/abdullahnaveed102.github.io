@@ -93,6 +93,24 @@ class NewsTests(unittest.TestCase):
         output = news.render_archive(changed)
         self.assertLess(output.index('id="sc26-paper-acceptances"'), output.index('id="phd-proposal-exam"'))
 
+    def test_archive_tells_the_story_in_order_while_home_stays_recent(self):
+        story = {
+            "homeLimit": 2,
+            "entries": [
+                {"id": "paper", "date": "2025-10", "category": "research", "title": "Paper accepted"},
+                {"id": "joined-graduate-school", "date": "2023-08", "category": "academic", "title": "Joined graduate school"},
+                {"id": "teaching-start", "date": "2023-08", "category": "professional", "title": "Started teaching"},
+                {"id": "bachelors-completed", "date": "2023-05", "category": "academic", "title": "Completed bachelor's degree"},
+            ],
+        }
+        archive = news.render_archive(story)
+        self.assertLess(archive.index('id="bachelors-completed"'), archive.index('id="joined-graduate-school"'))
+        self.assertLess(archive.index('id="joined-graduate-school"'), archive.index('id="teaching-start"'))
+        self.assertLess(archive.index('id="teaching-start"'), archive.index('id="paper"'))
+        home = news.render_home(story)
+        self.assertLess(home.index('data-news-id="paper"'), home.index('data-news-id="joined-graduate-school"'))
+        self.assertNotIn('data-news-id="bachelors-completed"', home)
+
     def test_plain_text_is_escaped(self):
         changed = deepcopy(self.data)
         changed["entries"][0]["title"] = '<script>alert("title")</script>'

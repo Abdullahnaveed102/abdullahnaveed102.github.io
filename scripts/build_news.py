@@ -3,7 +3,9 @@
 
 Run from any directory: python3 scripts/build_news.py
 Use --check to verify the committed HTML without changing files.
-Entries are maintained newest first; year-only dates remain year-only.
+Entries are maintained newest first for the homepage. The archive reads oldest
+to newest, preserving the authored order for entries with the same date.
+Year-only dates remain year-only.
 """
 
 import argparse
@@ -168,7 +170,9 @@ def render_archive(data):
         return '<p class="news-empty">Updates will be added here soon.</p>'
     lines = []
     current_year = None
-    for entry in data["entries"]:
+    # Stable sorting preserves the intended sequence within a month, such as
+    # enrolling at a university before starting a teaching appointment there.
+    for entry in sorted(data["entries"], key=lambda entry: entry["date"]):
         year = entry["date"][:4]
         if year != current_year:
             if current_year is not None:

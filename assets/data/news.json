@@ -38,7 +38,7 @@
       "date": "2025-08",
       "category": "academic",
       "title": "Started my Ph.D. in Computer Engineering at the University of Florida",
-      "description": "Began my Ph.D. in August 2025 and joined the Dependable Systems Lab as a Graduate Research Assistant working with Prof. Guanpeng Li.",
+      "description": "Joined the University of Florida in August 2025 to pursue my Ph.D. in Computer Engineering and conduct research with Prof. Guanpeng Li as a Graduate Research Assistant in the Dependable Systems Lab.",
       "link": {
         "url": "/experience/",
         "label": "View research experience"
@@ -70,8 +70,8 @@
       "id": "joined-iowa-research",
       "date": "2023-08",
       "category": "professional",
-      "title": "Started graduate school and research at the University of Iowa",
-      "description": "After completing my B.S. at LUMS, began graduate studies at the University of Iowa in August 2023 and started as a Graduate Research Assistant working on fault tolerance and reliable scientific computing.",
+      "title": "Joined the University of Iowa for graduate studies and research",
+      "description": "Joined the University of Iowa in August 2023 after completing my B.S. at LUMS. As a Graduate Research Assistant, investigated fault tolerance and reliable scientific computing.",
       "link": {
         "url": "/experience/",
         "label": "View research experience"
@@ -81,8 +81,8 @@
       "id": "iowa-database-teaching",
       "date": "2023-08",
       "category": "professional",
-      "title": "Teaching Assistant for Database Systems at the University of Iowa",
-      "description": "Supported Database Systems students during the fall 2023 semester, from August through December 2023."
+      "title": "Began a Teaching Assistantship in Database Systems at the University of Iowa",
+      "description": "Taught and mentored Database Systems students through projects, office hours, and query debugging during the fall 2023 semester, from August through December 2023."
     },
     {
       "id": "lums-graduation",
@@ -106,8 +106,19 @@
       "id": "lums-computational-problem-solving-teaching",
       "date": "2022-08",
       "category": "professional",
-      "title": "Teaching Assistant for Computational Problem Solving at LUMS",
-      "description": "Supported Computational Problem Solving students during the fall 2022 semester, from August through December 2022."
+      "title": "Began a Teaching Assistantship in Computational Problem Solving at LUMS",
+      "description": "Guided students through programming exercises, tutorials, and assessments during the fall 2022 semester, from August through December 2022."
+    },
+    {
+      "id": "started-lums-undergraduate-studies",
+      "date": "2019-08",
+      "category": "academic",
+      "title": "Started my B.S. in Computer Science at LUMS",
+      "description": "Began undergraduate studies in Computer Science at Lahore University of Management Sciences in August 2019.",
+      "link": {
+        "url": "/#education",
+        "label": "View education"
+      }
     }
   ]
 }
