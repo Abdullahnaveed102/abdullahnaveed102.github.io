@@ -98,17 +98,17 @@ class NewsTests(unittest.TestCase):
             "homeLimit": 2,
             "entries": [
                 {"id": "paper", "date": "2025-10", "category": "research", "title": "Paper accepted"},
-                {"id": "joined-graduate-school", "date": "2023-08", "category": "academic", "title": "Joined graduate school"},
                 {"id": "teaching-start", "date": "2023-08", "category": "professional", "title": "Started teaching"},
+                {"id": "joined-graduate-school", "date": "2023-08", "category": "academic", "title": "Joined graduate school"},
                 {"id": "bachelors-completed", "date": "2023-05", "category": "academic", "title": "Completed bachelor's degree"},
             ],
         }
         archive = news.render_archive(story)
-        self.assertLess(archive.index('id="paper"'), archive.index('id="joined-graduate-school"'))
-        self.assertLess(archive.index('id="joined-graduate-school"'), archive.index('id="teaching-start"'))
-        self.assertLess(archive.index('id="teaching-start"'), archive.index('id="bachelors-completed"'))
+        self.assertLess(archive.index('id="paper"'), archive.index('id="teaching-start"'))
+        self.assertLess(archive.index('id="teaching-start"'), archive.index('id="joined-graduate-school"'))
+        self.assertLess(archive.index('id="joined-graduate-school"'), archive.index('id="bachelors-completed"'))
         home = news.render_home(story)
-        self.assertLess(home.index('data-news-id="paper"'), home.index('data-news-id="joined-graduate-school"'))
+        self.assertLess(home.index('data-news-id="paper"'), home.index('data-news-id="teaching-start"'))
         self.assertNotIn('data-news-id="bachelors-completed"', home)
 
     def test_plain_text_is_escaped(self):

@@ -2,8 +2,8 @@
   --ink: #3f3f3f;
   --heading: #242424;
   --muted: #707070;
-  --link: #1788c2;
-  --link-dark: #0b6798;
+  --link: #0b6798;
+  --link-dark: #084e73;
   --line: #e3e3e3;
   --soft: #f7f7f7;
   --paper: #ffffff;
@@ -741,7 +741,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  color: #888;
+  color: #707070;
   font-size: 0.75rem;
 }
 
@@ -860,10 +860,6 @@ ul {
     height: 94px;
   }
 
-  .entry-description {
-    display: none;
-  }
-
   .experience-entry,
   .cv-skill-row {
     grid-template-columns: 1fr;
@@ -892,10 +888,6 @@ ul {
   .publication-list .entry-figure {
     width: 164px;
     height: 108px;
-  }
-
-  .entry-description {
-    display: block;
   }
 
   .compact-entry {

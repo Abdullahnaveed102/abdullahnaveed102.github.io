@@ -1,0 +1,109 @@
+% Public website resume. Based on the existing Jake Gutierrez / sb2nov style.
+% Keep unpublished manuscript names and results out of this file.
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[left=.5in,right=.5in,top=.58in,bottom=.42in]{geometry}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\renewcommand{\section}[1]{\par\vspace{9pt}{\scshape\large #1\par}\vspace{2pt}\hrule\vspace{4pt}}
+\pdfgentounicode=1
+\hypersetup{pdftitle={Abdullah Naveed - Resume},pdfauthor={Abdullah Naveed}}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{\item\textbf{#1}\hfill #2\\\textit{\small #3}\hfill\textit{\small #4}\par\vspace{-5pt}}
+\newcommand{\resumeEducationSubheading}[4]{\item\textbf{#1}\hfill #2\\\textit{\small #3}\hfill\textit{\small #4}\par}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{list}{}{\leftmargin=.15in\itemsep=0pt\topsep=0pt\parsep=0pt\partopsep=0pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{list}}
+\newcommand{\resumeEducationListStart}{\begin{list}{}{\leftmargin=.15in\itemsep=2pt\topsep=1pt\parsep=0pt\partopsep=0pt}}
+\newcommand{\resumeEducationListEnd}{\end{list}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{list}{\textbullet}{\leftmargin=.20in\itemsep=2pt\topsep=2pt\parsep=0pt\partopsep=0pt}}
+\newcommand{\resumeItemListEnd}{\end{list}\vspace{-3pt}}
+
+\begin{document}
+\begin{center}
+  \textbf{\LARGE\scshape Abdullah Naveed}\\[3pt]
+  \small
+  \href{mailto:abdullahnaveed102@gmail.com}{abdullahnaveed102@gmail.com}
+  \hspace{4pt}$|$\hspace{4pt}
+  \href{https://abdullahnaveed102.github.io/}{abdullahnaveed102.github.io}
+  \hspace{4pt}$|$\hspace{4pt}
+  \href{https://www.linkedin.com/in/abdullahnaveed102}{linkedin.com/in/abdullahnaveed102}
+\end{center}
+
+\vspace{-20pt}
+\section{Education}
+\resumeEducationListStart
+  \resumeEducationSubheading{University of Florida}{Aug 2025 -- Expected May 2027}{Ph.D. Candidate in Computer Engineering $|$ GPA: 3.93/4.00}{Gainesville, FL}
+  \resumeEducationSubheading{University of Iowa}{Aug 2023 -- Aug 2025}{Master of Computer Science $|$ GPA: 3.99/4.00}{Iowa City, IA}
+  \resumeEducationSubheading{Lahore University of Management Sciences}{Aug 2019 -- May 2023}{B.S. in Computer Science $|$ GPA: 3.61/4.00}{Lahore, Pakistan}
+\resumeEducationListEnd
+
+\vspace{-10pt}
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading{University of Florida}{Aug 2025 -- Present}{Graduate Research Assistant, Dependable Systems Lab}{Gainesville, FL}
+  \vspace{2pt}
+  \resumeItemListStart
+    \resumeItem{Developed \textbf{TRACE}, a runtime silent-error detector for LLM inference, achieving \textbf{95.3\% average detection coverage} across 15 LLMs and 3 datasets with \textbf{0.56\% runtime overhead}; accepted at SC26.}
+    \resumeItem{Characterize hardware-fault effects in LLM inference and adapted models; evaluate reliability and protection costs. Advised by \textbf{Prof. Guanpeng Li}.}
+  \resumeItemListEnd
+  \vspace{4pt}
+  \resumeSubheading{Argonne National Laboratory}{Jun 2025 -- Present}{Visiting Graduate Researcher}{Remote}
+  \vspace{2pt}
+  \resumeItemListStart
+    \resumeItem{Develop \textbf{scientific data compression and data systems} with Dr. Sheng Di and Prof. Guanpeng Li, addressing compression throughput, data fidelity, and data movement.}
+    \resumeItem{Design and evaluate \textbf{CPU, GPU, and FPGA acceleration} through parallel computing and hardware--software co-design.}
+  \resumeItemListEnd
+  \vspace{4pt}
+  \resumeSubheading{University of Iowa}{Aug 2023 -- Aug 2025}{Graduate Research Assistant}{Iowa City, IA}
+  \vspace{2pt}
+  \resumeItemListStart
+    \resumeItem{Analyzed hardware-fault effects in scientific and HPC applications using \textbf{LLVM, fault injection, and experimental evaluation}; compared compiler and runtime error detection and reliability--performance trade-offs.}
+  \resumeItemListEnd
+  \vspace{4pt}
+  \resumeSubheading{Undergraduate Research Collaboration}{Aug 2022 -- May 2023}{LUMS $\cdot$ University of Arizona $\cdot$ SRI International}{}
+  \vspace{2pt}
+  \resumeItemListStart
+    \resumeItem{Developed a \textbf{Python and Docker benchmarking framework} for container debloaters, evaluating attack surface, vulnerabilities, image size, and correctness; \textbf{published at IEEE SecDev 2023}.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-8pt}
+\section{Technical Projects}
+\resumeItemListStart
+  \resumeItem{\textbf{Multimodal Fake News Classification} --- developed text--image classifiers with \textbf{BERT, CNN models, and multimodal fusion}; compared accuracy, precision, recall, and F1.}
+  \resumeItem{\textbf{LUMS Mobile App} --- built a cross-platform student application using \textbf{React Native, JavaScript, and Firebase} for deadline management, GPA tracking, communication, and real-time data.}
+\resumeItemListEnd
+
+\vspace{-8pt}
+\section{Publications}
+\resumeItemListStart
+  \resumeItem{\href{https://sc26.conference-program.com/presentation/?id=pap435\&sess=sess228}{\textit{Low-Overhead Silent Error Detection for Large Language Model Inference at Scale}}. SC26. \textbf{Accepted; to appear.}}
+  \resumeItem{\href{https://sc26.conference-program.com/presentation/?id=pap1023\&sess=sess202}{\textit{Z-SPDK: Accelerating Lossy Compressed I/O on NVMe-SSDs}}. SC26. \textbf{Accepted; to appear.}}
+  \resumeItem{\href{https://doi.org/10.1109/SecDev56634.2023.00023}{\textit{Evaluating Container Debloaters}}. IEEE SecDev, 2023.}
+\resumeItemListEnd
+
+\vspace{-8pt}
+\section{Technical Skills}
+\begin{list}{}{\leftmargin=.15in\itemsep=0pt\topsep=1pt\parsep=0pt\partopsep=0pt}
+  \small\item
+  \textbf{Programming:} Python, C, C++, JavaScript, SQL, Bash, Git\\[1pt]
+  \textbf{Machine Learning / Data:} PyTorch, Hugging Face Transformers, TensorFlow/Keras, scikit-learn, OpenCV, Pandas\\[1pt]
+  \textbf{Systems / HPC:} LLVM, Linux, Docker, MPI, OpenMP, Slurm, fault injection, parallel computing\\[1pt]
+  \textbf{Hardware:} Chisel, Verilog/RTL, RISC-V, Chipyard, Verilator, Vivado\\[1pt]
+  \textbf{Software Development:} React, React Native, Firebase, HTML/CSS
+\end{list}
+\end{document}

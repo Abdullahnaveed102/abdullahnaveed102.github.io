@@ -27,22 +27,22 @@
       "description": "Attended SC25 in St. Louis, Missouri, during the conference held November 16–21, 2025."
     },
     {
+      "id": "joined-uf-research",
+      "date": "2025-08",
+      "category": "academic",
+      "title": "Joined UF ECE for a Ph.D. in Computer Engineering",
+      "description": "After completing my master's degree at Iowa, I joined the Department of Electrical and Computer Engineering at the University of Florida in August 2025. I conduct research with Prof. Guanpeng Li as a Graduate Research Assistant in the Dependable Systems Lab.",
+      "link": {
+        "url": "/experience/",
+        "label": "View research experience"
+      }
+    },
+    {
       "id": "iowa-masters-graduation",
       "date": "2025-08",
       "category": "academic",
       "title": "Completed my master's degree at the University of Iowa",
       "description": "Completed my Master of Computer Science at the University of Iowa before beginning my Ph.D. at the University of Florida."
-    },
-    {
-      "id": "joined-uf-research",
-      "date": "2025-08",
-      "category": "academic",
-      "title": "Started my Ph.D. in Computer Engineering at the University of Florida",
-      "description": "Joined the University of Florida in August 2025 to pursue my Ph.D. in Computer Engineering and conduct research with Prof. Guanpeng Li as a Graduate Research Assistant in the Dependable Systems Lab.",
-      "link": {
-        "url": "/experience/",
-        "label": "View research experience"
-      }
     },
     {
       "id": "joined-argonne",
@@ -67,22 +67,22 @@
       }
     },
     {
-      "id": "joined-iowa-research",
-      "date": "2023-08",
-      "category": "professional",
-      "title": "Joined the University of Iowa for graduate studies and research",
-      "description": "Joined the University of Iowa in August 2023 after completing my B.S. at LUMS. As a Graduate Research Assistant, investigated fault tolerance and reliable scientific computing.",
-      "link": {
-        "url": "/experience/",
-        "label": "View research experience"
-      }
-    },
-    {
       "id": "iowa-database-teaching",
       "date": "2023-08",
       "category": "professional",
       "title": "Began a Teaching Assistantship in Database Systems at the University of Iowa",
-      "description": "Taught and mentored Database Systems students through projects, office hours, and query debugging during the fall 2023 semester, from August through December 2023."
+      "description": "After joining Iowa, I taught and mentored Database Systems students through projects, office hours, and query debugging during the fall 2023 semester, from August through December 2023."
+    },
+    {
+      "id": "joined-iowa-research",
+      "date": "2023-08",
+      "category": "professional",
+      "title": "Joined the University of Iowa for graduate studies and research",
+      "description": "Joined the University of Iowa in August 2023 after completing my B.S. at LUMS. As a Graduate Research Assistant, I investigated fault tolerance and reliable scientific computing.",
+      "link": {
+        "url": "/experience/",
+        "label": "View research experience"
+      }
     },
     {
       "id": "lums-graduation",

@@ -6,7 +6,7 @@
     <meta name="description" content="Publications by Abdullah Naveed in software security, dependable AI, and scientific computing.">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=20260820-2">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20261029-3">
     <title>Publications — Abdullah Naveed</title>
   </head>
   <body>
@@ -19,11 +19,11 @@
       <ol class="entry-list publication-list">
         <li class="visual-entry">
           <div class="entry-figure"><img src="/assets/images/publications/p1-trace.png" alt="TRACE offline profiling and online monitoring workflow" width="984" height="361"><span class="entry-badge">SC’26</span></div>
-          <div class="entry-copy"><span class="entry-title">Low-Overhead Silent Error Detection for Large Language Model Inference at Scale</span><p class="entry-authors"><strong>Abdullah Naveed</strong>, Mahina Sheikh, and Guanpeng Li</p><p class="entry-venue"><strong>[SC’26]</strong> International Conference for High Performance Computing, Networking, Storage, and Analysis · Accepted; to appear</p><p class="entry-description">Introduces TRACE, a selective activation-monitoring framework that detects silent data corruption across 15 large language models and 3 datasets with 95.3% average detection coverage and 0.56% runtime overhead.</p></div>
+          <div class="entry-copy"><a class="entry-title" href="https://sc26.conference-program.com/presentation/?id=pap435&amp;sess=sess228" target="_blank" rel="noopener noreferrer">Low-Overhead Silent Error Detection for Large Language Model Inference at Scale</a><p class="entry-authors"><strong>Abdullah Naveed</strong>, Mahina Sheikh, and Guanpeng Li</p><p class="entry-venue"><strong>[SC’26]</strong> International Conference for High Performance Computing, Networking, Storage, and Analysis · Accepted; to appear</p><p class="entry-description">Introduces TRACE, a selective activation-monitoring framework that detects silent data corruption across 15 large language models and 3 datasets with 95.3% average detection coverage and 0.56% runtime overhead.</p><p class="entry-links"><a href="https://sc26.conference-program.com/presentation/?id=pap435&amp;sess=sess228" target="_blank" rel="noopener noreferrer">Conference record</a></p></div>
         </li>
         <li class="visual-entry">
           <div class="entry-figure"><img src="/assets/images/publications/p2-z-spdk.png" alt="Z-SPDK scientific data compression and storage workflow" width="820" height="415"><span class="entry-badge">SC’26</span></div>
-          <div class="entry-copy"><span class="entry-title">Z-SPDK: Accelerating Lossy Compressed I/O on NVMe-SSDs</span><p class="entry-authors">Darren Ng, <strong>Abdullah Naveed</strong>, Duo Zhang, Guanpeng Li, Sheng Di, and Xiaoyi Lu</p><p class="entry-venue"><strong>[SC’26]</strong> International Conference for High Performance Computing, Networking, Storage, and Analysis · Accepted; to appear</p><p class="entry-description">Co-designs lossy compression and NVMe I/O using dual-pipeline parallelism and zero-copy transfers, delivering up to 12× speedup and 5.9× better bandwidth utilization.</p></div>
+          <div class="entry-copy"><a class="entry-title" href="https://sc26.conference-program.com/presentation/?id=pap1023&amp;sess=sess202" target="_blank" rel="noopener noreferrer">Z-SPDK: Accelerating Lossy Compressed I/O on NVMe-SSDs</a><p class="entry-authors">Darren Ng, <strong>Abdullah Naveed</strong>, Duo Zhang, Guanpeng Li, Sheng Di, and Xiaoyi Lu</p><p class="entry-venue"><strong>[SC’26]</strong> International Conference for High Performance Computing, Networking, Storage, and Analysis · Accepted; to appear</p><p class="entry-description">Co-designs lossy compression and NVMe I/O using dual-pipeline parallelism and zero-copy transfers, delivering up to 12× speedup and 5.9× better bandwidth utilization.</p><p class="entry-links"><a href="https://sc26.conference-program.com/presentation/?id=pap1023&amp;sess=sess202" target="_blank" rel="noopener noreferrer">Conference record</a></p></div>
         </li>
         <li class="visual-entry">
           <div class="entry-figure"><img src="/assets/images/publications/p3-debloatbench.png" alt="DebloatBench framework architecture" width="1016" height="476"><span class="entry-badge">SecDev’23</span></div>
@@ -33,13 +33,14 @@
 
       <section aria-labelledby="current-research-heading">
         <h2 id="current-research-heading">Current Research</h2>
-        <p>I develop methods and systems that improve reliability and efficiency across AI, scientific software, and data-intensive computing.</p>
-        <ul class="research-interests">
-          <li><strong>Dependable AI and scientific software:</strong> Develop methods that strengthen the resilience of large language models and scientific applications to hardware faults.</li>
-          <li><strong>Scientific data compression:</strong> Design compression methods that reduce scientific data volumes and processing costs while preserving their usefulness for analysis.</li>
-          <li><strong>Hardware–software co-design:</strong> Combine software and hardware acceleration to improve scientific computing across CPU, GPU, and FPGA platforms.</li>
-          <li><strong>Scientific data systems:</strong> Build efficient systems for processing, moving, and storing large scientific datasets.</li>
-        </ul>
+        <p>My current research addresses how hardware faults affect AI and scientific software, and how compression and hardware acceleration improve scientific data workflows.</p>
+        <div class="research-list">
+          <article class="research-item"><h3>LLM Inference and Adaptation Reliability</h3><p>I characterize how transient hardware faults affect LLM inference, including models adapted to new tasks. I evaluate response reliability and protection costs to guide more dependable execution.</p></article>
+          <article class="research-item"><h3>Compiler and Runtime Resilience</h3><p>I develop and evaluate software approaches to detecting silent data corruption in scientific and HPC applications, balancing detection effectiveness with execution overhead across different workloads.</p></article>
+          <article class="research-item"><h3>GPU Scientific Compression</h3><p>I design GPU compression software for scientific data and evaluate compression throughput, data fidelity, and the cost of moving compressed data through scientific workflows.</p></article>
+          <article class="research-item"><h3>FPGA Compression and Reusable Hardware</h3><p>I develop FPGA compression hardware and reusable design components, balancing processing throughput, memory traffic, hardware resources, and implementation flexibility.</p></article>
+          <article class="research-item"><h3>Compression-Aware Scientific I/O</h3><p>I integrate compression with scientific data ingestion, transfer, and storage, and evaluate how data reduction and I/O bandwidth affect end-to-end workflow performance.</p></article>
+        </div>
       </section>
 
     </main>

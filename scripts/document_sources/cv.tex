@@ -1,0 +1,129 @@
+% Public website CV. Keep unpublished manuscript names and results out of this file.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=.55in,bottom=.60in,left=.68in,right=.68in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,xcolor,hyperref,tabularx,fancyhdr}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\raggedbottom
+\urlstyle{same}
+\definecolor{linkblue}{RGB}{0,70,125}
+\definecolor{footergray}{RGB}{90,90,90}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=black,citecolor=black,pdftitle={Abdullah Naveed - Curriculum Vitae},pdfauthor={Abdullah Naveed}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\footnotesize\color{footergray}Abdullah Naveed}
+\fancyfoot[R]{\footnotesize\color{footergray}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\needspace}[1]{\par\begingroup\dimen0=#1\relax\ifdim\dimexpr\pagegoal-\pagetotal\relax<\dimen0\vfil\break\fi\endgroup}
+\renewcommand{\section}[1]{\needspace{4\baselineskip}\vspace{.82em}{\normalsize\bfseries #1\par}\vspace{.16em}\hrule\vspace{.38em}}
+\newenvironment{cvitems}{\begin{list}{\textbullet}{\leftmargin=1.25em\itemsep=1.5pt\topsep=1pt\parsep=0pt\partopsep=0pt}}{\end{list}\vspace{.18em}}
+\newenvironment{publications}{\begin{list}{\arabic{enumi}.}{\usecounter{enumi}\leftmargin=1.70em\itemsep=6pt\topsep=2pt\parsep=0pt\partopsep=0pt}}{\end{list}}
+\newcommand{\cventry}[4]{\needspace{3\baselineskip}\begin{tabularx}{\textwidth}{@{}Xr@{}}\textbf{#1}&\textbf{#2}\\\textit{#3}&\textit{#4}\end{tabularx}\vspace{-.20em}}
+\newcommand{\cvdetail}[1]{{\small #1\par}\vspace{.38em}}
+\newcommand{\publication}[3]{\needspace{4\baselineskip}\item #1\\[-.08em]\textbf{#2}\\[-.08em]#3}
+\newcommand{\projectentry}[2]{\needspace{3\baselineskip}\textbf{#1}\par{\small #2\par}\vspace{.38em}}
+
+\begin{document}
+\begin{center}
+  {\LARGE\bfseries Abdullah Naveed}\\[3pt]
+  {\normalsize Ph.D. Candidate in Computer Engineering $\mid$ University of Florida}\\[5pt]
+  {\footnotesize
+    \href{mailto:abdullahnaveed102@gmail.com}{abdullahnaveed102@gmail.com}
+    \quad $\vert$ \quad
+    \href{https://abdullahnaveed102.github.io/}{abdullahnaveed102.github.io}
+    \quad $\vert$ \quad
+    \href{https://www.linkedin.com/in/abdullahnaveed102}{linkedin.com/in/abdullahnaveed102}
+  }\\[3pt]
+  {\footnotesize
+    \href{https://github.com/Abdullahnaveed102}{github.com/Abdullahnaveed102}
+    \quad $\vert$ \quad
+    \href{https://scholar.google.com/citations?user=LL4EX88AAAAJ}{Google Scholar}
+  }
+\end{center}
+\vspace{-.5em}
+
+\section{Research Interests}
+Dependable AI and high-performance computing; LLM reliability; compiler and runtime resilience; scientific data compression; CPU, GPU, and FPGA acceleration; hardware--software co-design.
+
+\section{Education}
+\cventry{University of Florida}{Aug 2025 -- Expected May 2027}{Ph.D. Candidate in Computer Engineering}{Gainesville, FL}
+\cvdetail{GPA: 3.93/4.00 \quad $\vert$ \quad Advisor: Prof. Guanpeng Li \quad $\vert$ \quad Dependable Systems Lab}
+\cventry{University of Iowa}{Aug 2023 -- Aug 2025}{Master of Computer Science}{Iowa City, IA}
+\cvdetail{GPA: 3.99/4.00}
+\cventry{Lahore University of Management Sciences}{Aug 2019 -- May 2023}{B.S. in Computer Science}{Lahore, Pakistan}
+\cvdetail{GPA: 3.61/4.00}
+
+\section{Research Experience}
+\cventry{University of Florida}{Aug 2025 -- Present}{Graduate Research Assistant, Dependable Systems Lab}{Gainesville, FL}
+\begin{cvitems}
+  \item Develop methods for dependable AI and scientific computing, focusing on LLM resilience and efficient error detection. Advised by Prof. Guanpeng Li.
+  \item Developed \textbf{TRACE}, a runtime silent-error detector achieving \textbf{95.3\% average detection coverage} across 15 LLMs and 3 datasets with \textbf{0.56\% runtime overhead}; paper accepted at SC26.
+  \item Characterize the effects of transient hardware faults on LLM inference, including models adapted to new tasks, and evaluate reliability and protection costs.
+\end{cvitems}
+
+\cventry{Argonne National Laboratory}{Jun 2025 -- Present}{Visiting Graduate Researcher}{Remote}
+\begin{cvitems}
+  \item Develop scientific data compression and data systems for efficient scientific computing, in collaboration with Dr. Sheng Di and Prof. Guanpeng Li.
+  \item Design and evaluate CPU, GPU, and FPGA acceleration through parallel computing and hardware--software co-design, with a focus on compression throughput, data fidelity, and data movement.
+\end{cvitems}
+
+\cventry{University of Iowa}{Aug 2023 -- Aug 2025}{Graduate Research Assistant}{Iowa City, IA}
+\begin{cvitems}
+  \item Analyzed hardware-fault effects in scientific and HPC applications and evaluated compiler and runtime approaches to detecting silent data corruption.
+  \item Measured trade-offs between detection effectiveness and execution cost across scientific workloads using fault injection and experimental evaluation.
+\end{cvitems}
+
+\cventry{Undergraduate Research Collaboration}{Aug 2022 -- May 2023}{LUMS $\cdot$ University of Arizona $\cdot$ SRI International}{}
+\begin{cvitems}
+  \item Evaluated container debloating tools for attack-surface reduction, vulnerability mitigation, image size, and execution correctness; co-authored \textit{Evaluating Container Debloaters} (IEEE SecDev 2023).
+  \item Collaborated with Prof. Fareed Zaffar, Prof. Sazzadur Rahaman, and Dr. Ashish Gehani across LUMS, the University of Arizona, and SRI International (formerly Stanford Research Institute).
+\end{cvitems}
+
+\newpage
+\section{Publications}
+\begin{publications}
+  \publication{\textbf{Abdullah Naveed}, Mahina Sheikh, and Guanpeng Li.}
+    {\href{https://sc26.conference-program.com/presentation/?id=pap435\&sess=sess228}{Low-Overhead Silent Error Detection for Large Language Model Inference at Scale.}}
+    {International Conference for High Performance Computing, Networking, Storage, and Analysis (SC26), 2026. \textbf{Accepted; to appear.}}
+  \publication{Darren Ng, \textbf{Abdullah Naveed}, Duo Zhang, Guanpeng Li, Sheng Di, and Xiaoyi Lu.}
+    {\href{https://sc26.conference-program.com/presentation/?id=pap1023\&sess=sess202}{Z-SPDK: Accelerating Lossy Compressed I/O on NVMe-SSDs.}}
+    {International Conference for High Performance Computing, Networking, Storage, and Analysis (SC26), 2026. \textbf{Accepted; to appear.}}
+  \publication{Muhammad Hassan, Talha Tahir, Muhammad Farrukh, \textbf{Abdullah Naveed}, Anas Naeem, Fareed Zaffar, Fahad Shaon, Ashish Gehani, and Sazzadur Rahaman.}
+    {\href{https://doi.org/10.1109/SecDev56634.2023.00023}{Evaluating Container Debloaters.}}
+    {2023 IEEE Secure Development Conference (SecDev), pp. 88--98, 2023.}
+\end{publications}
+
+\section{Teaching Experience}
+\cventry{University of Iowa}{Aug -- Dec 2023}{Teaching Assistant, Database Systems}{Iowa City, IA}
+\begin{cvitems}
+  \item Mentored more than 30 students through MySQL projects, relational schema design, query debugging, and implementation decisions during labs and office hours.
+\end{cvitems}
+\cventry{Lahore University of Management Sciences}{Aug -- Dec 2022}{Teaching Assistant, Computational Problem Solving}{Lahore, Pakistan}
+\begin{cvitems}
+  \item Supported more than 100 students through tutorials, programming exercises, assignment feedback, and assessments.
+\end{cvitems}
+
+\section{Professional Service}
+\begin{cvitems}
+  \item Co-reviewed conference submissions with my advisor for SC, IPDPS, DSN, ICS, AAAI, and HPDC.
+  \item Contribute to ProdeBench through implementation and experimental evaluation.
+\end{cvitems}
+
+\section{Selected Technical Projects}
+\projectentry{DebloatBench / BloatProfiler}{Developed a Python and Docker benchmarking framework for container debloaters, evaluating attack surface, vulnerability mitigation, image size, and execution correctness. Published at IEEE SecDev 2023.}
+\projectentry{Multimodal Fake News Classification}{Developed and benchmarked text--image classifiers using BERT, CNN vision models, and multimodal fusion; evaluated accuracy, precision, recall, and F1.}
+\projectentry{LUMS Mobile App}{Developed a cross-platform student application with React Native, JavaScript, and Firebase, integrating deadline management, GPA tracking, communication, and real-time data.}
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+  \textbf{Programming:} & Python, C, C++, Scala, Bash, SQL, JavaScript, Git \\
+  \textbf{Machine Learning / Data:} & PyTorch, Hugging Face Transformers, TensorFlow/Keras, scikit-learn, OpenCV, NumPy, Pandas, Matplotlib \\
+  \textbf{Systems / HPC:} & LLVM, Linux, Docker, MPI, OpenMP, Slurm, fault injection, parallel computing \\
+  \textbf{Hardware:} & Chisel, Verilog/RTL, RISC-V, Chipyard, Verilator, Vivado \\
+  \textbf{Software Development:} & React, React Native, Firebase, HTML/CSS
+\end{tabularx}
+\end{document}

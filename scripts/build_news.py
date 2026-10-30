@@ -170,8 +170,8 @@ def render_archive(data):
         return '<p class="news-empty">Updates will be added here soon.</p>'
     lines = []
     current_year = None
-    # Stable sorting preserves the intended sequence within a month, such as
-    # enrolling at a university before starting a teaching appointment there.
+    # Stable sorting preserves authored ties: within a month, list the later
+    # milestone first (e.g. a teaching appointment above university enrollment).
     for entry in sorted(data["entries"], key=lambda entry: entry["date"], reverse=True):
         year = entry["date"][:4]
         if year != current_year:
