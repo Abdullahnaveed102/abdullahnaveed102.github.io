@@ -48,7 +48,7 @@ Dates accept `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`. Use only the precision you can 
 
 Conference month references: [SC26 technical paper notifications](https://sc26.supercomputing.org/program/papers/), [SC25](https://sc25.supercomputing.org/), and [SecDev 2023 schedule](https://secdev.ieee.org/2023/schedule/). The SecDev month records the conference milestone, not a separately verified online-publication date. SRI's official name is [SRI International](https://www.sri.com/about-us/), formerly Stanford Research Institute.
 
-The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. The Publications page's Current Research section describes manuscript-related research directions: LLM inference/adaptation reliability, compiler/runtime resilience, GPU compression, FPGA hardware, and compression-aware scientific I/O. It gives the problem and evaluation focus without unpublished titles, distinctive methods, results, or submission venues. The qualifying-exam news entry has been removed at the author's request.
+The homepage keeps five recent entries and a compact research-focused reading order. Older/course projects remain on the Projects page. The Publications page's Current Research section describes manuscript-related research directions: LLM inference/adaptation reliability, compiler/runtime resilience, GPU compression, and FPGA hardware. It gives the problem and evaluation focus without unpublished titles, distinctive methods, results, or submission venues. The qualifying-exam news entry has been removed at the author's request.
 
 Example shape (replace these illustrative values with a confirmed event):
 
